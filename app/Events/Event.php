@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace SistemaRestauranteWeb\Events;
 
 abstract class Event {
 

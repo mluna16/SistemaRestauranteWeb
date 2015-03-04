@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace SistemaRestauranteWeb\Commands;
 
 abstract class Command {
 

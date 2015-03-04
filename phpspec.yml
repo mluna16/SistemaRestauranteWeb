@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: SistemaRestauranteWeb
+        psr4_prefix: SistemaRestauranteWeb
         src_path: app
