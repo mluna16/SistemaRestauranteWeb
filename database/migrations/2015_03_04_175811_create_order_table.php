@@ -16,7 +16,7 @@ class CreateOrderTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->smallInteger('status');
+            $table->smallInteger('status'); // Listo - en espera
             $table->integer('created_by')->unsigned();
             $table->integer('id_product')->unsigned();
 

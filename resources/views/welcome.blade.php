@@ -1,78 +1,45 @@
 @extends('layout_init')
 
-    @section('titulo')
-        Marcos Luna H
+    @section('title')
+             Inicio
     @stop
 
     @section('content')
 
-        <nav class="light-blue lighten-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-                <ul class="right">
-                    <li><a href="#">Navbar Link</a></li>
-                </ul>
+       @include('partials.principal.headerPrincipal')
 
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Navbar Link</a></li>
-                </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
-        </nav>
         <div class="section no-pad-bot" id="index-banner">
             <div class="container">
-                <br><br>
-                <h1 class="header center orange-text">Starter Template</h1>
-                <div class="row center">
-                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-                </div>
-                <div class="row center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-                </div>
-                <br><br>
+                <h2>Sistema Restaurante Web</h2>
+               <p class="flow-text">
+                   La propuesta que se plantea es el desarrollar una aplicación móvil que
+
+                   tenga dos (2) ambientes, uno para el mesonero que hace los pedidos y uno para la cocina
+
+                   que se encarga de la preparación de los pedidos, de este modo logrando una comunicación
+
+                   rápida entre ambos, facilitando al mesonero saber cuándo un pedido está listo; además la
+
+                   realización de un módulo web para llevar todos los procesos relacionados a la cobranza, en
+
+                   el cual se utilizan los datos enviados desde el módulo móvil y es mostrado en pantalla una
+
+                   lista de servicios prestados junto con el monto total de los pedidos realizados por esa mesa
+
+                   al mesonero; el encargado de la cobranza solo deberá pulsar el botón Facturar y el sistema
+
+                   se encargará de imprimir la factura que posteriormente será entregada al cliente del
+
+                   restaurante, de este modo manteniendo el control de los pagos por los servicios y control de
+
+                   los consumos en general por parte de las personas encargadas del restaurante.
+               </p>
 
             </div>
         </div>
 
-
         <div class="container">
-            <div class="section">
 
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="mdi-image-flash-on"></i></h2>
-                            <h5 class="center">Speeds up development</h5>
-
-                            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="mdi-social-group"></i></h2>
-                            <h5 class="center">User Experience Focused</h5>
-
-                            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text"><i class="mdi-action-settings"></i></h2>
-                            <h5 class="center">Easy to work with</h5>
-
-                            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <br><br>
-
-            <div class="section">
-
-            </div>
         </div>
 
         <footer class="page-footer orange">
