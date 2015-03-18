@@ -1,63 +1,63 @@
-@extends('app')
+@extends('layout.layout_init')
+
+@section('title')
+    Inicio de Sesion
+@stop
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="/auth/login">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+    @include('partials.principal.headerPrincipal')
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+    <div class="container">
+        <div class="row">
+            @include('partials.errors')
+            <h3>Iniciar Sesion</h3>
+            {!!Form::open([
+            'url' => '/auth/login',
+            'method' => 'POST'])
+            !!}
+                <div class="card medium">
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                {!! Form::email('email', null,['class' => 'validate'])!!}
+                                {!! Form::label('email', 'Correo Electronico ',['for' => 'email'])!!}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                {!! Form::password('password', ['class' => 'validate'])!!}
+                                {!! Form::label('password', 'Clave ',['for' => 'password'])!!}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col  s12 ">
+                                {!! Form::checkbox('remember','false')!!}
+                                {!! Form::label('remember', 'Recuerdame ',['for' => 'remember'])!!}
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
+                            </div>
+                        </div>
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
+                        <div class="card-action">
+                            <div class="row">
+                                <div class="container">
+                                    <div class="input-field col l6 s12 m6">
+                                        <div>
+                                            <a href="#/password/email">Forgot Your Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="input-field col l6 s12 m4">
+                                        <button class="btn waves-effect waves-light " type="submit">Iniciar Sesion!
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
-									Login
-								</button>
-
-								<a href="/password/email">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
+                        </div>
+                    </div>
+                </div>
+            {!!Form::close()!!}
 		</div>
-	</div>
-</div>
+    </div>
 @endsection
