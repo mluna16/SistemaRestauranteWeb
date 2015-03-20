@@ -27,6 +27,6 @@ class Kernel extends HttpKernel {
 		'auth' => 'SistemaRestauranteWeb\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'SistemaRestauranteWeb\Http\Middleware\RedirectIfAuthenticated',
-	];
+    ];
 
 }

@@ -1,4 +1,4 @@
-@extends('layout.layout_init')
+@extends('layout.init')
 
 @section('title')
     Inicio

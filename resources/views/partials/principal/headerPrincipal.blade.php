@@ -4,13 +4,25 @@
     </div>
     <div class="nav-wrapper ">
         <ul class="right">
+            @if (Session::has('user'))
+                $user = session('key');
+
+                <li>{{$user}}</li>
+            @else
             <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
             <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+            @endif
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
-            <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+            @if (Session::has('user'))
+                $user = session('key');
+                <li>{{$user}}</li>
+            @else
+                <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
+                <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+            @endif
+
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>

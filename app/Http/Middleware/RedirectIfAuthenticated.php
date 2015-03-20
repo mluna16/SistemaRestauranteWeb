@@ -35,8 +35,16 @@ class RedirectIfAuthenticated {
 	{
 		if ($this->auth->check())
 		{
-			return new RedirectResponse(url('/home'));
-		}
+            if($this->auth->user()->type = 'admin'){
+
+                return new RedirectResponse(url('/admin'));
+
+            }elseif($this->auth->user()->type= 'cocina'){
+
+            }else{
+
+            }
+        }
 
 		return $next($request);
 	}

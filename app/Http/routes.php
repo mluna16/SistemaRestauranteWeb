@@ -19,4 +19,21 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('admin',function(){
+        return view('usuarios.admin.admin');
+    });
+
+    Route::get('admin',function(){
+        return view('usuarios.admin.admin');
+    });
+    Route::get('user/profile', function()
+    {
+        // Has Auth Filter
+    });
+});
+
+
 Route::resource('users','UserController');
