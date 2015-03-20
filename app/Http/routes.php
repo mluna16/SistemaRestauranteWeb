@@ -13,7 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+//Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -22,17 +22,9 @@ Route::controllers([
 
 Route::group(['middleware' => 'auth'], function()
 {
-    Route::get('admin',function(){
-        return view('usuarios.admin.admin');
-    });
+    Route::get('admin','adminController@index');
 
-    Route::get('admin',function(){
-        return view('usuarios.admin.admin');
-    });
-    Route::get('user/profile', function()
-    {
-        // Has Auth Filter
-    });
+
 });
 
 

@@ -3,6 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\RedirectResponse;
+use SistemaRestauranteWeb\User;
 
 class RedirectIfAuthenticated {
 
@@ -33,17 +34,10 @@ class RedirectIfAuthenticated {
 	 */
 	public function handle($request, Closure $next)
 	{
+        $user = User::all();
 		if ($this->auth->check())
 		{
-            if($this->auth->user()->type = 'admin'){
-
-                return new RedirectResponse(url('/admin'));
-
-            }elseif($this->auth->user()->type= 'cocina'){
-
-            }else{
-
-            }
+                return new RedirectResponse(url('/'.$this->auth->user()->type));
         }
 
 		return $next($request);

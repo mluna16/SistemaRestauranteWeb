@@ -1,4 +1,4 @@
-@extends('layout.init')
+@extends('layout.dashboard')
 @section('title')
     ADMIN!
 @stop
