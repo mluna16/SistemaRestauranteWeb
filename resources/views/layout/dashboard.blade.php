@@ -1,24 +1,41 @@
 @extends('layout.init')
 
-@include('partials.principal.headerPrincipal')
-
 @section('content')
+    @include('partials.principal.headerPrincipal')
+
     <div class="row">
+        <div class="col s12 m2 l2 ">
+            <div class="row fixed ">
+                <div class="collection light-blue lighten-1">
+                    <a href="{{ url('admin/Estadisticas') }}" class="collection-item @yield('Estadisticas') ">Estadisticas</a>
+                    <a href="{{ url('admin/Usuarios') }}" class="collection-item @yield('Usuarios')">Usuarios</a>
+                    <a href="{{ url('admin/Menu') }}" class="collection-item @yield('Menu')">Menu</a>
+                    <a href="{{ url('admin/Restaurante') }}" class="collection-item @yield('Restaurante')">Restaurante</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m10 l10">
+        @section('infoPanel')
 
-        <div class="col s12 m4 l3 side-nav fixed" >
-
-            <ul>
-                <li>Gestionar Usuarios</li>
-                <li>Gestionar menu</li>
-            </ul>
-
+        @show
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large light-blue lighten-1">
+                    <i class="large mdi-content-add"></i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating  purple lighten-1"><i class="large mdi-image-timer-auto"></i></a></li>
+                    <li><a class="btn-floating green darken-1"><i class="large mdi-maps-local-restaurant"></i></a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="col s12 m8 l9">
-
-
-        </div>
 
     </div>
+
+
+
+
+
+
 
 @endsection

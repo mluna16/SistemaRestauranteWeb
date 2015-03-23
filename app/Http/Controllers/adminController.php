@@ -17,7 +17,32 @@ class adminController extends Controller {
 	{
         $user = User::all();
 
-        return view('usuarios.admin.admin')->with('user',$user);
+        return view('usuarios.admin.estadisticas')->with('user',$user);
+
+    }
+
+    public function estadisticasIndex(){
+        $user = User::all();
+
+        return view('usuarios.admin.estadisticas')->with('user',$user);
+
+    }
+    public function usuariosIndex(){
+        $user = User::all();
+
+        return view('usuarios.admin.usuarios')->with('user',$user);
+
+    }
+    public function menuIndex(){
+        $user = User::all();
+
+        return view('usuarios.admin.menu')->with('user',$user);
+
+    }
+    public function restauranteIndex(){
+        $user = User::all();
+
+        return view('usuarios.admin.restaurante')->with('user',$user);
 
     }
 

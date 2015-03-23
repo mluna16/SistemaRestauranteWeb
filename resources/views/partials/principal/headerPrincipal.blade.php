@@ -1,15 +1,15 @@
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="light-blue lighten-1 fixed" role="navigation">
     <div class="container">
         <a id="logo-container" href="#" class="brand-logo">Logo</a>
     </div>
     <div class="nav-wrapper ">
         <ul class="right">
             @if(isset($user))
-                <a class='dropdown-button' href='#' data-activates='dropdownProfile'>{{$user[0]->FullName}}</a>
+                <a class='dropdown-button' href='#' data-activates='dropdownProfile'>{{$user[0]->FullName}} <i class="mdi-navigation-arrow-drop-down right"></i></a>
 
                 <!-- Dropdown Structure -->
                 <ul id='dropdownProfile' class='dropdown-content'>
-                    <li><a href="">Edit</a></li>
+                    <li><a href="">Configuracion</a></li>
                     <li class="divider"></li>
                     <li><a href="{{ url('/auth/logout') }}">Cerrer Sesion</a></li>
                 </ul>

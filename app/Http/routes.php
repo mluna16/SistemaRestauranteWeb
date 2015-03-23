@@ -20,11 +20,18 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::group(['middleware' => 'auth'], function()
+
+Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 {
-    Route::get('admin','adminController@index');
+        Route::get('/','adminController@index');
 
+        Route::get('Estadisticas','adminController@estadisticasIndex');
 
+        Route::get('Usuarios','adminController@usuariosIndex');
+
+        Route::get('Menu','adminController@menuIndex');
+
+        Route::get('Restaurante','adminController@restauranteIndex');
 });
 
 
