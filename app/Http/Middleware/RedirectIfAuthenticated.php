@@ -34,8 +34,7 @@ class RedirectIfAuthenticated {
 	 */
 	public function handle($request, Closure $next)
 	{
-        $user = User::all();
-		if ($this->auth->check())
+       if ($this->auth->check())
 		{
                 return new RedirectResponse(url('/'.$this->auth->user()->type));
         }
