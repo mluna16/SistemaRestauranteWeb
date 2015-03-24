@@ -21,6 +21,12 @@ class CreateLocalDetailsTable extends Migration {
             $table->string('number_tables');
             $table->string('img_local');
 
+            $table->integer('owner')->unsigned();
+            $table->foreign('owner')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
             $table->timestamps();
 		});
 	}
