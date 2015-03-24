@@ -27,7 +27,7 @@ class CreateUserRequest extends Request {
              'email' => 'required|unique:users,email',
              'password' => 'required|same:password_',
              'password_' => 'required',
-             //'type' => 'required|in:admin,usuario,cocina,mesonero',
+             'type' => 'required|in:admin,caja,cocina,mesonero',
         ];
 	}
 

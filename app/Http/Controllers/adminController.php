@@ -1,10 +1,14 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use SistemaRestauranteWeb\Local;
+use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\User;
+use Symfony\Component\Security\Core\Tests\Authentication\Provider\RememberMeAuthenticationProviderTest;
 
 class adminController extends Controller {
 
@@ -28,21 +32,18 @@ class adminController extends Controller {
 
     }
     public function usuariosIndex(){
-        $user = User::all();
-
-        return view('usuarios.admin.usuarios')->with('user',$user);
+        $users = User::all();
+        return view('usuarios.admin.usuarios')->with('users',$users );
 
     }
     public function menuIndex(){
-        $user = User::all();
-
-        return view('usuarios.admin.menu')->with('user',$user);
+        $products = Product::all();
+        return view('usuarios.admin.menu')->with('products',$products);
 
     }
     public function restauranteIndex(){
-        $user = User::all();
-
-        return view('usuarios.admin.restaurante')->with('user',$user);
+        $local= Local::all();
+        return view('usuarios.admin.restaurante')->with('local',$local);
 
     }
 

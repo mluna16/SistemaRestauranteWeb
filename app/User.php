@@ -22,7 +22,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['first_name','last_name', 'email', 'password','type'];
+	protected $fillable = ['first_name','last_name', 'email', 'password','type','img_profile'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -42,4 +42,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
          }
 
   }
+    public function Local() {
+        return $this->hasOne('SistemaRestauranteWeb\Local');
+    }
 }

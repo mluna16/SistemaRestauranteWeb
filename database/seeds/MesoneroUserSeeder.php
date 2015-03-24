@@ -22,7 +22,9 @@ class MesoneroUserSeeder extends Seeder {
             'password' => \Hash::make('12345'),
             'created_by' => 1,
             'status' => true,
-            'type' => 'mesonero'
+            'type' => 'mesonero',
+            'img_profile' => $faker->imageUrl($width = 50, $height = 50),
+
         ));
 
         for($i=0;$i < 9;$i++) {
@@ -33,7 +35,8 @@ class MesoneroUserSeeder extends Seeder {
                 'password' => \Hash::make('12345'),
                 'created_by' => 1,
                 'status' => true,
-                'type' => 'mesonero'
+                'type' => 'mesonero',
+                'img_profile' => $faker->imageUrl($width = 50, $height = 50),
             ));
         }
     }

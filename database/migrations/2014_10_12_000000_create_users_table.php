@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration {
             $table->boolean('status',true);
             $table->string('password', 60);
 			$table->mediumText('img_profile');
-            $table->enum('type',['admin','cocina','mesonero']);
+            $table->enum('type',['admin','cocina','mesonero','caja']);
             $table->integer('created_by');
             $table->rememberToken();
 			$table->timestamps();

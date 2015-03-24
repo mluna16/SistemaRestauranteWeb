@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Faker\Factory as faker;
 
-class CocinaUserSeeder extends Seeder {
+class CajaUserSeeder extends Seeder {
 
     /**
      * Run the database seeds.
@@ -19,12 +19,13 @@ class CocinaUserSeeder extends Seeder {
         \DB::table('users')->insert(array (
             'first_name' => $faker->firstName,
             'last_name'  => $faker->lastName,
-            'email'     =>  'cocina@luna.com',
+            'email'     =>  'caja@luna.com',
+            'type' => 'caja',
             'password' => \Hash::make('12345'),
             'created_by' => 1,
             'status' => true,
-            'type' => 'cocina',
-             'img_profile' => $faker->imageUrl($width = 50, $height = 50),
+            'img_profile' => $faker->imageUrl($width = 50, $height = 50),
+
 
         ));
 

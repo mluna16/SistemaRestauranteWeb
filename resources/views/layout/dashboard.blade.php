@@ -1,8 +1,8 @@
 @extends('layout.init')
 
 @section('content')
-    @include('partials.principal.headerPrincipal')
 
+    @include('partials.principal.headerPrincipal')
     <div class="row">
         <div class="col s12 m2 l2 ">
             <div class="row fixed ">
@@ -15,27 +15,24 @@
             </div>
         </div>
         <div class="col s12 m10 l10">
-        @section('infoPanel')
+            <div class="row">
+                <div class="col m11 l11">
+                    @section('infoPanel')
 
-        @show
-            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-                <a class="btn-floating btn-large light-blue lighten-1">
-                    <i class="large mdi-content-add"></i>
-                </a>
-                <ul>
-                    <li><a class="btn-floating  purple lighten-1"><i class="large mdi-image-timer-auto"></i></a></li>
-                    <li><a class="btn-floating green darken-1"><i class="large mdi-maps-local-restaurant"></i></a></li>
-                </ul>
+                    @show
+                </div>
+                <div class="col m1 s1">
+                    <div class="fixed-action-btn" >
+                        <a class="btn-floating btn-large light-blue lighten-1">
+                            <i class="large mdi-content-add"></i>
+                        </a>
+                        <ul>
+                            <li><a class="btn-floating  purple lighten-1"><i class="large mdi-image-timer-auto"></i></a></li>
+                            <li><a class="btn-floating green darken-1"><i class="large mdi-maps-local-restaurant"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </div>
-
-
-
-
-
-
-
 @endsection
