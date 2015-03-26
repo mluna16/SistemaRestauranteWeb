@@ -12,10 +12,7 @@ class Local extends Model {
     protected $fillable = ['name','number_tables', 'owner','location','img_local'];
 
     public function getNameOwnerAttribute(){
-        $local = Local::all();
-        $name = DB::table('users')->where('id', $local[0]['owner']);
-
-        return $name;
+       return User::where('id', $this->owner)->firstOrFail()->FullName;
     }
 
 
