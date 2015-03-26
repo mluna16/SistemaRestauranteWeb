@@ -10,6 +10,7 @@
     @show
     </head>
     <body>
+
         @section('content')
 
         @show

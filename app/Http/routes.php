@@ -34,5 +34,11 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
         Route::get('Restaurante','adminController@restauranteIndex');
 });
 
+Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
+{
+    Route::get('/','cajaController@index');
+
+
+});
 
 Route::resource('users','UserController');
