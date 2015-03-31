@@ -20,7 +20,8 @@ class ProductTableSeeder extends Seeder {
                 'description' => $faker->text($maxNbChars = 240),
                 'cost' => $faker->numberBetween($min = 80, $max = 1000),
                 'img_product' => $faker->imageUrl($width = 640, $height = 480, 'food'),
-                'created_by' => 1
+                'created_by' => 1,
+                'local_for' => 1
             ));
         }
 
