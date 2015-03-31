@@ -28,6 +28,12 @@ class CreateProductTable extends Migration {
                 ->on('users')
                 ->onDelete('cascade');
 
+            $table->integer('local_for')->unsigned();
+            $table->foreign('local_for')
+                ->references('id')
+                ->on('local')
+                ->onDelete('cascade');
+
 			$table->timestamps();
 		});
 	}

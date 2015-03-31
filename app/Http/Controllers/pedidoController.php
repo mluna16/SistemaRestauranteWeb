@@ -1,13 +1,11 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
-use Illuminate\Support\Facades\Session;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use SistemaRestauranteWeb\Local;
 
-class cajaController extends Controller {
+class pedidoController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -16,10 +14,7 @@ class cajaController extends Controller {
 	 */
 	public function index()
 	{
-        $data = array(
-            'Local'  => Local::all(),
-        );
-        return view('usuarios.caja.caja')->with('data' , $data);
+		//
 	}
 
 	/**
@@ -50,7 +45,13 @@ class cajaController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        $data = [
+                    'nombre' => 'Pabellon',
+                    'precio' => '100',
+                    'estado' => 'ocupado',
+                    'mesa'   => $id,
+                 ];
+		return $data;
 	}
 
 	/**

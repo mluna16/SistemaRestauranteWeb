@@ -1,0 +1,1 @@
+<table class="table-responsive"> <thead> <tr> <th data-field="producto">Producto</th> <th data-field="precio">Precio</th> <th data-field="estado">Estado</th> </tr> </thead>

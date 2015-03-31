@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 {
     Route::get('/','cajaController@index');
 
+    Route::resource('pedido','pedidoController');
+
 
 });
 
