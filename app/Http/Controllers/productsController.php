@@ -42,7 +42,11 @@ class productsController extends Controller {
         $Product = Product::create($request->all());
         $Product->created_by = Auth::user()->id;
         $Product->local_for = 1;
-        //$Product->save();
+        if($Product->save()){
+
+            if($request->ajax()) return array('last_id' => $Product->id );
+
+        };
 	    return $Product;
     }
 

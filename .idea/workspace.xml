@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/dropzone.js" />
       <change type="DELETED" beforePath="C:\wamp\VirtualHost\SistemaRestauranteWeb\resources\views\layout_init.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_03_04_174007_create_product_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_03_04_174007_create_product_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateUser.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateUser.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Product.php" afterPath="$PROJECT_DIR$/app/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/functionsAdmin.js" afterPath="$PROJECT_DIR$/public/js/functionsAdmin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/productsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/productsController.php" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769" vertical-offset="374" max-vertical-offset="1683">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.6721582" vertical-offset="374" max-vertical-offset="1751">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding>
                 <element signature="e#57#93#0#PHP" expanded="true" />
               </folding>
@@ -131,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functionsAdmin.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functionsAdmin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/functionsAdmin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2685624" vertical-offset="0" max-vertical-offset="633">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
               <folding />
             </state>
@@ -196,10 +187,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateProductsRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/productsController.php" />
         <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/public/js/functions.js" />
         <option value="$PROJECT_DIR$/public/js/functionsAdmin.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/productsController.php" />
       </list>
     </option>
   </component>
@@ -1154,16 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="374" max-vertical-offset="1683">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <element signature="e#57#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="289">
@@ -1184,9 +1165,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/functionsAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2685624" vertical-offset="0" max-vertical-offset="633">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6721582" vertical-offset="374" max-vertical-offset="1751">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding>
+            <element signature="e#57#93#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
