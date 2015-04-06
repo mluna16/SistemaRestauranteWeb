@@ -1,5 +1,6 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request as Requests_Facades;
 use Illuminate\Support\Facades\View;
 use SistemaRestauranteWeb\Http\Requests;
@@ -18,7 +19,7 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		return view('auth/login');
 	}
 
 	/**
@@ -38,11 +39,15 @@ class UserController extends Controller {
 	 */
 	public function store(CreateUserRequest $request)
 	{
+
        $user = User::create($request->all());
        $user->setPasswordAttribuite($user->password);
        $user->save();
-       return redirect(route('users.index'));
-
+        if($request->ajax()){
+            return (array('validate', 'ok'));
+        }else{
+            return redirect(route('users.index'));
+        }
 	}
 
 	/**

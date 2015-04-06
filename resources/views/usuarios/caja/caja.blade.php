@@ -76,7 +76,7 @@
             $('#info_mesa').append("@include('partials.preloader')")
              $.get(url, data, function (result) {
                  $('.mostrar_mesa').children().addClass('teal');
-                 $('.mostrar_mesa').children().removeClass('light-green lighten-1');
+                 $('.mostrar_mesa').children().removeClass('light-green lighten-2');
                  $('.preloader-wrapper').hide();
                  $('<span class="card-title blue-text factura_mesa">Mesa Numero: ' + result["mesa"] + '  </span>').appendTo('#info_mesa')
                  $('<span class="card-title white-text factura_mesa">Total : Bs ' + result["precio"] + '  </span>').appendTo('.factura_total')

@@ -99,10 +99,3 @@
     </ul>
 
 @endsection
-@section('alternalJS')
-    <script>
-        $(document).ready(function(){
-            $('.collapsible').collapsible()
-        });
-    </script>
-@endsection

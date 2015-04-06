@@ -5,7 +5,8 @@
     <title>Restaurante | @yield('title','Restaurante')</title>
     <!-- CSS  -->
     <link href="{{asset('css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    @section('alternalCSS')
+
+@section('alternalCSS')
 
     @show
     </head>
@@ -18,8 +19,8 @@
     </body>
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="{{asset('js/materialize.js')}}"></script>
 <script src="{{asset('js/functions.js')}}"></script>
+<script src="{{asset('js/materialize.js')}}"></script>
 
 @section('alternalJS')
 

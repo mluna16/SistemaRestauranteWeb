@@ -20,6 +20,7 @@ class CreateProductTable extends Migration {
             $table->string('name');
             $table->string('description');
             $table->integer('cost');
+            $table->integer('limit');
             $table->string('img_product');
 
             $table->integer('created_by')->unsigned();

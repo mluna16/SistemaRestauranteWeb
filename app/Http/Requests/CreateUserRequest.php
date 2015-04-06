@@ -1,5 +1,6 @@
 <?php namespace SistemaRestauranteWeb\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
 use SistemaRestauranteWeb\Http\Requests\Request;
 
 class CreateUserRequest extends Request {
@@ -11,7 +12,7 @@ class CreateUserRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return true;
+        return true;
 	}
 
 	/**
@@ -21,10 +22,10 @@ class CreateUserRequest extends Request {
 	 */
 	public function rules()
 	{
-		return [
+       		return [
              'first_name' => 'required',
              'last_name' => 'required',
-             'email' => 'required|unique:users,email',
+             'email' => 'required|unique:users,email|email',
              'password' => 'required|same:password_',
              'password_' => 'required',
              'type' => 'required|in:admin,caja,cocina,mesonero',

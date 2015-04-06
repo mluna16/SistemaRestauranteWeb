@@ -1,7 +1,6 @@
 @extends('layout.init')
 
 @section('content')
-
     @include('partials.principal.headerPrincipal')
     <div class="row">
         <div class="col s12 m2 l2 ">
@@ -27,12 +26,21 @@
                             <i class="large mdi-content-add"></i>
                         </a>
                         <ul>
-                            <li><a class="btn-floating  purple lighten-1"><i class="large mdi-image-timer-auto"></i></a></li>
-                            <li><a class="btn-floating green darken-1"><i class="large mdi-maps-local-restaurant"></i></a></li>
+                            <li><a class="btn-floating  purple lighten-1 modal-trigger" href="#create_user"><i class="large mdi-image-timer-auto"></i></a></li>
+                            <li><a class="btn-floating green darken-1 modal-trigger" href="#create_menu"><i class="large mdi-maps-local-restaurant"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @if(Auth::user()->type == 'admin')
+        @include('partials.admin.ModalCreateMenu')
+        @include('partials.admin.ModalCreateUser')
+    @endif
+
+@endsection
+@section('alternalJS')
+    <script src="{{asset('js/functionsAdmin.js')}}"></script>
 @endsection

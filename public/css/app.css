@@ -4630,6 +4630,12 @@ a.thumbnail.active {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    height: 46px;
+    font-size: 24px;
+    z-index: 1000;
 }
 .alert h4 {
   margin-top: 0;
