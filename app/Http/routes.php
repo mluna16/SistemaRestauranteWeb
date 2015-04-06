@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
         Route::get('Menu','adminController@menuIndex');
 
         Route::get('Restaurante','adminController@restauranteIndex');
+
+        Route::resource('producto','productsController');
 });
 
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()

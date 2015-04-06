@@ -1,14 +1,7 @@
 <div id="create_user" class="modal ">
     <div class="modal-content">
-        <div class="row">
-            <div class="col s10">
-                <h4>Crear nuevo producto para el menu</h4>
+        <h4>Crear nuevo usuario </h4>
 
-            </div>
-            <div class="col s2 preloaderCargador">
-
-            </div>
-        </div>
         {!!Form::open([
         'route' => 'users.store',
         'method' => 'POST',
