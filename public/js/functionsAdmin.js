@@ -4,12 +4,13 @@ $(document).ready(function(){
 
     //Sudmits para los modales - crear
     $('#crear_userSubmit').click(function () {
-        $(this).ajaxStore('#crear_userForm',"Usuario Creado Correctamente")
+        $(this).ajaxStore('#crear_userForm',"Usuario Creado Correctamente","crearUserSuccess","form")
     });
 
-    $('#crear_menuSubmit').click(function () {
-        $(this).ajaxStore('#crear_menuForm',"Menu Creado Correctamente")
+    $('.crear_menuSubmit').click(function () {
+        $(this).ajaxStore('#crear_menuForm',"Menu Creado Correctamente","crearMenuSuccess","'#crear_menuFormImages' , last_id")
     });
+
 
 
 })

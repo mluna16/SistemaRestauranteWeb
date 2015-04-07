@@ -1,7 +1,10 @@
 <div id="create_menu" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4> Crear nuevo producto para el menu </h4>
-        <div id="menuPaso1">
+
+        <div id="menuPaso1" class="menuPaso1">
+            <p>Crear datos del Producto</p>
+
             {!!Form::open([
             'route' => 'admin.producto.store',
             'method' => 'POST',
@@ -29,13 +32,43 @@
 
                 </div>
             </div>
+            {!! Form::hidden('created_by', \Hash::make(Auth::user()->id)) !!}
+            {!! Form::hidden('local_for', \Hash::make(Auth::user()->id)) !!}
 
-            {!! Form::hidden('created_by', Auth::user()->id) !!}
-            {!! Form::hidden('local_for', 1) !!}
+
             {!!Form::close()!!}
         </div>
+        <div style="display:none" class="menuPaso2">
+            <p>Cargar Imagenes del Producto</p>
+            {!!Form::open([
+            'route' => [
+                'productImage.zUploadImage',
+                ':MENU_ID'
+                ],
+            'method' => 'POST',
+            'id' => 'crear_menuFormImages',
+            'file' => true,
+            'class' => 'dropzone',
+            ])
+            !!}
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+            {!!Form::close()!!}
+        </div>
+
     </div>
     <div class="modal-footer">
-        <a href="#" id="crear_menuSubmit" class="waves-effect waves-green btn-flat modal-action modal-close">Siguiente</a>
+        <div class="container">
+            <div class="progress">
+                <div class="determinate" style="width: 0%"></div>
+            </div>
+        </div>
+        <a href="#"  class="waves-effect waves-green btn-flat modal-action crear_menuSubmit ">Siguiente</a>
+        <a href="#"  style="display:none"class="waves-effect waves-green btn-flat modal-action  crear_menuSubmitnone menuPaso1">Siguiente</a>
+        <a href="#"  style="display:none"class="waves-effect waves-green btn-flat modal-action  menuPaso2">Finalizar</a>
+        <a href="#"  style="display:none" class="waves-effect waves-green btn-flat modal-action  menuPaso2 menuPaso2Atras">Atras</a>
+
+
     </div>
 </div>

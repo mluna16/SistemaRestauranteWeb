@@ -46,3 +46,5 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 });
 
 Route::resource('users','UserController');
+
+Route::controller('productImage','productImageController');

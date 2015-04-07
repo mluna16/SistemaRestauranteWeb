@@ -5938,7 +5938,7 @@ a.waves-effect .waves-ripple {
   .modal .modal-footer {
     background-color: #eee;
     padding: 4px 6px;
-    height: 56px;
+    height: 80px;
     width: 100%; }
     .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {
       float: right;

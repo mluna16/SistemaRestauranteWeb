@@ -1,26 +1,23 @@
 $(document).ready(function(){
     // Dropdown Menu para el perfil de usuarios
-        $('.dropdown-button').dropdown({
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: true // Displays dropdown below the button
+    });
 
-                inDuration: 300,
-                outDuration: 225,
-                constrain_width: false,
-                hover: true,
-                alignment: 'right',
-                gutter: 10,
-                belowOrigin: true
-            }
-        );
     //Modales
     $('.modal-trigger').leanModal()
 
     // Select
-
     $('.tipoDeUsuario').material_select();
 
 
     //Funciones ajax
-    $.fn.ajaxStore = function(idForm,successMessage) {
+    $.fn.ajaxStore = function(idForm,successMessage,afunction,params) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
         var form = $(idForm);
         var data = form.serialize();
@@ -32,9 +29,9 @@ $(document).ready(function(){
             dataType: 'json',
             success: function (data) {
                 $('.preloader-wrapper').hide();
+                last_id = data['last_id'];
                 Materialize.toast(successMessage, 4000)
-                form[0].reset();
-                $('.modal').closeModal();
+                eval(afunction + "("+params+")");
             },
             error: function (data) {
                 var errors = data.responseJSON;
@@ -48,4 +45,32 @@ $(document).ready(function(){
             }
         });
     }
+    //Funciones internas de los Modales
+    function crearUserSuccess(form){
+        form[0].reset();
+        $('.modal').closeModal();
+    }
+    function crearMenuSuccess(form,id){
+        console.log("entre")
+        $( ".menuPaso1, .crear_menuSubmit" ).hide()
+        $( ".menuPaso2" ).show();
+        $(form).attr('action').replace(':MENU_ID', id);
+    }
+    $(".menuPaso2Atras").click(function(){
+        $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
+        $(".crear_menuSubmit").removeClass("crear_menuSubmit")
+
+        $( ".menuPaso1" ).show()
+        $( ".menuPaso2" ).hide();
+    })
+    $(".crear_menuSubmitnone ").click(function(){
+        $( ".menuPaso1" ).hide()
+        $( ".menuPaso2" ).show();
+    })
+
+    //DropZone
+
+    Dropzone.options.crear_menuFormImages={
+        autoProcessQueue: true
+    };
 });

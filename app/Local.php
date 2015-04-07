@@ -26,6 +26,8 @@ class Local extends Model {
         $mesas = Local::where('owner',$ownerID)->firstOrFail()->number_tables;
         return $mesas;
     }
-
+    public function Product() {
+        return $this->hasOne('SistemaRestauranteWeb\Product');
+    }
 
 }

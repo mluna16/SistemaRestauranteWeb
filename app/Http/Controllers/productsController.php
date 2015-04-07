@@ -9,6 +9,9 @@ use SistemaRestauranteWeb\Http\Requests\CreateProductsRequest;
 use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\User;
 
+/**
+ * @property mixed CreatedBy
+ */
 class productsController extends Controller {
 
 	/**
@@ -39,15 +42,17 @@ class productsController extends Controller {
      */
 	public function store(CreateProductsRequest $request)
 	{
-        $Product = Product::create($request->all());
-        $Product->created_by = Auth::user()->id;
-        $Product->local_for = 1;
-        if($Product->save()){
 
-            if($request->ajax()) return array('last_id' => $Product->id );
+        $Product = Product::create($request->all());
+        $Product->setCreatedByAttribute($Product->created_by);
+        $Product->setLocalForAttribute(1);
+       if($Product->save()){
+
+           if($request->ajax()) return array('last_id' => $Product->id );
 
         };
 	    return $Product;
+
     }
 
 	/**

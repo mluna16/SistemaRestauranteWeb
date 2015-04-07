@@ -45,4 +45,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function Local() {
         return $this->hasOne('SistemaRestauranteWeb\Local');
     }
+    public function Product() {
+        return $this->hasMany('SistemaRestauranteWeb\Product');
+    }
 }

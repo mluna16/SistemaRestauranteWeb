@@ -1,6 +1,11 @@
 @extends('layout.init')
 
+@section('alternalCSS')
+    @include('include.dropzoneFile')
+
+@endsection
 @section('content')
+
     @include('partials.principal.headerPrincipal')
     <div class="row">
         <div class="col s12 m2 l2 ">
