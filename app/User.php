@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -45,7 +46,18 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function Local() {
         return $this->hasOne('SistemaRestauranteWeb\Local');
     }
+
     public function Product() {
         return $this->hasMany('SistemaRestauranteWeb\Product');
+    }
+
+    public function getLocalNameAttribute(){
+        if(Auth::user()->type == 'admin'){
+            return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
+        }else{
+            $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
+
+            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
+        }
     }
 }
