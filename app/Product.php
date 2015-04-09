@@ -23,6 +23,6 @@ class Product extends Model {
         return $this->hasOne('SistemaRestauranteWeb\User');
     }
     public function productImage() {
-        return $this->hasMany('SistemaRestauranteWeb\ProductImage');
+        return $this->hasOne('SistemaRestauranteWeb\ProductImage');
     }
 }

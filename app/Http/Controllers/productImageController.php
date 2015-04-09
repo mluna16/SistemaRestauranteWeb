@@ -2,16 +2,21 @@
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Routing\Controller as BaseController;
+
+use Symfony\Component\HttpFoundation\File;
+
 use SistemaRestauranteWeb\Http\Requests;
-use SistemaRestauranteWeb\Http\Controllers\Controller;
 use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\ProductImage;
 
-use Illuminate\Http\Request;
+class productImageController extends BaseController  {
 
-class productImageController extends Controller {
 
-	public function postUploadImage($id){
+    /**
+     * @param $id
+     */
+    public function postUpload($id){
 
         $fileInfo = Input::file('file');
 
@@ -21,26 +26,29 @@ class productImageController extends Controller {
 
             $path = public_path().'/Images/Product';
 
-            $fileType=$fileInfo->guessExtension();
+            $fileType= $fileInfo->guessExtension();
 
             $fileSize = $fileInfo->getClientSize()/1024;
 
-            $product=Product::find($id);
+            $product  =  Product::find($id);
 
             $ProductImage        = new ProductImage;
             $ProductImage->name  = $fileName;
             $ProductImage->route = $path;
             $ProductImage->type  = $fileType;
             $ProductImage->size  = $fileSize;
+            $ProductImage->id_product = $ProductImage->lastProductIdCreetedForUser();
 
-            $ProductImage->product()->associate($product);
-
-            if($ProductImage->move($path,$fileName.'.'.$fileType->guessExtension())){
+            if($fileInfo->move($path,$fileName.'.'.$fileType)){
                 $ProductImage->save();
             }
 
         }
 
     }
+
+
+
+
 
 }

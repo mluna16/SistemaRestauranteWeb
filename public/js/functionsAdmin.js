@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 
     $('.crear_menuSubmit').click(function () {
-        $(this).ajaxStore('#crear_menuForm',"Menu Creado Correctamente","crearMenuSuccess","'#crear_menuFormImages' , last_id")
+        $(this).ajaxStore('#crear_menuForm',"Menu Creado Correctamente","crearMenuSuccess","'.dropzone' , last_id")
     });
 
 

@@ -41,19 +41,17 @@
         <div style="display:none" class="menuPaso2">
             <p>Cargar Imagenes del Producto</p>
             {!!Form::open([
-            'route' => [
-                'productImage.zUploadImage',
-                ':MENU_ID'
-                ],
-            'method' => 'POST',
-            'id' => 'crear_menuFormImages',
-            'file' => true,
-            'class' => 'dropzone',
-            ])
+                    'route' => [
+                            'imagenUpload',
+                            'MENU_ID'
+                             ],
+                    'file' => true,
+                    'class' => 'dropzone',
+                    'id' => 'crear_menuFormImages',
+                    'method' => 'POST',
+                    ])
             !!}
-            <div class="fallback">
-                <input name="file" type="file" multiple />
-            </div>
+
             {!!Form::close()!!}
         </div>
 

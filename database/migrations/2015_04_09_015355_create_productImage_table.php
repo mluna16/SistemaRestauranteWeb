@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class productImage extends Migration {
+class CreateProductImageTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class productImage extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('productImage', function(Blueprint $table)
+        Schema::create('product_image', function(Blueprint $table)
         {
             $table->increments('id');
 
@@ -30,7 +30,9 @@ class productImage extends Migration {
             $table->timestamps();
 
         });
-	}
+    }
+
+
 
 	/**
 	 * Reverse the migrations.

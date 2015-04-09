@@ -54,7 +54,9 @@ $(document).ready(function(){
         console.log("entre")
         $( ".menuPaso1, .crear_menuSubmit" ).hide()
         $( ".menuPaso2" ).show();
-        $(form).attr('action').replace(':MENU_ID', id);
+        $(form).attr('action').replace('MENU_ID', id);
+        console.log($(form).attr('action'))
+        console.log(id)
     }
     $(".menuPaso2Atras").click(function(){
         $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
@@ -71,6 +73,8 @@ $(document).ready(function(){
     //DropZone
 
     Dropzone.options.crear_menuFormImages={
-        autoProcessQueue: true
+        autoProcessQueue: true,
+
+
     };
 });

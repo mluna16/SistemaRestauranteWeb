@@ -72,7 +72,9 @@
              var form = $('#form_mostrar_mesa');
              var mesa = $(this).children().children().text();
              var url = form.attr('action').replace(':MESA_ID', mesa);
-             var data = form.serialize();
+            console.log(form.attr('action'))
+
+            var data = form.serialize();
             $('#info_mesa').append("@include('partials.preloader')")
              $.get(url, data, function (result) {
                  $('.mostrar_mesa').children().addClass('teal');
