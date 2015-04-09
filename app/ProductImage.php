@@ -12,7 +12,7 @@ class ProductImage extends Model {
         $this->belongsTo('SistemaRestauranteWeb\Product');
     }
 
-    public function lastProductIdCreetedForUser(){
+    public function getlastProductIdCreetedForUser(){
         $product = Product::where('created_by', Auth::user()->id)->orderby('id','DESC')->take(1)->firstOrFail()->id;;
 
         return $product;
