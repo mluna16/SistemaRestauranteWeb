@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Routing\Controller as BaseController;
 
+use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File;
 
 use SistemaRestauranteWeb\Http\Requests;
@@ -30,18 +31,18 @@ class productImageController extends BaseController  {
 
             $fileSize = $fileInfo->getClientSize()/1024;
 
-            $product  =  Product::find($id);
-
             $ProductImage        = new ProductImage;
             $ProductImage->name  = $fileName;
-            $ProductImage->route = $path;
+            $ProductImage->route = $path.'/'.$ProductImage->getlastProductIdCreetedForUser();
             $ProductImage->type  = $fileType;
             $ProductImage->size  = $fileSize;
-            $ProductImage->id_product = $ProductImage->lastProductIdCreetedForUser();
+            $ProductImage->id_product = $ProductImage->getlastProductIdCreetedForUser();
 
-            if($fileInfo->move($path,$fileName.'.'.$fileType)){
-                $ProductImage->save();
+            if ($ProductImage->save()) {
+                $fileInfo->move($ProductImage->route , $fileName . '.' . $fileType);
+
             }
+
 
         }
 
