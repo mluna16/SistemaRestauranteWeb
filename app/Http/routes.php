@@ -34,6 +34,10 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
         Route::get('Restaurante','adminController@restauranteIndex');
 
         Route::resource('producto','productsController');
+
+
+
+
 });
 
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
@@ -46,5 +50,8 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 });
 
 Route::resource('users','UserController');
+Route::post('productImg/{id}', ['uses' => 'productImageController@postUpload', 'as' => 'imagenUpload']);
 
-Route::controller('productImage','productImageController');
+
+
+
