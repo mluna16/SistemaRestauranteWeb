@@ -51,12 +51,9 @@ $(document).ready(function(){
         $('.modal').closeModal();
     }
     function crearMenuSuccess(form,id){
-        console.log("entre")
         $( ".menuPaso1, .crear_menuSubmit" ).hide()
         $( ".menuPaso2" ).show();
         $(form).attr('action').replace('MENU_ID', id);
-        console.log($(form).attr('action'))
-        console.log(id)
     }
     $(".menuPaso2Atras").click(function(){
         $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
@@ -74,6 +71,9 @@ $(document).ready(function(){
 
     Dropzone.options.crear_menuFormImages={
         autoProcessQueue: true,
+        maxFilesize: 0.5,
+        acceptedFiles: ".jpg, .jpeg, .png",
+        maxFiles:5
 
 
     };
