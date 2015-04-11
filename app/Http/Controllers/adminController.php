@@ -31,8 +31,13 @@ class adminController extends Controller {
         return view('usuarios.admin.estadisticas')->with('user',$user);
 
     }
+
+    /**
+     * @return $this
+     */
     public function usuariosIndex(){
-        $users = User::all();
+        $user = new User();
+        $users = $user->getUserByCretedBy(Auth::user()->id);
         return view('usuarios.admin.usuarios')->with('users',$users );
 
     }

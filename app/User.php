@@ -60,4 +60,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
             return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
         }
     }
+
+    public function getUserByCretedBy($value){
+        return  User::where('created_by',$value)->get();
+    }
 }
