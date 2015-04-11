@@ -6,6 +6,7 @@
     <!-- CSS  -->
     <link href="{{asset('css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+
 @section('alternalCSS')
 
     @show
