@@ -23,7 +23,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['first_name','last_name', 'email', 'password','type','img_profile'];
+	protected $fillable = ['first_name','last_name', 'email', 'password','type','img_profile','first_time'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -63,5 +63,22 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function getUserByCretedBy($value){
         return  User::where('created_by',$value)->get();
+    }
+
+    public function getRouteModuleAdmin($routeModule, $data){
+        $user = new User();
+        if($user->getHasCheckedUser(Auth::user()->id)){
+            if(isset($data)) return view($routeModule)->with('users',$data);
+            else return view($routeModule);
+        }else{
+            return  view('usuarios.admin.firstTime');
+        }
+
+    }
+
+    public function getHasCheckedUser($value){
+        $return = User::where('id',$value)->firstOrFail()->first_time;
+        if($return == true) return true;
+        else return false;
     }
 }

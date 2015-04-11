@@ -17,19 +17,11 @@ class adminController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-        $user = User::all();
 
-        return view('usuarios.admin.estadisticas')->with('user',$user);
-
-    }
 
     public function estadisticasIndex(){
-        $user = User::all();
 
-        return view('usuarios.admin.estadisticas')->with('user',$user);
-
+        return view('usuarios.admin.estadisticas');
     }
 
     /**
@@ -53,6 +45,7 @@ class adminController extends Controller {
         return view('usuarios.admin.restaurante')->with('local',$local);
 
     }
+
 
 	/**
 	 * Show the form for creating a new resource.

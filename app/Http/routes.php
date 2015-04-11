@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', 'WelcomeController@index');
 
 //Route::get('home', 'HomeController@index');
@@ -32,17 +34,19 @@ Route::group(['middleware' => 'auth','prefix' => 'API'], function(){
 });
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 {
-        Route::get('/','adminController@index');
 
-        Route::get('Estadisticas','adminController@estadisticasIndex');
+           Route::get('/', 'adminController@estadisticasIndex');
 
-        Route::get('Usuarios','adminController@usuariosIndex');
+           Route::get('Estadisticas', 'adminController@estadisticasIndex');
 
-        Route::get('Menu','adminController@menuIndex');
+           Route::get('Usuarios', 'adminController@usuariosIndex');
 
-        Route::get('Restaurante','adminController@restauranteIndex');
+           Route::get('Menu', 'adminController@menuIndex');
 
-        Route::resource('producto','productsController');
+           Route::get('Restaurante', 'adminController@restauranteIndex');
+
+           Route::resource('producto', 'productsController');
+
 });
 
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()

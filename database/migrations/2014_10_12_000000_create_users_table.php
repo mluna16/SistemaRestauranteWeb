@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration {
 			$table->mediumText('img_profile');
             $table->enum('type',['admin','cocina','mesonero','caja']);
             $table->integer('created_by');
+            $table->boolean('first_time')->default(false);
             $table->rememberToken();
 			$table->timestamps();
 		});
