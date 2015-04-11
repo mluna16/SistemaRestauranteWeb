@@ -30,4 +30,14 @@ class Local extends Model {
         return $this->hasOne('SistemaRestauranteWeb\Product');
     }
 
+    public function getLocalIdAttribute(){
+        if(Auth::user()->type == 'admin'){
+            return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+        }else{
+            $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
+
+            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->id;
+        }
+    }
+
 }
