@@ -14,6 +14,8 @@ use SistemaRestauranteWeb\User;
  */
 class productsController extends Controller {
 
+
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -63,7 +65,8 @@ class productsController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$product = new Product();
+        return $product->getProductsForId($id);
 	}
 
 	/**
@@ -98,5 +101,18 @@ class productsController extends Controller {
 	{
 		//
 	}
+    public  function getProductsForAttrAndID($attr , $value){
+        $Product = new Product();
+        return $Product->getProductsForAttrAndID($attr , $value);
+    }
 
+    public function getProductForUser($value){
+        $Product = new Product();
+        return $Product->getProductsForCreatedBy($value);
+    }
+
+    public function getProductForLocal($value){
+        $Product = new Product();
+        return $Product->getProductsForLocal($value);
+    }
 }

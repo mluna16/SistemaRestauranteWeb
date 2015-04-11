@@ -20,7 +20,16 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+//Routas de la Api sistemasrestaurante/API/talMetodo
+Route::group(['middleware' => 'auth','prefix' => 'API'], function(){
+    //Rutas de productos
+    Route::get('productoPorUsuario/{id}', ['uses' => 'productsController@getProductForUser']);
+    Route::get('productoPorLocal/{id}', ['uses' => 'productsController@getProductForUser']);
+    Route::get('productoInfo/{id}', ['uses' => 'productsController@show']);
+    Route::get('productoInfo/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
 
+
+});
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 {
         Route::get('/','adminController@index');
@@ -34,10 +43,6 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
         Route::get('Restaurante','adminController@restauranteIndex');
 
         Route::resource('producto','productsController');
-
-
-
-
 });
 
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()

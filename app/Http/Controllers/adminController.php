@@ -37,7 +37,9 @@ class adminController extends Controller {
 
     }
     public function menuIndex(){
-        $products = Product::all();
+        $Product = new Product();
+        $Local   = new Local();
+        $products = $Product->getProductsForLocal($Local->getLocalIdAttribute());
         return view('usuarios.admin.menu')->with('products',$products);
 
     }
