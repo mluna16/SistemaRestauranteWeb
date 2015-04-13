@@ -47,7 +47,7 @@
                              ],
                     'file' => true,
                     'class' => 'dropzone',
-                    'id' => 'crear_menuFormImages',
+                    'id' => 'crearMenuFormImages',
                     'method' => 'POST',
                     ])
             !!}

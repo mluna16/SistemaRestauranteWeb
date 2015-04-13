@@ -47,6 +47,8 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 
            Route::resource('producto', 'productsController');
 
+           Route::resource('local', 'localController');
+
 });
 
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
@@ -60,6 +62,8 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 
 Route::resource('users','UserController');
 Route::post('productImg/{id}', ['uses' => 'productImageController@postUpload', 'as' => 'imagenUpload']);
+Route::post('localImg', ['uses' => 'localImageController@postUpload', 'as' => 'localImagenUpload']);
+
 
 
 

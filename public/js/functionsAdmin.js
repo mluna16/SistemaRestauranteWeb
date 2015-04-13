@@ -11,6 +11,10 @@ $(document).ready(function(){
         $(this).ajaxStore('#crear_menuForm',"Menu Creado Correctamente","crearMenuSuccess","'.dropzone' , last_id")
     });
 
+    $('.crear_localSubmit').click(function () {
+        $(this).ajaxStore('#crear_localForm',"Local Creado Correctamente","crearlocalSuccess","'.dropzone' , last_id")
+    });
+
 
 
 })

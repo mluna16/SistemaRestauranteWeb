@@ -12,6 +12,8 @@ $(document).ready(function(){
     //Modales
     $('.modal-trigger').leanModal()
 
+
+
     // Select
     $('.tipoDeUsuario').material_select();
 
@@ -45,36 +47,76 @@ $(document).ready(function(){
             }
         });
     }
-    //Funciones internas de los Modales
+    //Funciones internas de los Modal de User
     function crearUserSuccess(form){
-        form[0].reset();
-        $('.modal').closeModal();
-    }
-    function crearMenuSuccess(form,id){
-        $( ".menuPaso1, .crear_menuSubmit" ).hide()
-        $( ".menuPaso2" ).show();
-        $(form).attr('action').replace('MENU_ID', id);
-    }
-    $(".menuPaso2Atras").click(function(){
-        $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
-        $(".crear_menuSubmit").removeClass("crear_menuSubmit")
+            form[0].reset();
+            $('.modal').closeModal();
+        }
 
-        $( ".menuPaso1" ).show()
-        $( ".menuPaso2" ).hide();
-    })
-    $(".crear_menuSubmitnone ").click(function(){
-        $( ".menuPaso1" ).hide()
-        $( ".menuPaso2" ).show();
-    })
+    //Funciones internas de los Modal de Menu
+
+    function crearMenuSuccess(form,id){
+            $( ".menuPaso1, .crear_menuSubmit" ).hide()
+            $( ".menuPaso2" ).show();
+            $(form).attr('action').replace('MENU_ID', id);
+        }
+        $(".menuPaso2Atras").click(function(){
+            $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
+            $(".crear_menuSubmit").removeClass("crear_menuSubmit")
+            $( ".menuPaso1" ).show()
+            $( ".menuPaso2" ).hide();
+        })
+        $(".crear_menuSubmitnone ").click(function(){
+            $( ".menuPaso1" ).hide()
+            $( ".menuPaso2" ).show();
+        })
 
     //DropZone
+        //DropZone de Menu
+        Dropzone.options.crearMenuFormImages={
+            autoProcessQueue: true,
+            maxFilesize: 0.5,
+            acceptedFiles: ".jpg, .jpeg, .png",
+            maxFiles:5
+        };
+        //DropZone de Local
+    $(function() {
+        Dropzone.options.crearLocalFormImages={
+            autoProcessQueue: true,
+            maxFilesize: 0.5,
+            acceptedFiles: ".jpg, .jpeg, .png",
+            maxFiles:1,
+            success: function(){
+                Materialize.toast("Imagen cargada correctamente, Bienvenido", 4000)
 
-    Dropzone.options.crear_menuFormImages={
-        autoProcessQueue: true,
-        maxFilesize: 0.5,
-        acceptedFiles: ".jpg, .jpeg, .png",
-        maxFiles:5
+                location.reload().delay( 3000 );
+            }
+        };
+    });
 
 
-    };
+    //Funciones de Crear Local
+    function crearlocalSuccess(form,id){
+        $( ".localPaso1, .crear_localSubmit" ).hide()
+        $( ".localPaso2" ).show();
+        $(form).attr('action').replace('local_ID', id);
+    }
+    $('.crear_localPaso0').click(function(){
+        $( ".localPaso0, .crear_localPaso0" ).hide()
+        $( ".localPaso1, .crear_localSubmit" ).show();
+    })
+
+    $(".localPaso2Atras").click(function(){
+        $(".crear_localSubmit").addClass("crear_localSubmitNone")
+        $(".crear_localSubmit").removeClass("crear_localSubmit")
+        $( ".localPaso1, .crear_localSubmitnone" ).show()
+        $( ".localPaso2" ).hide();
+    })
+    $(".crear_menuSubmitnone ").click(function(){
+        $( ".localPaso1" ).hide()
+        $( ".localPaso2" ).show();
+    })
+
+
+
 });

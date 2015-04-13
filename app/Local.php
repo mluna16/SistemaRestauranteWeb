@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\DB;
  */
 class Local extends Model {
 
-
-
 	protected $table = 'local';
 
-    protected $filltable = ['name','number_tables', 'owner','location','img_local'];
+    protected $fillable = array('name','location','number_tables','owner');
 
     public function getNameOwnerAttribute(){
        return User::where('id', $this->owner)->firstOrFail()->FullName;
@@ -30,14 +28,26 @@ class Local extends Model {
         return $this->hasOne('SistemaRestauranteWeb\Product');
     }
 
-    public function getLocalIdAttribute(){
-        if(Auth::user()->type == 'admin'){
-            return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
-        }else{
-            $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
+    public function User() {
+        return $this->hasOne('SistemaRestauranteWeb\User');
+    }
 
-            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->id;
-        }
+    public function getLocalIdAttribute(){
+        $user = new User();
+            if (Auth::user()->getIsASystemGod()) {
+                if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+                else return 000;
+            } else {
+                $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
+
+                return Local::where('owner', $ownerID)->take(1)->firstOrFail()->id;
+            }
+
+    }
+
+    public function setOwnerAttribute($value){
+
+        $this->attributes['owner'] = Auth::user()->id;
     }
 
 }

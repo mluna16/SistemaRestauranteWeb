@@ -1,16 +1,13 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Request as Requests_Facades;
-use Illuminate\Support\Facades\View;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use SistemaRestauranteWeb\Http\Requests\CreateUserRequest;
-use SistemaRestauranteWeb\User;
+use SistemaRestauranteWeb\Http\Requests\CreateLocalRequest;
+use SistemaRestauranteWeb\Local;
 
-class UserController extends Controller {
+class localController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -19,7 +16,7 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		return view('auth/login');
+		//
 	}
 
 	/**
@@ -35,23 +32,21 @@ class UserController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param CreateUserRequest $request
+     * @param CreateProductsRequest $request
      * @return Response
      */
-	public function store(CreateUserRequest $request)
-	{
+    public function store(CreateLocalRequest $request)
+    {
+        $Local = Local::create($request->all());
+        $Local->setOwnerAttribute($Local->owner);
+        if($Local->save()){
 
-       $user = User::create($request->all());
-       $user->setPasswordAttribuite($user->password);
-        if( $user->save()){
-             if($request->ajax()){
-                 return (array('last_id' => $user->id));
-             }else{
-                 return redirect(route('users.index'));
-             }
-        }
+            if($request->ajax()) return array('last_id' => $Local->id );
 
-	}
+        };
+        return $Local;
+
+    }
 
 	/**
 	 * Display the specified resource.

@@ -52,33 +52,40 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function getLocalNameAttribute(){
-        if(Auth::user()->type == 'admin'){
-            return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
-        }else{
-            $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
+        //Retorna el nombre del restaurante asociado al admin del restaurante
+        if(! Auth::user()->getIsAFirstTimeUser())
+            if(Auth::user()->getIsASystemGod()){
 
-            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
-        }
+                return  Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
+
+            }else{
+                $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
+
+                return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
+            }
+        else return "No";
     }
 
     public function getUserByCretedBy($value){
+        //Retorna la informacion de un usuario segun quien lo creo
         return  User::where('created_by',$value)->get();
     }
 
-    public function getRouteModuleAdmin($routeModule, $data){
-        $user = new User();
-        if($user->getHasCheckedUser(Auth::user()->id)){
-            if(isset($data)) return view($routeModule)->with('users',$data);
-            else return view($routeModule);
-        }else{
-            return  view('usuarios.admin.firstTime');
-        }
 
-    }
 
-    public function getHasCheckedUser($value){
-        $return = User::where('id',$value)->firstOrFail()->first_time;
+    public function getIsAFirstTimeUser(){
+        //Pregunta si el usuario en sesion entro ya al sistema o no
+        $return = User::where('id',Auth::user()->id)->firstOrFail()->first_time;
         if($return == true) return true;
         else return false;
+    }
+
+    public function getIsASystemGod(){
+        //Pregunta si el usuario en sesion es un admin
+        if(Auth::user()->type == 'admin') return true;
+        else return false;
+    }
+    public function UpdateFirstTimeUser(){
+        $user = User::where('id',Auth::user()->id )->update(['first_time' => false]);
     }
 }
