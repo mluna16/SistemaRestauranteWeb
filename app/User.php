@@ -86,4 +86,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function UpdateFirstTimeUser(){
         $user = User::where('id',Auth::user()->id )->update(['first_time' => false]);
     }
+
+    public function ReturnToFirstTime(){
+        return view ('usuarios.firstTime');
+    }
+
+    public function UpdatePassword($value){
+
+        User::where('id',Auth::user()->id)->update(['password' => \Hash::make($value)]);
+    }
 }

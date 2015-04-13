@@ -22,7 +22,7 @@ class adminController extends Controller {
     public function estadisticasIndex(){
         $user = new User();
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.estadisticas');
-        else return view ('usuarios.admin.firstTime');
+        else return $user->ReturnToFirstTime();
     }
 
     /**
@@ -32,7 +32,6 @@ class adminController extends Controller {
         $user = new User();
         $users = $user->getUserByCretedBy(Auth::user()->id);
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.usuarios')->with('users',$users );
-        else return view ('usuarios.admin.firstTime');
     }
     public function menuIndex(){
         $Product = new Product();
@@ -40,13 +39,13 @@ class adminController extends Controller {
         $user    = new User();
         $products = $Product->getProductsForLocal($Local->getLocalIdAttribute());
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.menu')->with('products',$products);
-        else return view ('usuarios.admin.firstTime');
+        else return $user->ReturnToFirstTime();
     }
     public function restauranteIndex(){
         $user = new User();
         $local= new Local();
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.restaurante')->with('local',$local->getLocalForOwner());
-        else return view ('usuarios.admin.firstTime');
+        else return $user->ReturnToFirstTime();
     }
 
 

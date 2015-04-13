@@ -7,6 +7,7 @@ use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use SistemaRestauranteWeb\Http\Requests\CreatePasswordRequest;
 use SistemaRestauranteWeb\Http\Requests\CreateUserRequest;
 use SistemaRestauranteWeb\Http\Requests\CreateUserRequestAjax;
 use SistemaRestauranteWeb\User;
@@ -52,6 +53,17 @@ class UserController extends Controller {
         $user = User::create($request->all());
         $user->setPasswordAttribuite($user->password);
         if( $user->save()) return (array('last_id' => $user->id));
+    }
+
+    public function changePassword(CreatePasswordRequest $request, User $user){
+        $user->fill($request->all());
+        $user->UpdatePassword($user->password);
+        if( $user->update()){
+            $user->UpdateFirstTimeUser();
+            return (array('last_id' => $user->id));
+        }
+
+
     }
 
 	/**
