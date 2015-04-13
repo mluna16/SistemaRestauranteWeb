@@ -44,8 +44,8 @@ class adminController extends Controller {
     }
     public function restauranteIndex(){
         $user = new User();
-        $local= Local::all();
-        if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.restaurante')->with('local',$local);
+        $local= new Local();
+        if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.restaurante')->with('local',$local->getLocalForOwner());
         else return view ('usuarios.admin.firstTime');
     }
 

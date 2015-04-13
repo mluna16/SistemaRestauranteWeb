@@ -50,4 +50,10 @@ class Local extends Model {
         $this->attributes['owner'] = Auth::user()->id;
     }
 
+    public function getLocalForOwner(){
+        /** @var json $return */
+        $return = Local::where('Owner', Auth::user()->id)->get();
+        return $return;
+    }
+
 }
