@@ -52,8 +52,12 @@ class Local extends Model {
 
     public function getLocalForOwner(){
         /** @var json $return */
-        $return = Local::where('Owner', Auth::user()->id)->get();
-        return $return;
+        return  Local::where('owner', Auth::user()->id)->get();
+    }
+
+    public function  getLocalForUser(){
+        $user = new User();
+        return Local::where('owner',$user->getUserIDCreator())->get();
     }
 
 }

@@ -53,17 +53,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function getLocalNameAttribute(){
         //Retorna el nombre del restaurante asociado al admin del restaurante
-        if(! Auth::user()->getIsAFirstTimeUser())
             if(Auth::user()->getIsASystemGod()){
-
-                return  Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
-
+                if(! Auth::user()->getIsAFirstTimeUser())return  Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
+                else return "No";
             }else{
                 $ownerID = User::where('id',Auth::user()->id)->firstOrFail()->created_by;
-
                 return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
             }
-        else return "No";
     }
 
     public function getUserByCretedBy($value){
@@ -71,7 +67,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return  User::where('created_by',$value)->get();
     }
 
-
+    public function getUserIDCreator(){
+        return User::find(Auth::user()->id)->created_by;
+    }
 
     public function getIsAFirstTimeUser(){
         //Pregunta si el usuario en sesion entro ya al sistema o no

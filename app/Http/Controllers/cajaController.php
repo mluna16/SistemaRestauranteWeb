@@ -16,8 +16,9 @@ class cajaController extends Controller {
 	 */
 	public function index()
 	{
+        $local = new Local();
         $data = array(
-            'Local'  => Local::all(),
+            'Local'  => $local->getLocalForUser(),
         );
         return view('usuarios.caja.caja')->with('data' , $data);
 	}
