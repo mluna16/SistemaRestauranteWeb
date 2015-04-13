@@ -3,7 +3,7 @@
         <h4>Crear nuevo usuario </h4>
 
         {!!Form::open([
-        'route' => 'users.store',
+        'route' => 'userStoreAjax',
         'method' => 'POST',
         'id' => 'crear_userForm',
         ])

@@ -59,7 +59,7 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 
 
 });
-
+Route::post('storeAjax',['uses'=>'UserController@storeAjax','as' => 'userStoreAjax']);
 Route::resource('users','UserController');
 Route::post('productImg/{id}', ['uses' => 'productImageController@postUpload', 'as' => 'imagenUpload']);
 Route::post('localImg', ['uses' => 'localImageController@postUpload', 'as' => 'localImagenUpload']);

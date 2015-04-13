@@ -1,6 +1,5 @@
 <?php namespace SistemaRestauranteWeb\Http\Requests;
 
-use Illuminate\Support\Facades\Auth;
 use SistemaRestauranteWeb\Http\Requests\Request;
 
 class CreateUserRequest extends Request {
@@ -28,7 +27,6 @@ class CreateUserRequest extends Request {
              'email' => 'required|unique:users,email|email',
              'password' => 'required|same:password_',
              'password_' => 'required',
-             'type' => 'required|in:admin,caja,cocina,mesonero',
         ];
 	}
 

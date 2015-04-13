@@ -8,6 +8,7 @@ use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Http\Requests\CreateUserRequest;
+use SistemaRestauranteWeb\Http\Requests\CreateUserRequestAjax;
 use SistemaRestauranteWeb\User;
 
 class UserController extends Controller {
@@ -35,23 +36,23 @@ class UserController extends Controller {
     /**
      * Store a newly created resource in storage.
      *
-     * @param CreateUserRequest $request
+     * @param CreateUserRequest|CreateUserRequestAjax $request
+     * @param CreateUserRequest $requestNoAjax
      * @return Response
+     * @internal param CreateUserRequestAjax $requestAjax
      */
-	public function store(CreateUserRequest $request)
+	public function store( CreateUserRequest $request)
 	{
+        $user = User::create($request->all());
+        $user->setPasswordAttribuite($user->password);
+        if( $user->save()) return redirect(route('users.index'));
+    }
 
-       $user = User::create($request->all());
-       $user->setPasswordAttribuite($user->password);
-        if( $user->save()){
-             if($request->ajax()){
-                 return (array('last_id' => $user->id));
-             }else{
-                 return redirect(route('users.index'));
-             }
-        }
-
-	}
+    public function storeAjax(CreateUserRequestAjax $request){
+        $user = User::create($request->all());
+        $user->setPasswordAttribuite($user->password);
+        if( $user->save()) return (array('last_id' => $user->id));
+    }
 
 	/**
 	 * Display the specified resource.
