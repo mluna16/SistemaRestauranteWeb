@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="Creado Nuevo modulo, que permite saber si el usuario entra por primera vez al sistema. esto para todos los usuarios con diferencia de admin">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Bold.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Light.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Medium.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Medium.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Thin.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/font/roboto/Roboto-Thin.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Images/restaurante1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Images/restaurante2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/Images/restaurante4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jQueryMaster.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layout/parallax.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/parallax.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/parallax.js" />
-      <change type="DELETED" beforePath="C:\wamp\VirtualHost\SistemaRestauranteWeb\public\css\paralax.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/materialize.css" afterPath="$PROJECT_DIR$/public/css/materialize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcomeP.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcomeP.blade.php" />
+    <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
@@ -910,7 +889,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429017043830</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Parallax para el inicio">
+      <created>1429030558570</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1429030558570</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -996,7 +981,8 @@
     <MESSAGE value="Salucionado problema de sistema mas crear un usuario, se crearon dos metodos nuevos para el controlador userController y un nuevo Reques que se encaga se manejar las entradas para los usurios via ajax." />
     <MESSAGE value="Creado Nuevo modulo, que permite saber si el usuario entra por primera vez al sistema. esto para todos los usuarios con diferencia de admin" />
     <MESSAGE value="Cambios varios. Sistema de firsttime para usuarios normales" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios varios. Sistema de firsttime para usuarios normales" />
+    <MESSAGE value="Parallax para el inicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parallax para el inicio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
