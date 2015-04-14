@@ -60,7 +60,9 @@
     </div>
 @endsection
 @section('alternalJS')
-<script>
+    <script src="{{asset('js/functionsUser.js')}}"></script>
+
+    <script>
 
     $(document).ready(function(){
         $('.mostrar_mesa').click(function(e){

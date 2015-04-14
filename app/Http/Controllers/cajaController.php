@@ -1,11 +1,13 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Local;
+use SistemaRestauranteWeb\User;
 
 class cajaController extends Controller {
 
@@ -16,12 +18,14 @@ class cajaController extends Controller {
 	 */
 	public function index()
 	{
+        $user = new User();
         $local = new Local();
         $data = array(
             'Local'  => $local->getLocalForUser(),
         );
-        return view('usuarios.caja.caja')->with('data' , $data);
-	}
+        if(! $user->getIsAFirstTimeUser()) return view('usuarios.caja.caja')->with('data' , $data);
+        else return $user->ReturnToFirstTime();
+    }
 
 	/**
 	 * Show the form for creating a new resource.

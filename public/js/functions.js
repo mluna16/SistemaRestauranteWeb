@@ -117,6 +117,16 @@ $(document).ready(function(){
         $( ".localPaso2" ).show();
     })
 
+    //Funciones cambio password
+
+    function changePasswordSuccess(id){
+        location.reload().delay( 3000 );
+    }
+
+    $('.changePasswordPaso0').click(function(){
+        $( ".changePassworPaso0, .changePasswordPaso0" ).hide()
+        $( ".changePasswordPaso1, .changePasswordSubmit" ).show();
+    })
 
 
 });
