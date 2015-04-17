@@ -35,6 +35,7 @@ class CreateProductTable extends Migration {
                 ->onDelete('cascade');
 
 			$table->timestamps();
+
 		});
 	}
 

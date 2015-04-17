@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration {
             $table->boolean('first_time')->default(true);
             $table->rememberToken();
 			$table->timestamps();
+
 		});
 	}
 

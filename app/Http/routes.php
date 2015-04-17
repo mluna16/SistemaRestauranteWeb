@@ -61,7 +61,7 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 });
 
 Route::group(['middleware' => 'auth'], function() {
-
+    Route::post('userSoftDelete/{id}', ['uses' => 'UserController@softDelete', 'as' => 'userSoftDelete']);
     Route::post('changePassword', ['uses' => 'UserController@changePassword', 'as' => 'userChangePassword']);
     Route::post('storeAjax', ['uses' => 'UserController@storeAjax', 'as' => 'userStoreAjax']);
     Route::resource('users', 'UserController');

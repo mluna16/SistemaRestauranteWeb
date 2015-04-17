@@ -62,8 +62,11 @@ class UserController extends Controller {
             $user->UpdateFirstTimeUser();
             return (array('last_id' => $user->id));
         }
-
-
+    }
+    public function softDelete($id){
+        $user = User::findOrFail($id);
+        $user->setStatus($id);
+        return (array('valido' => 'ok'));
     }
 
 	/**

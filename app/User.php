@@ -23,7 +23,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['first_name','last_name', 'email', 'password','type','img_profile','first_time'];
+	protected $fillable = array('first_name','last_name', 'email', 'password','type','img_profile','first_time','status');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -84,7 +84,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         else return false;
     }
     public function UpdateFirstTimeUser(){
-        $user = User::where('id',Auth::user()->id )->update(['first_time' => false]);
+        User::where('id',Auth::user()->id )->update(['first_time' => false]);
     }
 
     public function ReturnToFirstTime(){
@@ -92,7 +92,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     }
 
     public function UpdatePassword($value){
-
         User::where('id',Auth::user()->id)->update(['password' => \Hash::make($value)]);
+    }
+    public function setStatus($value){
+        $user = User::find($value);
+        if($user->status == true) User::where('id',$value)->update(['status' => false]);
+        else User::where('id',$value)->update(['status' => true]);
     }
 }

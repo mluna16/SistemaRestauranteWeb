@@ -19,14 +19,15 @@ $(document).ready(function(){
 
 
     //Funciones ajax
-    $.fn.ajaxStore = function(idForm,successMessage,afunction,params) {
+    $.fn.ajaxStore = function(idForm,urlForm,successMessage,afunction,params) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
         var form = $(idForm);
         var data = form.serialize();
-        var url = form.attr('action');
+        var type = form.attr('method');
+        console.log(urlForm)
         $.ajax({
-            type: 'post',
-            url: url,
+            type: type,
+            url: urlForm,
             data: data,
             dataType: 'json',
             success: function (data) {
@@ -128,5 +129,19 @@ $(document).ready(function(){
         $( ".changePasswordPaso1, .changePasswordSubmit" ).show();
     })
 
+    function softDeleteUserSuccess(that){
+        if($(that).attr('data-tooltip')=='Activar'){
+            $(that).children().removeClass('mdi-notification-do-not-disturb')
+            $(that).children().addClass('mdi-action-done')
+            $(that).attr('data-tooltip','Desactivar')
+            $(that).removeClass('changeActionSoftDelete')
+        }else{
+            $(that).children().removeClass('mdi-action-done')
+            $(that).children().addClass(' mdi-notification-do-not-disturb')
+            $(that).attr('data-tooltip','Activar')
+            $(that).removeClass('changeActionSoftDelete')
+        }
+        $('.modal').closeModal();
 
+    }
 });

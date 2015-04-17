@@ -43,6 +43,7 @@
     @if(Auth::user()->type == 'admin')
         @include('partials.admin.ModalCreateMenu')
         @include('partials.admin.ModalCreateUser')
+        @include('partials.admin.ModalSoftDeleteUser')
     @endif
 
 @endsection

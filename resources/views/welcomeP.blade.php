@@ -3,7 +3,7 @@
 @section('contentParallax')
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <a id="logo-container" href="#" class="brand-logo"></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
                 <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
@@ -51,7 +51,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center green-text  text-darken-4"><i class="mdi-social-group"></i></h2>
-                        <h5 class="center">User Experience Focused</h5>
+                        <h5 class="center">Porqué dos son mejor que uno</h5>
 
                         <p class="light">Son dos sistemas en uno. Por un lado tienes el sistema web para gestinar el restaurante y manejar la caja. Y otro una aplicacion Android para manejar las Mesas, los pedidos y la cocina.</p>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center green-text  text-darken-4"><i class="mdi-hardware-cast-connected"></i></h2>
-                        <h5 class="center">Chromecast</h5>
+                        <h5 class="center">Conecta tu Chromecast</h5>
 
                         <p class="light">Puedes tener toda la aplicacion Android enlazada en tu dispositivo Chromecast.</p>
                     </div>
@@ -70,14 +70,14 @@
         </div>
     </div>
 
-
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
-                <div class="row center">
+
+            <div class="row center">
                     <h4 class="header col s12 thin">Maneja las ordenes y los pedidos de tu <span class="light-green-text text-lighten-3">Restaurante</span> de forma ordenada y eficiente</h4>
                 </div>
 
-        </div>
+            </div>
         <div class="parallax"><img src="{{asset('images/restaurante2.jpg')}}" alt="Unsplashed background img 2"></div>
     </div>
 
