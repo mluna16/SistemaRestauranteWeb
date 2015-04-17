@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
@@ -846,7 +844,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429246085557</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Solucionado Bug de nu almacenar el atributo created_by de users en el metodo storeAjax del controllador">
+      <created>1429247127349</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1429247127349</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -958,7 +962,8 @@
     <MESSAGE value="Cambios varios. Sistema de firsttime para usuarios normales" />
     <MESSAGE value="Parallax para el inicio" />
     <MESSAGE value="Sistema de SoftDelete Propio no de Laravel - Para los usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sistema de SoftDelete Propio no de Laravel - Para los usuarios" />
+    <MESSAGE value="Solucionado Bug de nu almacenar el atributo created_by de users en el metodo storeAjax del controllador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionado Bug de nu almacenar el atributo created_by de users en el metodo storeAjax del controllador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

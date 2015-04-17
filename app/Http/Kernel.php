@@ -15,7 +15,7 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		'SistemaRestauranteWeb\Http\Middleware\VerifyCsrfToken',
+		//'SistemaRestauranteWeb\Http\Middleware\VerifyCsrfToken',
 	];
 
 	/**
@@ -27,6 +27,7 @@ class Kernel extends HttpKernel {
 		'auth' => 'SistemaRestauranteWeb\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'SistemaRestauranteWeb\Http\Middleware\RedirectIfAuthenticated',
+        'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
     ];
 
 }
