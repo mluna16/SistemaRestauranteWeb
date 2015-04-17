@@ -23,7 +23,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('first_name','last_name', 'email', 'password','type','img_profile','first_time','status');
+	protected $fillable = array('first_name','last_name', 'email', 'password','type','img_profile','first_time','status','created_by');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -43,6 +43,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
          }
 
   }
+    public function setCreated_byAttribuite(){
+            $this->attributes['created_by'] = Auth::user()->id;
+    }
     public function Local() {
         return $this->hasOne('SistemaRestauranteWeb\Local');
     }

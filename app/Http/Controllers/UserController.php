@@ -52,6 +52,7 @@ class UserController extends Controller {
     public function storeAjax(CreateUserRequestAjax $request){
         $user = User::create($request->all());
         $user->setPasswordAttribuite($user->password);
+        $user->setCreated_byAttribuite();
         if( $user->save()) return (array('last_id' => $user->id));
     }
 
