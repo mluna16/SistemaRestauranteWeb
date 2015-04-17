@@ -23,7 +23,7 @@ Route::controllers([
 ]);
 
 //Routas de la Api sistemasrestaurante/API/talMetodo
-Route::group(['middleware' => 'auth','prefix' => 'API'], function(){
+Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
     //Rutas de productos
     Route::get('productoPorUsuario/{id}', ['uses' => 'productsController@getProductForUser']);
     Route::get('productoPorLocal/{id}', ['uses' => 'productsController@getProductForUser']);
