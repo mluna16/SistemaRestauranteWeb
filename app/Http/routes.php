@@ -59,13 +59,14 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 
 
 });
-Route::resource('users', 'UserController');
+Route::resource('users', 'UserController',['only' => ['store']]);
 
 Route::group(['middleware' => 'auth','except' => 'UserController@store'], function() {
 
     Route::post('userSoftDelete/{id}', ['uses' => 'UserController@softDelete', 'as' => 'userSoftDelete']);
     Route::post('changePassword', ['uses' => 'UserController@changePassword', 'as' => 'userChangePassword']);
     Route::post('storeAjax', ['uses' => 'UserController@storeAjax', 'as' => 'userStoreAjax']);
+    Route::resource('users', 'UserController',['except' => ['store']]);
     Route::post('productImg/{id}', ['uses' => 'productImageController@postUpload', 'as' => 'imagenUpload']);
     Route::post('localImg', ['uses' => 'localImageController@postUpload', 'as' => 'localImagenUpload']);
 
