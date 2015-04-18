@@ -42,7 +42,7 @@ class UserController extends Controller {
      * @return Response
      * @internal param CreateUserRequestAjax $requestAjax
      */
-	public function store( CreateUserRequest $request)
+	public function store(CreateUserRequest $request)
 	{
         $user = User::create($request->all());
         $user->setPasswordAttribuite($user->password);
