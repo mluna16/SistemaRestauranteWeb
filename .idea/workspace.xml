@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/usuarios/admin/usuarios.blade.php" afterPath="$PROJECT_DIR$/resources/views/usuarios/admin/usuarios.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
@@ -34,21 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="usuarios.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/usuarios.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.11931818" vertical-offset="1283" max-vertical-offset="2091">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateLocalRequest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateLocalRequest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307" vertical-offset="17" max-vertical-offset="646">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.3260274" vertical-offset="68" max-vertical-offset="646">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -142,7 +132,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_04_12_035706_create_localImage_table.php" />
         <option value="$PROJECT_DIR$/app/ProductImage.php" />
         <option value="$PROJECT_DIR$/database/seeds/AdminUserSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/localController.php" />
         <option value="$PROJECT_DIR$/app/LocalImage.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/localImageController.php" />
@@ -186,6 +175,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/admin/usuarios.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php" />
       </list>
     </option>
   </component>
@@ -923,7 +913,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429332186288</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Solucinado problema de softDelete para todos los User en el menu de Usuarios en el Admin">
+      <created>1429366658685</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1429366658685</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1018,7 +1014,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/php-getting-started" />
     </ignored-roots>
-    <MESSAGE value="Agregadas reglas para dropzone de imagenes de productos" />
     <MESSAGE value="Cambio de mensaje a espa;ol, para subir archivos" />
     <MESSAGE value="Cambio de vista para cerrar sesion, ahora muestra un  perfil de usuario" />
     <MESSAGE value="Primer intento con paralax lo dejo para otro momento." />
@@ -1043,7 +1038,8 @@
     <MESSAGE value="Cambio de platilla con Jquery Local ." />
     <MESSAGE value="Solucinado problema de almacenar usuarios, y cambiar contrase;apor primera vez" />
     <MESSAGE value="Solucinado problema de almacenar usuarios admin, desde el Form de CrearCuenta nueva" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solucinado problema de almacenar usuarios admin, desde el Form de CrearCuenta nueva" />
+    <MESSAGE value="Solucinado problema de softDelete para todos los User en el menu de Usuarios en el Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucinado problema de softDelete para todos los User en el menu de Usuarios en el Admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1399,14 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="17" max-vertical-offset="646">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env.example">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
@@ -1435,6 +1423,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.11931818" vertical-offset="1283" max-vertical-offset="2091">
           <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3260274" vertical-offset="68" max-vertical-offset="646">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
