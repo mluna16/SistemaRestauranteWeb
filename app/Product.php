@@ -17,8 +17,8 @@ class Product extends Model {
         $this->attributes['created_by'] = Auth::user()->id;
     }
     public function setLocalForAttribute($value){
-
-        $this->attributes['local_for'] = Local::getLocalIdAttribute();
+        $local = new Local();
+        $this->attributes['local_for'] = $local->getLocalIdAttribute();
     }
 
 
