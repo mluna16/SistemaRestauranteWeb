@@ -1,13 +1,5 @@
 $(document).ready(function(){
-    // Dropdown Menu para el perfil de usuarios
-    $('.dropdown-button').dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        constrain_width: false, // Does not change width of dropdown to that of the activator
-        hover: true, // Activate on hover
-        gutter: 0, // Spacing from edge
-        belowOrigin: true // Displays dropdown below the button
-    });
+
 
     //Modales
     $('.modal-trigger').leanModal()
@@ -24,7 +16,6 @@ $(document).ready(function(){
         var form = $(idForm);
         var data = form.serialize();
         var type = form.attr('method');
-        console.log(urlForm)
         $.ajax({
             type: type,
             url: urlForm,
@@ -48,6 +39,28 @@ $(document).ready(function(){
             }
         });
     }
+    $.fn.ajaxGetData = function(url,afunction,params) {
+        $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
+        $.ajax({
+            type: 'Get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                $('.preloader-wrapper').hide();
+                eval(afunction + "("+params+")");
+            },
+            error: function (data) {
+                var errors = data.responseJSON;
+                $('.preloader-wrapper').hide();
+                if (errors) {
+                    $.each(errors, function (i) {
+                        Materialize.toast(errors[i], 3000);
+                    });
+                }
+            }
+        });
+    }
+
     //Funciones internas de los Modal de User
     function crearUserSuccess(form){
             form[0].reset();
@@ -144,4 +157,44 @@ $(document).ready(function(){
         $('.modal').closeModal();
 
     }
+
+    //Editar usuario
+
+    function DataEditUser(data){
+        activeLabelForm('#editUserForm');
+        $('.firstNameUser').val(data['first_name']);
+        $('.lastNameUser').val(data['last_name']);
+        $('.emailUser').val(data['email']);
+        $('.typeUser').val(data['type']);
+        $('#editUserSubmit').attr('data-id',data['id']);
+        $('#EditUserModal').openModal();
+    }
+
+    function UserEditSuccess(form){
+        form[0].reset();
+        CleanForm(form);
+        CleanForm('#crear_userForm')
+        $('.modal').closeModal();
+    }
+
+
+    //Funciones Generales
+    function activeLabelForm(idForm){
+        idForm = $(idForm);
+
+        idForm.find(':input').each(function(){
+            if($(this).val()!= " " ){
+                $(this).next().addClass('active');
+            }
+        })
+    }
+    function CleanForm(idForm) {
+        idForm = $(idForm);
+        idForm.find(':input').each(function () {
+            if (!$(this).hasClass("hidden")) {
+                $(this).val("");
+            }
+        });
+    }
+
 });

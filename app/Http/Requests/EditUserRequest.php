@@ -1,9 +1,16 @@
 <?php namespace SistemaRestauranteWeb\Http\Requests;
-
 use SistemaRestauranteWeb\Http\Requests\Request;
+use Illuminate\Routing\Route;
 
-class CreateUserRequestAjax extends Request {
-
+class EditUserRequest extends Request {
+    /**
+     * @var Route
+     */
+    private $route;
+    public function __construct(Route $route)
+    {
+        $this->route = $route;
+    }
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -13,7 +20,6 @@ class CreateUserRequestAjax extends Request {
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,11 +30,8 @@ class CreateUserRequestAjax extends Request {
         return [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|unique:users,email|email',
-            'password' => 'required|same:password_',
-            'password_' => 'required',
+            'email' => 'required|unique:users,email,' . $this->route->getParameter('users'),
             'type' => 'required|in:caja,cocina,mesonero',
         ];
     }
-
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request as Requests_Facades;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Http\Requests\CreatePasswordRequest;
 use SistemaRestauranteWeb\Http\Requests\CreateUserRequest;
 use SistemaRestauranteWeb\Http\Requests\CreateUserRequestAjax;
+use SistemaRestauranteWeb\Http\Requests\EditUserRequest;
 use SistemaRestauranteWeb\User;
 
 class UserController extends Controller {
@@ -78,7 +80,8 @@ class UserController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::findOrFail($id);
+        return Response::json($user);
 	}
 
 	/**
@@ -92,15 +95,20 @@ class UserController extends Controller {
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @param CreateUserRequestAjax $request
+     * @return Response
+     */
+	public function update($id, EditUserRequest $request)
 	{
-		//
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
+        if( $user->update()){
+            return (array('last_id' => $user->id));
+        }
 	}
 
 	/**

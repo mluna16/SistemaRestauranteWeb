@@ -22,10 +22,12 @@
                 </div>
 
         <div class="modal-footer">
-            <a href="#" id="crear_userSubmit" type="submit" class="waves-effect waves-green btn-flat  ">Crear</a>
+            <a href="#" id="crear_userSubmit" type="submit" class="waves-effect waves-green btn-flat ">Crear</a>
+
+
         </div>
-        {!! Form::hidden('password_', '12345') !!}
-        {!! Form::hidden('password', '12345') !!}
+        {!! Form::hidden('password_', '12345',['class' => 'hidden']) !!}
+        {!! Form::hidden('password', '12345',['class' => 'hidden']) !!}
         {!!Form::close()!!}
             </div>
 

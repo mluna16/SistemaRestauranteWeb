@@ -21,6 +21,12 @@ $(document).ready(function(){
         var url = form.attr('action')
         $(this).ajaxStore('#crear_localForm',url,"Local Creado Correctamente","crearlocalSuccess","'.dropzone' , last_id")
     });
+    $('.editUserSubmit').click(function () {
+        var  form = $('#editUserForm');
+        var id = $(this).attr('data-id');
+        var url = form.attr('action').replace(':USER_ID', id);
+        $(this).ajaxStore('#editUserForm',url,"Usuario Editado","UserEditSuccess","form")
+    });
 
 
     // modales de softDelete
@@ -48,5 +54,20 @@ $(document).ready(function(){
     $('.closeSoftDelete').click(function(){
         $('.softDeleteUser').removeClass('changeActionSoftDelete')
     })
+
+
+    //Editar Usuarios
+
+    $('.EditUser').click(function(){
+        var id = $(this).parent().parent().attr('data-id')
+        var url = '../users/'+id;
+        $(this).ajaxGetData(url,'DataEditUser','data')
+    });
+
+
+
+
+
+
 
 })
