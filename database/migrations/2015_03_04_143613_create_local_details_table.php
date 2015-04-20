@@ -19,7 +19,6 @@ class CreateLocalDetailsTable extends Migration {
             $table->string('name');
             $table->string('location');
             $table->string('number_tables');
-            $table->string('img_local');
             $table->integer('owner')->unsigned();
             $table->foreign('owner')
                 ->references('id')

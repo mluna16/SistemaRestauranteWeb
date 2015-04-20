@@ -16,12 +16,19 @@ class LocalTableSeeder extends Seeder {
     {
         $faker = Faker::create();
 
-        \DB::table('local')->insert(array (
+        $id = \DB::table('local')->insertGetid(array(
             'name'	=> 'EL Restaurante',
             'Location' => 'Porlamar',
             'number_tables' => 12,
             'owner'	=> 1,
-            'img_local' => $faker->imageUrl($width = 680, $height = 460),
+
+        ));
+        \DB::table('local_image')->insert(array(
+            'name' =>  \Hash::make('local'),
+            'route' => 'C:\wamp\VirtualHost\SistemaRestauranteWeb\public/Images/local/',
+            'type' => 'jpeg',
+            'size' => '44.529296875',
+            'id_local' => $id
 
         ));
     }
