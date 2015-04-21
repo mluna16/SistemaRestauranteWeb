@@ -19,7 +19,9 @@ class localImageController extends BaseController {
 
         if(Input::hasFile('file')){
 
-            $fileName=Hash::make($fileInfo->getClientOriginalName());
+            $vowels = array(".jpeg", ".jpg", ".png", ".JPEG", ".PNG", ".JPG");
+            $fileNameChange = str_replace($vowels, "",$fileInfo->getClientOriginalName());
+            $fileName = str_replace('/', "",\Hash::make($fileNameChange));
 
             $path = public_path().'/Images/Local';
 

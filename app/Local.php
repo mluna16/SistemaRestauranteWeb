@@ -1,6 +1,7 @@
 <?php namespace SistemaRestauranteWeb;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -42,7 +43,6 @@ class Local extends Model {
 
                 return Local::where('owner', $ownerID)->take(1)->firstOrFail()->id;
             }
-
     }
 
     public function setOwnerAttribute($value){
@@ -60,4 +60,22 @@ class Local extends Model {
         return Local::where('owner',$user->getUserIDCreator())->get();
     }
 
+    public  function getAllLocalInformationByUser($id){
+        $user = new User();
+        $local = Local::where('owner',$id)->firstOrFail();
+        $localImage = LocalImage::where('id_local',$local->id)->firstOrFail();
+
+        $localAllInfo[] = [
+
+            'id_local' => $local->id,
+            'name' => $local->name,
+            'location' => $local->location,
+            'number_tables' => $local->limit,
+            'owner' => $user->getFullNameUserById($local->owner),
+            'id_image' => $localImage->id,
+            'image' => $localImage->name.".".$localImage->type
+        ];
+
+        return Collection::make($localAllInfo);
+    }
 }

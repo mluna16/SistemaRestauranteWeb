@@ -102,4 +102,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         if($user->status == true) User::where('id',$value)->update(['status' => false]);
         else User::where('id',$value)->update(['status' => true]);
     }
+
+    public function getFullNameUserById($value){
+        $user = User::where('id',$value)->firstOrFail();
+        return $user->getFullNameAttribute();
+
+    }
 }
