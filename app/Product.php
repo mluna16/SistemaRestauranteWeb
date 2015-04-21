@@ -1,6 +1,7 @@
 <?php namespace SistemaRestauranteWeb;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
 
@@ -73,6 +74,27 @@ class Product extends Model {
             if($data->id == $value) return true;
         }
         return false;
+    }
+
+    public  function getAllProductInformationByUser($id){
+        $productList = Product::where('created_by',$id)->get();
+        foreach($productList as $product){
+            /** @var TYPE_NAME $productImages */
+            $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
+            $productImage[] = [
+
+                'id_product' => $product->id,
+                'name' => $product->name,
+                'cost' => $product->cost,
+                'limit' => $product->limit,
+                'description' => $product->description,
+                'id_image' => $productImages->id,
+                'image' => $productImages->name.".".$productImages->type
+            ];
+        }
+        return Collection::make($productImage);
+
+
     }
 
     //Relaciones de clave foraneas

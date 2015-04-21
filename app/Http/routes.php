@@ -26,7 +26,7 @@ Route::controllers([
 Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
     //Rutas de productos
     Route::get('productoPorUsuario/{id}', ['uses' => 'productsController@getProductForUser']);
-    Route::get('productoPorLocal/{id}', ['uses' => 'productsController@getProductForUser']);
+    Route::get('productoPorLocal/{id}', ['uses' => 'productsController@getProductForLocal']);
     Route::get('productoInfo/{id}', ['uses' => 'productsController@show']);
     Route::get('productoInfo/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
 

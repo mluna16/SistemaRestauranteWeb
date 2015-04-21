@@ -37,7 +37,7 @@ class adminController extends Controller {
         $Product = new Product();
         $Local   = new Local();
         $user    = new User();
-        $products = $Product->getProductsForLocal($Local->getLocalIdAttribute());
+        $products = $Product->getAllProductInformationByUser($Local->getLocalIdAttribute());
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.menu')->with('products',$products);
         else return $user->ReturnToFirstTime();
     }

@@ -12,9 +12,26 @@ class ProductImage extends Model {
         $this->belongsTo('SistemaRestauranteWeb\Product');
     }
 
-    public function getlastProductIdCreetedForUser(){
-        $product = Product::where('created_by', Auth::user()->id)->orderby('id','DESC')->take(1)->firstOrFail()->id;;
+    public function getLastProductIdCreatedForUser(){
+        $product = Product::where('created_by', Auth::user()->id)->orderby('id','DESC')->take(1)->firstOrFail()->id;
 
         return $product;
+    }
+
+    public  function getAllProductInformation($id){
+        $productList = Product::where('created_by',$id)->get();
+        $productImage = [
+            'product' => []
+        ];
+        foreach($productList as $product){
+            $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
+            $productImage['product'][] = [
+                'id' => $productImages->id,
+                'id_product' => $productImages->id_product,
+                'images' => $productImages->route."".$productImages->name.".".$productImages->type
+            ];
+        }
+        return $productImage;
+
     }
 }
