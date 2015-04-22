@@ -21,6 +21,7 @@ class CreateProductTable extends Migration {
             $table->string('description');
             $table->integer('cost');
             $table->integer('limit');
+            $table->boolean('status');
 
             $table->integer('created_by')->unsigned();
             $table->foreign('created_by')

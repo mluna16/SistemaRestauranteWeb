@@ -147,4 +147,17 @@ class productsController extends Controller
         $Product = new Product();
         return $Product->getProductsForLocal($value);
     }
+
+    public function softDelete($id,$action){
+        if($action==1) {
+            $Product = Product::findOrFail($id);
+            $Product->setStatus($id);
+            return (array('valido' => 'ok'));
+        }elseif($action==2){
+            $user = Product::find($id);
+            $user->delete();
+            return (array('valido' => 'ok'));
+
+        }
+    }
 }

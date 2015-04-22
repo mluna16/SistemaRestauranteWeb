@@ -3,6 +3,11 @@ $(document).ready(function(){
     $('.collapsible').collapsible()
     //Tooltip materialize
     $('.tooltipped').tooltip({delay: 50});
+
+
+    /*
+        --USERS--
+     */
     //Sudmits para los modales - crear
     $('#crear_userSubmit').click(function () {
         var  form = $('#crear_userForm');
@@ -10,17 +15,6 @@ $(document).ready(function(){
         $(this).ajaxStore('#crear_userForm',url,"Usuario Creado Correctamente","crearUserSuccess","form")
     });
 
-    $('.crear_menuSubmit').click(function () {
-        var  form = $('#crear_menuForm');
-        var url = form.attr('action')
-        $(this).ajaxStore('#crear_menuForm',url,"Menu Creado Correctamente","crearMenuSuccess","'.dropzone' , last_id")
-    });
-
-    $('.crear_localSubmit').click(function () {
-        var  form = $('#crear_localForm');
-        var url = form.attr('action')
-        $(this).ajaxStore('#crear_localForm',url,"Local Creado Correctamente","crearlocalSuccess","'.dropzone' , last_id")
-    });
     $('.editUserSubmit').click(function () {
         var  form = $('#editUserForm');
         var id = $(this).attr('data-id');
@@ -28,14 +22,15 @@ $(document).ready(function(){
         $(this).ajaxStore('#editUserForm',url,"Usuario Editado","UserEditSuccess","form")
     });
 
-
-    // modales de softDelete
+    // modales de softDeleteUser
     $('.submitSoftDelete').click(function () {
         var  form = $('#formSoftDeleteUser');
         var id = $(this).attr('data-id')
         var url = form.attr('action').replace(':USER_ID', id);
         $(this).ajaxStore('#formSoftDeleteUser',url,"Usuario actualizado","softDeleteUserSuccess","'.changeActionSoftDelete'")
     });
+
+    //Modal
 
     $('.softDeleteUser').click(function(){
         $('.headerSoftDeleteUser,.fullNameSoftDeleteUser').empty()
@@ -50,6 +45,7 @@ $(document).ready(function(){
         $(this).addClass('changeActionSoftDelete');
         $('.modalSoftDeleteUser').openModal();
     })
+
 
     $('.closeSoftDelete').click(function(){
         $('.softDeleteUser').removeClass('changeActionSoftDelete')
@@ -67,7 +63,57 @@ $(document).ready(function(){
 
 
 
+    /*
+        --PRODUCTS--
+     */
+
+    $('.crear_menuSubmit').click(function () {
+        var  form = $('#crear_menuForm');
+        var url = form.attr('action')
+        $(this).ajaxStore('#crear_menuForm',url,"Menu Creado Correctamente","crearMenuSuccess","'.dropzone' , last_id")
+    });
+    $('.submitSoftDeleteProduct').click(function () {
+        var  form = $('#formSoftDeleteProduct');
+        var id = $(this).attr('data-id')
+        var action = $(this).attr('data-action')
+        var url = form.attr('action').replace(':PRODUCT_ID', id);
+
+        if(action=='Eliminar'){
+            $(this).ajaxStore('#formSoftDeleteProduct',url+'/2',"Producto Eliminado","deleteUserSuccess","'#CardMenu"+id+"'")
+        }else{
+            $(this).ajaxStore('#formSoftDeleteProduct',url+'/1',"Producto actualizado","softDeleteUserSuccess","'.changeActionSoftDelete'")
+        }
+    });
+
+    //SoftdeleteProduct
+    $('.softDeleteProduct').click(function(){
+        $('.headerSoftDeleteProduct,.ProductNameSoftDeleteProduct').empty()
+        $('.submitSoftDeleteProduct').attr('data-id',"")
+        $(this).removeClass('changeActionSoftDelete');
+        var action = $(this).attr('data-tooltip')
+        var ProductName = $(this).attr('data-name')
+        var id = $(this).attr('data-id')
+        $('.submitSoftDeleteProduct').attr('data-id',id)
+        $('.submitSoftDeleteProduct').attr('data-action',action)
+        $('.headerSoftDeleteProduct').append($('<span>'+action+'</span>'));
+        $('.ProductNameSoftDeleteProduct').append($('<span>'+ProductName+'</span>'));
+        $(this).addClass('changeActionSoftDelete');
+        $('.modalSoftDeleteProduct').openModal();
+    })
 
 
+
+
+
+
+    /*
+        --LOCAL--
+     */
+
+    $('.crear_localSubmit').click(function () {
+        var  form = $('#crear_localForm');
+        var url = form.attr('action')
+        $(this).ajaxStore('#crear_localForm',url,"Local Creado Correctamente","crearlocalSuccess","'.dropzone' , last_id")
+    });
 
 })

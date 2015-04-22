@@ -176,7 +176,11 @@ $(document).ready(function(){
         CleanForm('#crear_userForm')
         $('.modal').closeModal();
     }
-
+    function deleteUserSuccess(card){
+        card = $(card);
+        card.fadeOut();
+        $('.modalSoftDeleteProduct').closeModal();
+    }
 
     //Funciones Generales
     function activeLabelForm(idForm){

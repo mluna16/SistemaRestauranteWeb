@@ -35,19 +35,21 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 {
 
-           Route::get('/', 'adminController@estadisticasIndex');
+       Route::get('/', 'adminController@estadisticasIndex');
 
-           Route::get('Estadisticas', 'adminController@estadisticasIndex');
+       Route::get('Estadisticas', 'adminController@estadisticasIndex');
 
-           Route::get('Usuarios', 'adminController@usuariosIndex');
+       Route::get('Usuarios', 'adminController@usuariosIndex');
 
-           Route::get('Menu', 'adminController@menuIndex');
+       Route::get('Menu', 'adminController@menuIndex');
 
-           Route::get('Restaurante', 'adminController@restauranteIndex');
+       Route::get('Restaurante', 'adminController@restauranteIndex');
 
-           Route::resource('producto', 'productsController');
+       Route::post('productSoftDelete/{id}/{action}', ['uses' => 'productsController@softDelete', 'as' => 'productSoftDelete']);
 
-           Route::resource('local', 'localController');
+       Route::resource('producto', 'productsController');
+
+       Route::resource('local', 'localController');
 
 });
 

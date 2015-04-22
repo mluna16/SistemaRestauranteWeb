@@ -16,12 +16,14 @@
                                     <td >{{$admin->full_name}}</td>
                                     <td>{{$admin->email}}</td>
                                     <td>
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
-                                        @if($admin->status == true)
-                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 " data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
-                                        @else
-                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 " data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
-                                        @endif
+                                        <div class="row">
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
+                                            @if($admin->status == true)
+                                                <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
+                                            @else
+                                                <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
+                                            @endif
+                                        </div>
                                     </td>
                                </tr>
                             @endif
@@ -43,12 +45,14 @@
                                 <td>{{$caja->full_name}}</td>
                                 <td>{{$caja->email}}</td>
                                 <td>
-                                    <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
-                                    @if($caja->status == true)
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
-                                    @else
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
-                                    @endif
+                                    <div class="row">
+                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
+                                        @if($caja->status == true)
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
+                                        @else
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
+                                        @endif
+                                    </div>
                                 </td>
                             </tr>
                         @endif
@@ -70,12 +74,14 @@
                                 <td>{{$cocina->full_name}}</td>
                                 <td>{{$cocina->email}}</td>
                                 <td>
-                                    <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
-                                    @if($cocina->status == true)
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
-                                    @else
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
-                                    @endif
+                                    <div class="row">
+                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
+                                        @if($cocina->status == true)
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
+                                        @else
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
+                                        @endif
+                                    </div>
                                 </td>
                             </tr>
                         @endif
@@ -98,12 +104,14 @@
                                 <td>{{$mesonero->full_name}}</td>
                                 <td>{{$mesonero->email}}</td>
                                 <td>
-                                    <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
-                                    @if($mesonero->status == true)
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
-                                    @else
-                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
-                                    @endif
+                                    <div class="row">
+                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
+                                        @if($mesonero->status == true)
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
+                                        @else
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
+                                        @endif
+                                    </div>
                                 </td>
                             </tr>
                         @endif

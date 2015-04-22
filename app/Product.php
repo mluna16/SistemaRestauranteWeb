@@ -88,6 +88,7 @@ class Product extends Model {
                 'cost' => $product->cost,
                 'limit' => $product->limit,
                 'description' => $product->description,
+                'status' => $product->stautus,
                 'id_image' => $productImages->id,
                 'image' => $productImages->name.".".$productImages->type
             ];
@@ -95,6 +96,11 @@ class Product extends Model {
         return Collection::make($productImage);
 
 
+    }
+    public function setStatus($value){
+        $product = Product::find($value);
+        if($product->status == true) Product::where('id',$value)->update(['status' => false]);
+        else Product::where('id',$value)->update(['status' => true]);
     }
 
     //Relaciones de clave foraneas
