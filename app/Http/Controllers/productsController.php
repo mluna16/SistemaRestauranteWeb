@@ -1,6 +1,7 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use Psy\Exception\Exception;
 use SistemaRestauranteWeb\Http\Requests;
@@ -9,6 +10,7 @@ use SistemaRestauranteWeb\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Http\Requests\CreateProductsRequest;
 use SistemaRestauranteWeb\Product;
+use SistemaRestauranteWeb\ProductImage;
 use SistemaRestauranteWeb\User;
 
 /**
@@ -152,11 +154,24 @@ class productsController extends Controller
         if($action==1) {
             $Product = Product::findOrFail($id);
             $Product->setStatus($id);
-            return (array('valido' => 'ok'));
+            return Response::json('Bien', 200);
         }elseif($action==2){
+
             $user = Product::find($id);
-            $user->delete();
-            return (array('valido' => 'ok'));
+            $file = ProductImage::where('id_product',$id)->firstOrFail();
+            $path = public_path().'/images/Product/'.$id;
+
+            if (!File::deleteDirectory($path))
+            {
+                return Response::json($path, 500);
+            }
+            else
+            {
+                $file->delete();
+                $user->delete();
+                return Response::json('Bien', 200);
+
+            }
 
         }
     }
