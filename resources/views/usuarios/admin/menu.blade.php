@@ -31,7 +31,7 @@
                             @else
                                 <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteProduct" data-position="top" data-delay="50" data-id="{{$menu['id_product']}}" data-name="{{$menu['name']}}" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
                             @endif
-                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteProduct" data-position="top" data-delay="50" data-id="{{$menu['id_product']}}" data-name="{{$menu['name']}}" data-tooltip="Eliminar"><i class="mdi-action-delete "></i></a>
+                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteProduct red darken-1" data-position="top" data-delay="50" data-id="{{$menu['id_product']}}" data-name="{{$menu['name']}}" data-tooltip="Eliminar"><i class="mdi-action-delete "></i></a>
 
                         </div>
                     </div>
