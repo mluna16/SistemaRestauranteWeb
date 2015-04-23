@@ -1,8 +1,9 @@
 @extends('layout.dashboard')
 @section('title') Estadisticas @endsection
 @section('Menu') active @endsection
+<div id="MenuPrincipal">
 @section('infoPanel')
-    <div class="row">
+    <div class="row" id="MenuPrincipal" >
         @foreach($products as $menu)
             <div class="col s12 m6 l4">
                 <div class="card" id="CardMenu{{$menu['id_product']}}">
@@ -42,3 +43,4 @@
     @include('partials.admin.ModalSoftDeleteProduct')
 
 @endsection
+</div>

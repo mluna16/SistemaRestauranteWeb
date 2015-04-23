@@ -1,6 +1,8 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\View;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
@@ -33,13 +35,22 @@ class adminController extends Controller {
         $users = $user->getUserByCretedBy(Auth::user()->id);
         if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.usuarios')->with('users',$users );
     }
-    public function menuIndex(){
+    public function menuIndex(Request $request){
         $Product = new Product();
         $Local   = new Local();
         $user    = new User();
         $products = $Product->getAllProductInformationByUser($Local->getLocalIdAttribute());
-        if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.menu')->with('products',$products);
-        else return $user->ReturnToFirstTime();
+        if(! $user->getIsAFirstTimeUser()){
+            $view = View::make('usuarios.admin.menu')->with('products',$products);
+            if($request->ajax()) {
+                $sections = $view->renderSections();
+                return Response::json($sections['infoPanel']);
+
+            }else return $view;
+        }
+        else {
+            return $user->ReturnToFirstTime();
+        }
     }
     public function restauranteIndex(){
         $user = new User();

@@ -60,6 +60,27 @@ $(document).ready(function(){
             }
         });
     }
+     function ajaxGetPageLoader(url) {
+        $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
+        $.ajax({
+            type: 'Get',
+            url: url,
+            dataType: 'json',
+            success: function (data) {
+                $('#principalmd').empty().append($(data));
+                $('.preloader-wrapper').hide();
+            },
+            error: function (data) {
+                var errors = data.responseJSON;
+                $('.preloader-wrapper').hide();
+                if (errors) {
+                    $.each(errors, function (i) {
+                        Materialize.toast(errors[i], 3000);
+                    });
+                }
+            }
+        });
+    }
 
     //Funciones internas de los Modal de User
     function crearUserSuccess(form){
@@ -176,10 +197,11 @@ $(document).ready(function(){
         CleanForm('#crear_userForm')
         $('.modal').closeModal();
     }
-    function deleteUserSuccess(card){
+    function deleteProductSuccess(card){
         card = $(card);
-        card.fadeOut();
+        //card.fadeOut();
         $('.modalSoftDeleteProduct').closeModal();
+        ajaxGetPageLoader('Menu')
     }
 
     //Funciones Generales

@@ -20,7 +20,7 @@
         </div>
         <div class="col s12 m10 l10">
             <div class="row">
-                <div class="col m11 l11">
+                <div class="col m11 l11" id="principalmd">
                     @section('infoPanel')
 
                     @show
