@@ -41,15 +41,15 @@
         <div style="display:none" class="menuPaso2">
             <p>Cargar Imagenes del Producto</p>
             {!!Form::open([
-                    'route' => [
-                            'imagenUpload',
-                            'MENU_ID'
-                             ],
-                    'file' => true,
-                    'class' => 'dropzone',
-                    'id' => 'crearMenuFormImages',
-                    'method' => 'POST',
-                    ])
+            'route' => [
+            'imagenUpload',
+            'MENU_ID'
+            ],
+            'file' => true,
+            'class' => 'dropzone',
+            'id' => 'crearMenuFormImages',
+            'method' => 'POST',
+            ])
             !!}
             <h6 class="dz-message"><i class="medium mdi-editor-attach-file"></i>Arrastra hasta o has click aqui para agregar images al producto (Maximo 5)</h6>
             {!!Form::close()!!}

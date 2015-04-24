@@ -60,7 +60,7 @@ $(document).ready(function(){
             }
         });
     }
-     function ajaxGetPageLoader(url) {
+    function ajaxGetPageLoader(url) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
         $.ajax({
             type: 'Get',
@@ -84,37 +84,37 @@ $(document).ready(function(){
 
     //Funciones internas de los Modal de User
     function crearUserSuccess(form){
-            form[0].reset();
-            $('.modal').closeModal();
-        }
+        form[0].reset();
+        $('.modal').closeModal();
+    }
 
     //Funciones internas de los Modal de Menu
 
     function crearMenuSuccess(form,id){
-            $( ".menuPaso1, .crear_menuSubmit" ).hide()
-            $( ".menuPaso2" ).show();
-            $(form).attr('action').replace('MENU_ID', id);
-        }
-        $(".menuPaso2Atras").click(function(){
-            $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
-            $(".crear_menuSubmit").removeClass("crear_menuSubmit")
-            $( ".menuPaso1" ).show()
-            $( ".menuPaso2" ).hide();
-        })
-        $(".crear_menuSubmitnone ").click(function(){
-            $( ".menuPaso1" ).hide()
-            $( ".menuPaso2" ).show();
-        })
+        $( ".menuPaso1, .crear_menuSubmit" ).hide()
+        $( ".menuPaso2" ).show();
+        $(form).attr('action').replace('MENU_ID', id);
+    }
+    $(".menuPaso2Atras").click(function(){
+        $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
+        $(".crear_menuSubmit").removeClass("crear_menuSubmit")
+        $( ".menuPaso1" ).show()
+        $( ".menuPaso2" ).hide();
+    })
+    $(".crear_menuSubmitnone ").click(function(){
+        $( ".menuPaso1" ).hide()
+        $( ".menuPaso2" ).show();
+    })
 
     //DropZone
-        //DropZone de Menu
-        Dropzone.options.crearMenuFormImages={
-            autoProcessQueue: true,
-            maxFilesize: 0.5,
-            acceptedFiles: ".jpg, .jpeg, .png",
-            maxFiles:5
-        };
-        //DropZone de Local
+    //DropZone de Menu
+    Dropzone.options.crearMenuFormImages={
+        autoProcessQueue: true,
+        maxFilesize: 0.5,
+        acceptedFiles: ".jpg, .jpeg, .png",
+        maxFiles:5
+    };
+    //DropZone de Local
     $(function() {
         Dropzone.options.crearLocalFormImages={
             autoProcessQueue: true,

@@ -9,25 +9,25 @@
                 <table class="striped centered responsive-table">
                     @include('partials.admin.UserTable')
                     <tbody>
-                        @foreach($users as $admin)
-                            @if($admin->type == 'admin')
-                               <tr data-id="{{$admin -> id}}" data-fullname="{{$admin->full_name}}">
-                                   <td><img class="responsive-img circle"  style="width: 50px;height: 50px;" src="{{$admin -> img_profile}}"></td>
-                                    <td >{{$admin->full_name}}</td>
-                                    <td>{{$admin->email}}</td>
-                                    <td>
-                                        <div class="row">
-                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
-                                            @if($admin->status == true)
-                                                <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
-                                            @else
-                                                <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
-                                            @endif
-                                        </div>
-                                    </td>
-                               </tr>
-                            @endif
-                        @endforeach
+                    @foreach($users as $admin)
+                        @if($admin->type == 'admin')
+                            <tr data-id="{{$admin -> id}}" data-fullname="{{$admin->full_name}}">
+                                <td><img class="responsive-img circle"  style="width: 50px;height: 50px;" src="{{$admin -> img_profile}}"></td>
+                                <td >{{$admin->full_name}}</td>
+                                <td>{{$admin->email}}</td>
+                                <td>
+                                    <div class="row">
+                                        <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditUser" data-position="top" data-delay="50" data-tooltip="Editar"><i class="tiny mdi-editor-mode-edit "></i></a>
+                                        @if($admin->status == true)
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Desactivar"><i class="tiny mdi-action-done "></i></a>
+                                        @else
+                                            <a href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 softDeleteUser" data-position="top" data-delay="50" data-tooltip="Activar"><i class="tiny mdi-notification-do-not-disturb "></i></a>
+                                        @endif
+                                    </div>
+                                </td>
+                            </tr>
+                        @endif
+                    @endforeach
                     </tbody>
                 </table>
             </div>

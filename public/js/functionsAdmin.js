@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 
     /*
-        --USERS--
+     --USERS--
      */
     //Sudmits para los modales - crear
     $('#crear_userSubmit').click(function () {
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 
     /*
-        --PRODUCTS--
+     --PRODUCTS--
      */
 
     $('.crear_menuSubmit').click(function () {
@@ -109,7 +109,7 @@ $(document).ready(function(){
 
 
     /*
-        --LOCAL--
+     --LOCAL--
      */
 
     $('.crear_localSubmit').click(function () {
