@@ -9,6 +9,7 @@ use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Http\Requests\CreateProductsRequest;
+use SistemaRestauranteWeb\Http\Requests\EditProductRequest;
 use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\ProductImage;
 use SistemaRestauranteWeb\User;
@@ -69,8 +70,8 @@ class productsController extends Controller
      */
     public function show($id)
     {
-        $product = new Product();
-        return $product->getProductsForId($id);
+        $product = Product::findOrFail($id);
+        return Response::json($product);
     }
 
     /**
@@ -90,9 +91,15 @@ class productsController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function update($id)
+    public function update($id, EditProductRequest $request)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->fill($request->all());
+        if( $product->update())   return Response::json('Bbien',200);
+        else  return Response::json('Mal',500);
+
+
+
     }
 
     /**

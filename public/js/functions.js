@@ -63,11 +63,11 @@ $(document).ready(function(){
     function ajaxGetPageLoader(url) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
         $.ajax({
-            type: 'Get',
+            type: 'GET',
             url: url,
             dataType: 'json',
             success: function (data) {
-                $('#principalmd').empty().append($(data));
+                $('#principalPanel').empty().append($(data));
                 $('.preloader-wrapper').hide();
             },
             error: function (data) {
@@ -179,6 +179,17 @@ $(document).ready(function(){
 
     }
 
+    function DataEditProduct(data){
+        activeLabelForm('#EditmenuForm');
+        $('.nameProduct').val(data['name'])
+        $('.costProduct').val(data['cost'])
+        $('.limitProduct').val(data['limit'])
+        $('.descriptionProduct').val(data['description'])
+        $('.editProductSubmit').attr('data-id',data['id']);
+        $('#editMenu').openModal();
+
+    }
+
     //Editar usuario
 
     function DataEditUser(data){
@@ -196,6 +207,17 @@ $(document).ready(function(){
         CleanForm(form);
         CleanForm('#crear_userForm')
         $('.modal').closeModal();
+    }
+    function ProductEditSuccess(form){
+        form[0].reset();
+        CleanForm(form);
+        CleanForm('#create_menu')
+        $('#editMenu').closeModal();
+        ajaxGetPageLoader('Menu')
+
+
+
+
     }
     function deleteProductSuccess(card){
         card = $(card);

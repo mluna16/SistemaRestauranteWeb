@@ -37,8 +37,8 @@ $(document).ready(function(){
         $('.submitSoftDelete').attr('data-id',"")
         $(this).removeClass('changeActionSoftDelete');
         var action = $(this).attr('data-tooltip')
-        var fullname = $(this).parent().parent().attr('data-fullname')
-        var id = $(this).parent().parent().attr('data-id')
+        var fullname = $(this).parent().parent().parent().attr('data-fullname')
+        var id = $(this).parent().parent().parent().attr('data-id')
         $('.submitSoftDelete').attr('data-id',id)
         $('.headerSoftDeleteUser').append($('<span>'+action+'</span>'));
         $('.fullNameSoftDeleteUser').append($('<span>'+fullname+'</span>'));
@@ -55,7 +55,7 @@ $(document).ready(function(){
     //Editar Usuarios
 
     $('.EditUser').click(function(){
-        var id = $(this).parent().parent().attr('data-id')
+        var id = $(this).parent().parent().parent().attr('data-id')
         var url = '../users/'+id;
         $(this).ajaxGetData(url,'DataEditUser','data')
     });
@@ -102,10 +102,19 @@ $(document).ready(function(){
         $('.modalSoftDeleteProduct').openModal();
     });
 
+    $('.EditProduct').click(function(){
+        var id = $(this).attr('data-id')
+        var url = 'producto/'+id;
+        $(this).ajaxGetData(url,'DataEditProduct','data')
+    });
 
 
-
-
+    $('.editProductSubmit').click(function () {
+        var  form = $('#EditmenuForm');
+        var id = $(this).attr('data-id');
+        var url = form.attr('action').replace(':PRODUCT_ID', id);
+        $(this).ajaxStore('#EditmenuForm',url,"Producto Editado","ProductEditSuccess","form")
+    });
 
 
     /*
