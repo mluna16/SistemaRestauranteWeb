@@ -102,14 +102,14 @@ $(document).ready(function(){
         $('.modalSoftDeleteProduct').openModal();
     });
 
-    $('.EditProduct').click(function(){
+    $(document).on('click','.EditProduct', function(event){
         var id = $(this).attr('data-id')
         var url = 'producto/'+id;
         $(this).ajaxGetData(url,'DataEditProduct','data')
     });
 
 
-    $('.editProductSubmit').click(function () {
+    $(document).on('click','.editProductSubmit',function(event){
         var  form = $('#EditmenuForm');
         var id = $(this).attr('data-id');
         var url = form.attr('action').replace(':PRODUCT_ID', id);
@@ -127,4 +127,16 @@ $(document).ready(function(){
         $(this).ajaxStore('#crear_localForm',url,"Local Creado Correctamente","crearlocalSuccess","'.dropzone' , last_id")
     });
 
+    $(document).on('click','.EditLocal',function(event){
+        var id = $(this).attr('data-id')
+        var url = 'local/'+id;
+        $(this).ajaxGetData(url,'DataEditLocal','data')
+    });
+
+    $(document).on('click','.LocalEditSubmit',function(event){
+        var  form = $('#editLocalForm');
+        var id = $(this).attr('data-id');
+        var url = form.attr('action').replace(':LOCAL_ID', id);
+        $(this).ajaxStore('#editLocalForm',url,"Usuario Editado","LocalEditSuccess","form")
+    })
 })

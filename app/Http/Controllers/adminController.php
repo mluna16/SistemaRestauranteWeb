@@ -52,11 +52,18 @@ class adminController extends Controller {
             return $user->ReturnToFirstTime();
         }
     }
-    public function restauranteIndex(){
+    public function restauranteIndex(Request $request){
         $user = new User();
         $local= new Local();
-        if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.restaurante')->with('local',$local->getAllLocalInformationByUser(Auth::user()->id));
-        else return $user->ReturnToFirstTime();
+        if(! $user->getIsAFirstTimeUser()){
+            $view = View::make('usuarios.admin.restaurante')->with('local',$local->getAllLocalInformationByUser(Auth::user()->id));
+            if($request->ajax()){
+                $sections = $view->renderSections();
+                return Response::json($sections['infoPanel']);
+            }else return$view;
+        }else{
+            return $user->ReturnToFirstTime();
+        }
     }
 
 

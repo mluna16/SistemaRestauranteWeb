@@ -1,10 +1,12 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Http\Requests\CreateLocalRequest;
+use SistemaRestauranteWeb\Http\Requests\EditLocalRequest;
 use SistemaRestauranteWeb\Local;
 
 class localController extends Controller {
@@ -56,7 +58,8 @@ class localController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        $local = Local::findOrFail($id);
+        return Response::json($local);
 	}
 
 	/**
@@ -76,9 +79,13 @@ class localController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, EditLocalRequest $request)
 	{
-		//
+        $local = Local::findOrFail($id);
+        $local->fill($request->all());
+        if( $local->update()){
+            return (array('last_id' => $local->id));
+        }
 	}
 
 	/**

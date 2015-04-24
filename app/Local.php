@@ -70,7 +70,7 @@ class Local extends Model {
             'id_local' => $local->id,
             'name' => $local->name,
             'location' => $local->location,
-            'number_tables' => $local->limit,
+            'number_tables' => $local->number_tables,
             'owner' => $user->getFullNameUserById($local->owner),
             'id_image' => $localImage->id,
             'image' => $localImage->name.".".$localImage->type

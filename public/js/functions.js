@@ -226,6 +226,25 @@ $(document).ready(function(){
         ajaxGetPageLoader('Menu')
     }
 
+
+    //Editar local
+
+    function DataEditLocal(data){
+        activeLabelForm('#editLocalForm');
+        $('.localName').val(data['name']);
+        $('.localNumberTables').val(data['number_tables']);
+        $('.localLocation').val(data['location']);
+        $('.LocalEditSubmit').attr('data-id',data['id']);
+        $('#Editlocal').openModal();
+    }
+
+    function LocalEditSuccess(form){
+        form[0].reset();
+        CleanForm(form);
+        $('#Editlocal').closeModal();
+        ajaxGetPageLoader('Restaurante')
+
+    }
     //Funciones Generales
     function activeLabelForm(idForm){
         idForm = $(idForm);
