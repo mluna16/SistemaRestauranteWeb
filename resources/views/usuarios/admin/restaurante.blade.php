@@ -2,7 +2,6 @@
 @section('title') Estadisticas @endsection
 @section('Restaurante') active @endsection
 @section('infoPanel')
-{{dd($local)}}
 @foreach($local as $datos)
 
     <div class="card large">
