@@ -1,4 +1,4 @@
-<?php namespace SistemaRestauranteWeb\Http\Controllers\Auth;
+<?php namespace SistemaRestauranteWeb\Http\Controllers\Api;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
@@ -7,8 +7,10 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 
 use Illuminate\Http\Request;
+use SistemaRestauranteWeb\Local;
+use SistemaRestauranteWeb\User;
 
-class ApiController extends Controller {
+class LoginController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -23,7 +25,13 @@ class ApiController extends Controller {
     protected $auth;
 
 
-    public function postLogin(Request $request){
+    /**
+     * @param Request $request
+     * @param Local $local
+     * @param User $user
+     * @return mixed
+     */
+    public function postLogin(Request $request, Local $local,User $user){
         //Test curl -X POST -d "email=marcos@luna.com&password=12345" http://restaurante.local/api/v1/login
         $this->validate($request, [
             'email' => 'required|email', 'password' => 'required',
@@ -33,7 +41,11 @@ class ApiController extends Controller {
 
         if ($this->auth->attempt($credentials,false ))
         {
-            $response = ['UserData' => Auth::user(),'UserSession'=>Auth::check()];
+            $response = [
+                            'userData' => Auth::user(),
+                            'userSession'=>Auth::check(),
+                            'localData' => $local->getLocalForUser(),
+                        ];
             return Response::json($response,200);
 
         }else{

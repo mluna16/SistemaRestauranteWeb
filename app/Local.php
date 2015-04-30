@@ -9,6 +9,22 @@ use Illuminate\Support\Facades\DB;
 /**
  * @property mixed owner
  */
+
+
+/**
+ * Metodos de este Modelo
+ *         getNameOwnerAttribute() -> retorna el nombre del Due#o del Restaurante
+ *         getMesasAttribute() -> Retorna el numero de mesas del restaurante en sesion
+ *         Product() -> relacion entre los modelos Producto y Local
+ *         User-> Relacion uno a uno del Local con el Usuario
+ *         getLocalIdAttribute() -> Retorna el id de un Local en sesion
+ *         setOwnerAttribute-> Cambia el valor del Owner antes de crearlo en la base de Datos
+ *         getLocalForOwner()-> Retorna la informacion del restaurante para los usuarios Admin
+ *         getLocalForUser()->
+ *
+ *
+ *
+ */
 class Local extends Model {
 
 	protected $table = 'local';

@@ -4,6 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
+use Symfony\Component\HttpFoundation\Response;
 
 class Product extends Model {
 
@@ -33,7 +34,6 @@ class Product extends Model {
     public function getProductsForLocal($value){
         /** @var json $return */
         $return = Product::where('local_for', $value)->get();
-
         return $return;
     }
     public function getProductsForId($value){
@@ -76,8 +76,9 @@ class Product extends Model {
         return false;
     }
 
-    public  function getAllProductInformationByUser($id){
-        $productList = Product::where('created_by',$id)->get();
+    public  function getAllProductInformationByLocalFor(){
+        $local = new Local();
+        $productList = Product::where('local_for',$local->getLocalIdAttribute())->get();
         foreach($productList as $product){
             /** @var TYPE_NAME $productImages */
             $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
@@ -94,6 +95,26 @@ class Product extends Model {
             ];
         }
         return Collection::make($productImage);
+
+
+    }
+    public function getAllInfoForProduct($id){
+        $product = Product::where('id',$id)->get()->first();
+        $productImages = ProductImage::where('id_product',$id)->get()->first();
+
+            $productinfo[] = [
+
+                'id_product' => $product->id,
+                'name' => $product->name,
+                'cost' => $product->cost,
+                'limit' => $product->limit,
+                'description' => $product->description,
+                'status' => $product->stautus,
+                'id_image' => $productImages->id,
+                'image' => $productImages->name.".".$productImages->type
+            ];
+
+        return Collection::make($productinfo);
 
 
     }

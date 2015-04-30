@@ -37,9 +37,8 @@ class adminController extends Controller {
     }
     public function menuIndex(Request $request){
         $Product = new Product();
-        $Local   = new Local();
         $user    = new User();
-        $products = $Product->getAllProductInformationByUser($Local->getLocalIdAttribute());
+        $products = $Product->getAllProductInformationByLocalFor();
         if(! $user->getIsAFirstTimeUser()){
             $view = View::make('usuarios.admin.menu')->with('products',$products);
             if($request->ajax()) {

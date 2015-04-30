@@ -5,18 +5,34 @@
  * Date: 4/25/2015
  * Time: 12:07 PM
  *
- * Routas de la Api sistemasrestaurante/API/talMetodo
+ * Routas de la Api sistemasrestaurante/api/vX/talMetodo
  *
  */
-Route::controller('api/v1','Auth\ApiController');
+
+
+/*
+ * --Rutas que dependen de auth--
+ */
 
 Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
-    //Rutas de productos
-    Route::get('productoPorUsuario/{id}', ['uses' => 'productsController@getProductForUser']);
-    Route::get('productoPorLocal/{id}', ['uses' => 'productsController@getProductForLocal']);
-    Route::get('productoInfo/{id}', ['uses' => 'productsController@show']);
-    Route::get('productoInfo/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
+
+
+    /*
+     * Rutas de productos
+     */
+    Route::group(['prefix' => 'Producto'],function(){
+        Route::get('/', ['uses' => 'productsController@getProducts']);
+        Route::get('Info/{id}', ['uses' => 'productsController@getProduct']);
+        Route::get('Info/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
+    });
+
 
 
 });
+
+/*
+ *  --Rutas para el auth--
+ */
+Route::controller('api/v1','Api\LoginController');
+
 

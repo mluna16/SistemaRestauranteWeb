@@ -70,7 +70,7 @@ class productsController extends Controller
      */
     public function show($id)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
         return Response::json($product);
     }
 
@@ -97,9 +97,6 @@ class productsController extends Controller
         $product->fill($request->all());
         if( $product->update())   return Response::json('Bbien',200);
         else  return Response::json('Mal',500);
-
-
-
     }
 
     /**
@@ -119,43 +116,8 @@ class productsController extends Controller
         return $Product->getProductsForAttrAndID($attr, $value);
     }
 
-    public function getProductForUser($value)
-    {
 
-        $Product = new Product();
 
-        try {
-            $response = [
-                'Products' => []
-            ];
-
-            $statusCode = 200;
-            $products = $Product->getProductsForCreatedBy($value);
-
-            foreach ($products as $product) {
-                $response['Products'][] = [
-                    'id' => $product->id,
-                    'name' => $product->name,
-                    'cost' => $product->cost,
-                    'description' => $product->description,
-                    'limit' => $product->limit,
-                ];
-            }
-        }catch (Exception $e) {
-            $response = [
-                "error" => "No hay productos para este usuario"
-            ];
-            $statusCode = 404;
-
-        } finally {
-            return Response::json($response, $statusCode);
-        }
-    }
-
-    public function getProductForLocal($value){
-        $Product = new Product();
-        return $Product->getProductsForLocal($value);
-    }
 
     public function softDelete($id,$action){
         if($action==1) {
@@ -182,4 +144,52 @@ class productsController extends Controller
 
         }
     }
+
+
+
+    /**
+     * --API--
+     */
+
+    public function getProducts()
+    {
+
+        $Product = new Product();
+
+        try {
+            $statusCode = 200;
+            $response = $Product->getAllProductInformationByLocalFor();
+
+        }catch (Exception $e) {
+            $response = [
+                "error" => "No hay productos para este usuario"
+            ];
+            $statusCode = 404;
+
+        } finally {
+            return Response::json($response, $statusCode);
+        }
+    }
+
+    public function getProduct($id)
+    {
+
+        $Product = new Product();
+
+        try {
+            $statusCode = 200;
+            $response = $Product->getAllInfoForProduct($id);
+
+        }catch (Exception $e) {
+            $response = [
+                "error" => "No existe este producto"
+            ];
+            $statusCode = 404;
+
+        } finally {
+            return Response::json($response, $statusCode);
+        }
+    }
+
+
 }
