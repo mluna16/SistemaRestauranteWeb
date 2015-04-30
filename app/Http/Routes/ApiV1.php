@@ -26,6 +26,15 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
         Route::get('Info/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
     });
 
+    Route::group(['prefix' => 'Order'],function(){
+        Route::post('store',['uses' => 'Api\OrderController@store']);
+    });
+
+    Route::group(['prefix' => 'Invoice'],function(){
+
+
+    });
+
 
 
 });
