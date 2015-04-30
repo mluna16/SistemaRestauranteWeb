@@ -21,10 +21,10 @@ class CreateTableTable extends Migration {
             $table->enum('state',['ocupado','disponible']);
 
 
-            $table->integer('id_invoice')->unsigned();
-            $table->foreign('id_invoice')
+            $table->integer('id_order')->unsigned();
+            $table->foreign('id_order')
                 ->references('id')
-                ->on('invoice')
+                ->on('order')
                 ->onDelete('cascade');
 
             $table->integer('id_local')->unsigned();

@@ -16,7 +16,7 @@ class CreateOrderTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->smallInteger('status'); // Listo - en espera
+            $table->enum('state',['listo','espera']); // Listo - en espera
             $table->integer('created_by')->unsigned();
             $table->integer('id_product')->unsigned();
 
@@ -26,6 +26,7 @@ class CreateOrderTable extends Migration {
             //$table->primary($keys);
 
             //clave foraneas
+
             $table->foreign('created_by')
                 ->references('id')
                 ->on('users')
