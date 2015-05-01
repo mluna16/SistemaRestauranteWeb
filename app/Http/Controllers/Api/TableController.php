@@ -28,7 +28,7 @@ class TableController extends Controller {
         ];
         for($i = 0 ;$i <= $totalMesas;$i++){
             if(Table::where('number_table',$i)->get()){
-                    $mesasData = Table::where('number_table',$i)->get();
+                $mesasData = Table::where(['number_table' => $i,'id_local' => $local->getLocalIdAttribute()])->get();
                     foreach ($mesasData as $mesaData){
                         $orderData = Order::find($mesaData->id_order);
                         $mesas['Mesas'][] = [
@@ -81,8 +81,33 @@ class TableController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
-	}
+        $local = new Local();
+        $product =new Product();
+        $totalMesas = $local->NumberTable();
+        $mesa = [
+            'Pedidos'  => []
+        ];
+        if($id <= $totalMesas) {
+            $mesasData = Table::where(['number_table' => $id,'id_local' => $local->getLocalIdAttribute()])->get();
+            foreach ($mesasData as $mesaData) {
+                $orderData = Order::find($mesaData->id_order);
+                $mesa['Pedidos'][] = [
+                    'NumberTable' => $id,
+                    'State' => $mesaData->state,
+                    'OrderId' => $orderData->id,
+                    'OrderState' => $orderData->state,
+                    'ProductId' => $orderData->id_product,
+                    'ProductName' => $product->getProductNameAttribute($orderData->id_product),
+                ];
+            }
+            return Response::json(['success' =>true, 'data' => $mesa], 200);
+
+        }else{
+            return Response::json(['success' =>false], 401);
+        }
+
+
+    }
 
 	/**
 	 * Show the form for editing the specified resource.
