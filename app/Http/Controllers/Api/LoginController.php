@@ -46,12 +46,11 @@ class LoginController extends Controller {
                             'userSession'=>Auth::check(),
                             'localData' => $local->getLocalForUser(),
                         ];
-            return Response::json(['success' => true,'data' => $response],200);
+            return Response::json(array('success' => true, 'data' => $response),200);
 
         }else{
-
             $response = ['error' => 'No tiene credenciales'];
-            return Response::json(['success' => false,'data' => $response],401);
+            return Response::json(array('success' => false, 'data' => $response),401);
         }
     }
 
