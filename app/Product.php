@@ -124,6 +124,15 @@ class Product extends Model {
         else Product::where('id',$value)->update(['status' => true]);
     }
 
+    /**
+     * @param $value
+     * @return mixed
+     */
+    public function getProductNameAttribute($value){
+        return Product::find($value)->name;
+
+    }
+
     //Relaciones de clave foraneas
 
     public function User() {
