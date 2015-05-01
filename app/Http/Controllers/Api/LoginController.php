@@ -46,12 +46,12 @@ class LoginController extends Controller {
                             'userSession'=>Auth::check(),
                             'localData' => $local->getLocalForUser(),
                         ];
-            return Response::json($response,200);
+            return Response::json(['success' => true,'data' => $response],200);
 
         }else{
 
             $response = ['error' => 'No tiene credenciales'];
-            return Response::json($response,401);
+            return Response::json(['success' => false,'data' => $response],401);
         }
     }
 
@@ -60,8 +60,7 @@ class LoginController extends Controller {
         //Test curl -X GET   http://restaurante.local/api/v1/logout
 
         $this->auth->logout();
-        $response = ['message' => 'ok'];
-        return Response::json($response,200);
+        return Response::json(['success' => true],200);
     }
 
 }
