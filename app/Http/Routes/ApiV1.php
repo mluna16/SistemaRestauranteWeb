@@ -20,17 +20,19 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
     /*
      * Rutas de productos
      */
-    Route::group(['prefix' => 'Producto'],function(){
+    Route::group(['prefix' => 'producto'],function(){
         Route::get('/', ['uses' => 'productsController@getProducts']);
         Route::get('Info/{id}', ['uses' => 'productsController@getProduct']);
         Route::get('Info/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
     });
 
-    Route::group(['prefix' => 'Order'],function(){
+    Route::group(['prefix' => 'order'],function(){
         Route::post('store',['uses' => 'Api\OrderController@store']);
+        Route::delete('delete/{id}',['uses' => 'Api\OrderController@destroy']);
+
     });
 
-    Route::group(['prefix' => 'Invoice'],function(){
+    Route::group(['prefix' => 'invoice'],function(){
 
 
     });

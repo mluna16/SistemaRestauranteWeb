@@ -53,7 +53,10 @@ class OrderController extends Controller {
         if($order->save()){
             $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $local->getLocalIdAttribute()];
             $table = Table::create($tableAttr);
-            if($table->save()) return Response::json(array('success' => true),200);
+            if($table->save()){
+                //Colocar codigo para disminuir el inventario producto
+                return Response::json(array('success' => true),200);
+            }
             else return Response::json(array('success' => false),500);
         }
 	}
@@ -99,7 +102,12 @@ class OrderController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+        $order = Order::find($id);
+        if($order->delete()){
+            //Colocar aumentar inventario de producto
+            return Response::json(array('success' => true),200);
+        }
+        else return Response::json(array('success' => false),401);
 	}
 
 }
