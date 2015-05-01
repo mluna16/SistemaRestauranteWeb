@@ -94,4 +94,10 @@ class Local extends Model {
 
         return Collection::make($localAllInfo);
     }
+
+    public function NumberTable(){
+        $local = new local();
+        $locals = Local::find($local->getLocalIdAttribute());
+        return $locals->number_tables;
+    }
 }
