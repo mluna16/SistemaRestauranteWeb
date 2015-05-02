@@ -142,6 +142,17 @@ class Product extends Model {
 
     }
 
+    public function resetInventory(){
+        $local = new local();
+        $products = Product::where('local_for',$local->getLocalIdAttribute())->get();
+
+        foreach($products as $product){
+            Product::where('id', $product->id )->update(['inventory' => $product->limit]);
+        }
+        return true;
+
+    }
+
     //Relaciones de clave foraneas
 
     public function User() {

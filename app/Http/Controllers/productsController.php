@@ -95,8 +95,8 @@ class productsController extends Controller
     {
         $product = Product::findOrFail($id);
         $product->fill($request->all());
-        if( $product->update())   return Response::json('Bbien',200);
-        else  return Response::json('Mal',500);
+        if( $product->update())   return Response::json(['success' => true],200);
+        else  return Response::json(['success' => false],401);
     }
 
     /**
@@ -143,6 +143,12 @@ class productsController extends Controller
             }
 
         }
+    }
+
+    public function resetInventory(){
+        $product = new Product();
+        if($product->resetInventory()) return Response::json(['success' => true], 200);
+        else return Response::json(['success' => false], 401);
     }
 
 
