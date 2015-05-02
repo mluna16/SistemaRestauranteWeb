@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
+use SistemaRestauranteWeb\Http\Controllers\productsController;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Local;
 use SistemaRestauranteWeb\Order;
+use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\Table;
 
 
@@ -42,7 +44,7 @@ class OrderController extends Controller {
 	public function store(Request $request)
 	{
         $local = new Local();
-
+        $product = new Product();
         $this->validate($request, [
             'idTable' => 'required', 'idProduct' => 'required',
         ]);
@@ -54,7 +56,7 @@ class OrderController extends Controller {
             $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $local->getLocalIdAttribute()];
             $table = Table::create($tableAttr);
             if($table->save()){
-                //Colocar codigo para disminuir el inventario producto
+                $product->updateInventory($request->idProduct,true);
                 return Response::json(array('success' => true),200);
             }
             else return Response::json(array('success' => false),500);
@@ -103,8 +105,9 @@ class OrderController extends Controller {
 	public function destroy($id)
 	{
         $order = Order::find($id);
+        $product= new Product();
         if($order->delete()){
-            //Colocar aumentar inventario de producto
+            $product->updateInventory($order->id_product,false);
             return Response::json(array('success' => true),200);
         }
         else return Response::json(array('success' => false),401);

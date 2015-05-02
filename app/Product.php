@@ -133,6 +133,15 @@ class Product extends Model {
 
     }
 
+    public  function updateInventory($value,$action){
+        $product = Product::find($value);
+
+        if($action==true)   $Inventory= $product->inventory - 1;
+        else                $Inventory= $product->inventory + 1;
+        Product::where('id', $value)->update(['inventory' => $Inventory]);
+
+    }
+
     //Relaciones de clave foraneas
 
     public function User() {
@@ -141,4 +150,5 @@ class Product extends Model {
     public function productImage() {
         return $this->hasOne('SistemaRestauranteWeb\ProductImage');
     }
+
 }
