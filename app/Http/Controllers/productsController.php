@@ -49,17 +49,23 @@ class productsController extends Controller
      */
     public function store(CreateProductsRequest $request)
     {
+        $product = new Product();
+        if($request->all()){
 
-        $Product = Product::create($request->all());
-        $Product->setCreatedByAttribute($Product->created_by);
-        $Product->setLocalForAttribute(1);
-        if ($Product->save()) {
+            $product->setCreatedBy(Auth::user()->id);
+            $product->setLocalForAttribute();
+            $product->name = $request->name;
+            $product->cost = $request->cost;
+            $product->description = $request->description;
+            $product->limit = $request->limit;
+            $product->inventory = $request->limit;
+            $product->save();
+            if ($product->save()) {
 
-            if ($request->ajax()) return array('last_id' => $Product->id);
+                if ($request->ajax()) return array('last_id' => $product->id);
 
-        };
-        return $Product;
-
+            };
+        }
     }
 
     /**
