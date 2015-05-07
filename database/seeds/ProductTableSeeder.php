@@ -16,7 +16,7 @@ class ProductTableSeeder extends Seeder {
         $faker = Faker::create();
         for($i=0;$i < 12;$i++){
             $limitInventory = $faker->numberBetween($min = 10, $max = 100);
-            $id = \DB::table('Product')->insertGetid(array(
+            $id = \DB::table('product')->insertGetid(array(
                 'name'	=> $faker->streetName,
                 'description' => $faker->text($maxNbChars = 240),
                 'cost' => $faker->numberBetween($min = 80, $max = 1000),
