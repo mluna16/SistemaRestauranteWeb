@@ -27,7 +27,8 @@ class productImageController extends BaseController  {
             $fileName = str_replace('/', "",\Hash::make($fileNameChange));
 
 
-            $path = public_path().'/images/Product';
+	   $path = public_path().'/images/product';
+
 
             $fileType= $fileInfo->guessExtension();
 

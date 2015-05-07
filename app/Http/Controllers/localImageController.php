@@ -23,7 +23,8 @@ class localImageController extends BaseController {
             $fileNameChange = str_replace($vowels, "",$fileInfo->getClientOriginalName());
             $fileName = str_replace('/', "",\Hash::make($fileNameChange));
 
-            $path = public_path().'/images/Local';
+            $path = public_path().'/images/local';
+
 
             $fileType= $fileInfo->guessExtension();
 
