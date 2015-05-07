@@ -134,7 +134,7 @@ class productsController extends Controller
 
             $user = Product::find($id);
             $file = ProductImage::where('id_product',$id)->firstOrFail();
-            $path = public_path().'/images/Product/'.$id;
+            $path = public_path().'/images/product/'.$id;
 
             if (!File::deleteDirectory($path))
             {
