@@ -9,16 +9,15 @@ use Symfony\Component\HttpFoundation\Response;
 class Product extends Model {
 
     protected $table = 'product';
-    protected $fillable = ['name','cost', 'description','limit','created_by','local_for'];
+    protected $fillable = ['name','cost', 'description','limit','created_by','inventory','local_for'];
 
     /**
      * @param $value
      */
-    public function setCreatedByAttribute($value){
-
-        $this->attributes['created_by'] = Auth::user()->id;
+    public function setCreatedBy($value){
+        $this->attributes['created_by'] = $value;
     }
-    public function setLocalForAttribute($value){
+    public function setLocalForAttribute(){
         $local = new Local();
         $this->attributes['local_for'] = $local->getLocalIdAttribute();
     }
@@ -54,7 +53,6 @@ class Product extends Model {
                 $return = Product::find($value)->$attr;
                 return $return;
             } else  return ['error' => "that product don't belong at this local "];
-
         }else  return  ['error' => "attr not found"];
     }
 

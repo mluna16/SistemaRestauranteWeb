@@ -140,6 +140,7 @@ return [
          * Vendor Service Providers
          */
         'Collective\Html\HtmlServiceProvider',
+        'Barryvdh\DomPDF\ServiceProvider',
 
 		/*
 		 * Application Service Providers...
@@ -204,6 +205,12 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
 
-	],
+        /*
+         * Vendor Alias DomPDF
+         */
+        'PDF' => 'Barryvdh\DomPDF\Facade',
+
+
+    ],
 
 ];

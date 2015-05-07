@@ -12,7 +12,7 @@
             ])
             !!}
             @include('partials.admin.FormMenu')
-
+            {!!Form::close()!!}
         </div>
         <div style="display:none" class="menuPaso2">
             <p>Cargar Imagenes del Producto</p>
