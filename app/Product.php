@@ -128,7 +128,9 @@ class Product extends Model {
      */
     public function getProductNameAttribute($value){
         return Product::find($value)->name;
-
+    }
+    public function getProductAttributeForId($value, $attr){
+        return Product::find($value)->$attr;
     }
 
     public  function updateInventory($value,$action){
