@@ -24,7 +24,7 @@ class TableController extends Controller {
 		$totalMesas = $local->NumberTable();
         $mesas = [
             'TotalMesas' => $totalMesas,
-            'Mesas'  => []
+            'Mesas'  => [],
         ];
         for($i = 0 ;$i <= $totalMesas;$i++){
             if(Table::where('number_table',$i)->get()){
@@ -85,19 +85,22 @@ class TableController extends Controller {
         $product =new Product();
         $totalMesas = $local->NumberTable();
         $mesa = [
+            'CostTable' => 0,
+            'NumberTable' => $id,
             'Pedidos'  => []
         ];
         if($id <= $totalMesas) {
             $mesasData = Table::where(['number_table' => $id,'id_local' => $local->getLocalIdAttribute()])->get();
             foreach ($mesasData as $mesaData) {
                 $orderData = Order::find($mesaData->id_order);
+                $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product,'cost');
                 $mesa['Pedidos'][] = [
-                    'NumberTable' => $id,
                     'State' => $mesaData->state,
                     'OrderId' => $orderData->id,
                     'OrderState' => $orderData->state,
                     'ProductId' => $orderData->id_product,
                     'ProductName' => $product->getProductNameAttribute($orderData->id_product),
+                    'productCost' => $product->getProductAttributeForId($orderData->id_product,'cost'),
                 ];
             }
             return Response::json(['success' =>true, 'data' => $mesa], 200);
