@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="Instalando DomPDF">
-      <change type="DELETED" beforePath="C:\wamp\VirtualHost\SistemaRestauranteWeb\public\Images\Product\52\$2y$10$6PQE8hVUAjjh9mOQwZfqJeSXLcEXG1YRXiLtgjPWukWsfkO154k8..jpeg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\VirtualHost\SistemaRestauranteWeb\public\Images\Product\53\$2y$10$rlATCM.WXZNu6t8VZk1IXul9RzbODqP3NbubdPys4XUN9kHlkHG.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table.php" afterPath="$PROJECT_DIR$/app/Table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php" afterPath="$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcomeP.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcomeP.blade.php" />
+    <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
@@ -2885,12 +2879,6 @@
       <option name="number" value="Default" />
       <updated>1425477644111</updated>
     </task>
-    <task id="LOCAL-00017" summary="Creado Nuevo modulo, que permite saber si el usuario entra por primera vez al sistema. esto para todos los usuarios con diferencia de admin">
-      <created>1428944386183</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1428944386183</updated>
-    </task>
     <task id="LOCAL-00018" summary="Cambios varios. Sistema de firsttime para usuarios normales">
       <created>1429017043830</created>
       <option name="number" value="00018" />
@@ -3179,7 +3167,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430968012026</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Funciones para la caja, ahora sabe si esta ono ocupada la caja">
+      <created>1432092269560</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1432092269582</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -3206,6 +3200,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31191224" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -3223,7 +3218,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40595612" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -3274,7 +3268,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/php-getting-started" />
     </ignored-roots>
-    <MESSAGE value="Modulo de editar Productos" />
     <MESSAGE value="Cambio de distribución de la rutas" />
     <MESSAGE value="Modulo restaurante Funcional" />
     <MESSAGE value="Api, sistema de Auth via json" />
@@ -3299,7 +3292,8 @@
     <MESSAGE value="Solucionado problema de que no guardaba productos al menu y Dropzone no funcionaba" />
     <MESSAGE value="Cambios de direccion de carpetas para manejarlas en linux" />
     <MESSAGE value="Cambios de formatod para leer arvhicos para linux ---SERVER" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios de formatod para leer arvhicos para linux ---SERVER" />
+    <MESSAGE value="Funciones para la caja, ahora sabe si esta ono ocupada la caja" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funciones para la caja, ahora sabe si esta ono ocupada la caja" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3530,6 +3524,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2057" max-vertical-offset="2261">
           <caret line="121" column="23" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
