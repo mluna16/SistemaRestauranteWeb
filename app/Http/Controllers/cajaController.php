@@ -7,6 +7,7 @@ use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Local;
+use SistemaRestauranteWeb\Table;
 use SistemaRestauranteWeb\User;
 
 class cajaController extends Controller {
@@ -20,10 +21,9 @@ class cajaController extends Controller {
 	{
         $user = new User();
         $local = new Local();
-        $data = array(
-            'Local'  => $local->getLocalForUser(),
-        );
-        if(! $user->getIsAFirstTimeUser()) return view('usuarios.caja.caja')->with('data' , $data);
+        $table = new Table();
+        $data = $table->getAllTablesForLocal($local->getLocalIdAttribute());
+        if(!$user->getIsAFirstTimeUser()) return view('usuarios.caja.caja')->with('data' , $data);
         else return $user->ReturnToFirstTime();
     }
 

@@ -20,4 +20,36 @@ class Table extends Model {
 
     }
 
+    public function getAllTablesForLocal($id){
+        $local = new Local();
+        $totalMesas = $local->NumberTable();
+        $mesas = [
+            'TotalMesas' => $totalMesas,
+            'Mesas'  => []
+        ];
+        $mesa = Table::where(['number_table' => 2,'state' => 'ocupado','id_local' => $id])->take(1);
+        for($i = 1 ;$i <= $totalMesas;$i++)
+        {
+            $hola = Table::where(['number_table' => $i,'state' => 'ocupado','id_local' => $id])->get();
+
+            if ( ! $hola->isEmpty())
+            {
+                $mesas['Mesas'][] = [
+
+                    'NumberTable' => $hola->first()->number_table,
+                    'State' => $hola->first()->state
+                ];
+
+            }else
+            {
+                $mesas['Mesas'][] = [
+
+                    'NumberTable' => $i,
+                    'State' => 'disponible'
+                ];
+            }
+        }
+        return $mesas;
+
+    }
 }

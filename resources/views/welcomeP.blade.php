@@ -119,7 +119,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Made for <a class="text-white" href="https://www.facebook.com/pedro.moyahernandez">Pedro Moya</a>
+                Made by <a class="text-white" href="https://www.facebook.com/pedro.moyahernandez">Pedro Moya</a>
                 & <a class="text-white" href="http://marcoslunah.herokuapp.com">Marcos Luna H</a>
 
             </div>

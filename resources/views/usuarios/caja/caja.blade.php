@@ -1,36 +1,43 @@
 @extends('layout.init')
 @section('title') Caja @endsection
-
 @endsection
 @section('content')
     @include('partials.principal.headerPrincipal')
     <div class="row">
-        <div class="col s12 m12 l6">
-            @foreach($data['Local'] as $local)
+        @section('tablesPanel')
+            <div class="col s12 m12 l6">
                 <div class="row">
-                    @for($i=1; $i <= $local->mesas;$i++)
-                    <div class="col s6 m4 l3">
-                        <a class="mostrar_mesa">
-                            <div class="card-panel teal ">
-
-                                <h5 class="white-text center-align ">{{$i}} </h5>
-                            </div>
-                        </a>
-
-                    </div>
+                    @for($i=1; $i <= $data['TotalMesas'];$i++)
+                            @if($data['Mesas'][$i-1]['State'] == 'ocupado')
+                                <div class="col s6 m4 l3" style="cursor: pointer">
+                                    <a class="mostrar_mesa tooltipped" data-position="right" data-delay="50" data-tooltip="{{$data['Mesas'][$i-1]['State']}}">
+                                        <div class="card-panel red lighten-3 ">
+                                            <h5 class="black-text center-align ">{{$i}} </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            @else
+                                <div class="col s6 m4 l3">
+                                    <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="{{$data['Mesas'][$i-1]['State']}}">
+                                        <div class="card-panel green lighten-3 ">
+                                            <h5 class="black-text center-align ">{{$i}} </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endif
                     @endfor
                 </div>
+        @show
 
-            @endforeach
-                {!!Form::open([
-                     'route' => [
-                     'caja.pedido.show',
-                     ':MESA_ID'
-                     ],
-                     'method' => 'GET',
-                     'id' => 'form_mostrar_mesa'])
-                    !!}
-                {!!Form::close()!!}
+        {!!Form::open([
+             'route' => [
+             'caja.pedido.show',
+             ':MESA_ID'
+             ],
+             'method' => 'GET',
+             'id' => 'form_mostrar_mesa'])
+            !!}
+        {!!Form::close()!!}
         </div>
 
         <div class="col s12 m12 l6">
