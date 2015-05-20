@@ -25,6 +25,7 @@ class localImageController extends BaseController {
 
             $path = public_path().'/images/local';
 
+
             $fileType= $fileInfo->guessExtension();
 
             $fileSize = $fileInfo->getClientSize()/1024;

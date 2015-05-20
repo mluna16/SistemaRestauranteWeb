@@ -964,6 +964,8 @@
                 "php"
             ],
             "time": "2015-05-02 15:40:40"
+<<<<<<< HEAD
+=======
         },
         {
             "name": "phenx/php-font-lib",
@@ -998,6 +1000,7 @@
             "description": "A library to read, parse, export and make subsets of different types of font files.",
             "homepage": "https://github.com/PhenX/php-font-lib",
             "time": "2014-02-01 15:22:28"
+>>>>>>> 10005af91bb5ff6a82601a7572d011e7b23c7bcd
         },
         {
             "name": "psr/log",
