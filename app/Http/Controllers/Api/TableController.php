@@ -81,35 +81,14 @@ class TableController extends Controller {
 	 */
 	public function show($id)
 	{
-        $local = new Local();
-        $product =new Product();
-        $totalMesas = $local->NumberTable();
-        $mesa = [
-            'CostTable' => 0,
-            'NumberTable' => $id,
-            'Pedidos'  => []
-        ];
-        if($id <= $totalMesas) {
-            $mesasData = Table::where(['number_table' => $id,'id_local' => $local->getLocalIdAttribute()])->get();
-            foreach ($mesasData as $mesaData) {
-                $orderData = Order::find($mesaData->id_order);
-                $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product,'cost');
-                $mesa['Pedidos'][] = [
-                    'State' => $mesaData->state,
-                    'OrderId' => $orderData->id,
-                    'OrderState' => $orderData->state,
-                    'ProductId' => $orderData->id_product,
-                    'ProductName' => $product->getProductNameAttribute($orderData->id_product),
-                    'productCost' => $product->getProductAttributeForId($orderData->id_product,'cost'),
-                ];
-            }
-            return Response::json(['success' =>true, 'data' => $mesa], 200);
+    $table = new Table();
+        if($table->getInfoTableForNumberTable($id) != false)
+        {
+            return Response::json(['success' =>true, 'data' => $table->getInfoTableForNumberTable($id)], 200);
 
         }else{
             return Response::json(['success' =>false], 401);
         }
-
-
     }
 
 	/**

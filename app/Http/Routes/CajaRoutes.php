@@ -11,8 +11,6 @@
 Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 {
     Route::get('/','cajaController@index');
-
+    Route::get('infoOrden/{id}','cajaController@getInfotable');
     Route::resource('pedido','pedidoController');
-
-
 });

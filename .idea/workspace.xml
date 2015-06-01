@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/usuarios/caja/infoPedido.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php" afterPath="$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table.php" afterPath="$PROJECT_DIR$/app/Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php" afterPath="$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/functions.js" afterPath="$PROJECT_DIR$/public/js/functions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SistemaRestauranteWeb.iws" />
@@ -33,55 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="caja.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php">
+      <file leaf-file-name="OrderTable.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/partials/caja/OrderTable.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50268817" vertical-offset="0" max-vertical-offset="1785">
-              <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
-              <folding>
-                <element signature="e#468#491#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="33bbf8c780efc442472e7f26da28bd03" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/framework/views/33bbf8c780efc442472e7f26da28bd03">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1802">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="1309" max-vertical-offset="1904">
-              <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.923077" vertical-offset="1303" max-vertical-offset="2567">
-              <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-              <folding>
-                <element signature="e#61#101#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.961538" vertical-offset="385" max-vertical-offset="1037">
-              <caret line="44" column="29" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="29" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="172" />
               <folding />
             </state>
           </provider>
@@ -90,18 +53,88 @@
       <file leaf-file-name="cajaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/cajaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="1564">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+            <state vertical-scroll-proportion="-9.576923" vertical-offset="1604" max-vertical-offset="2091">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+              <folding>
+                <element signature="e#57#93#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.88461536" vertical-offset="895" max-vertical-offset="1530">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
+      <file leaf-file-name="caja.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1904">
-              <caret line="63" column="60" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="60" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="731" max-vertical-offset="1207">
+              <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
+              <folding>
+                <element signature="e#460#483#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.115385" vertical-offset="1017" max-vertical-offset="2261">
+              <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
+              <folding>
+                <element signature="e#61#101#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.98644984" vertical-offset="4277" max-vertical-offset="4845">
+              <caret line="273" column="184" selection-start-line="273" selection-start-column="184" selection-end-line="273" selection-end-column="184" />
+              <folding>
+                <marker date="1433182632773" expanded="true" signature="320:384" placeholder="..." />
+                <marker date="1433182632773" expanded="true" signature="2328:2392" placeholder="..." />
+                <marker date="1433182632773" expanded="true" signature="4095:4159" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functionsAdmin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/functionsAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.054054" vertical-offset="890" max-vertical-offset="2499">
+              <caret line="59" column="8" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CajaRoutes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="238">
+              <caret line="13" column="60" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layout/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="952">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -117,11 +150,12 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response47.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/usuarios/admin/usuarios.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/ModalEditUser.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/ModalEditProduct.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php" />
@@ -135,10 +169,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/localController.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/ModalEditLocal.blade.php" />
         <option value="$PROJECT_DIR$/public/js/functionsAdmin.js" />
-        <option value="$PROJECT_DIR$/public/js/functions.js" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/admin/restaurante.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/admin/estadisticas.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php" />
         <option value="$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/parallax.blade.php" />
@@ -152,25 +184,29 @@
         <option value="$PROJECT_DIR$/app/Order.php" />
         <option value="$PROJECT_DIR$/app/Local.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_03_04_174007_create_product_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Routes/ApiV1.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/productImageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/localImageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/productsController.php" />
         <option value="$PROJECT_DIR$/resources/views/welcomeP.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Routes/ApiV1.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php" />
         <option value="$PROJECT_DIR$/app/Table.php" />
+        <option value="$PROJECT_DIR$/resources/views/usuarios/caja/infoPedido.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/cajaController.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/functions.js" />
       </list>
     </option>
   </component>
@@ -596,138 +632,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Requests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SistemaRestauranteWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -740,7 +644,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../UsoDeRenderSectionsL5" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="33bbf8c780efc442472e7f26da28bd03&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/storage/framework/views/33bbf8c780efc442472e7f26da28bd03&#10;table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/cajaController.php&#10;Table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;TableCon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;Pr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;contro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;Ima&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;UserCon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;userConto&#9;null&#9;null&#10;user&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/User.php&#10;userCo&#9;null&#9;null&#10;Prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;Local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;Login&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/LoginController.php&#10;im&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;loc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;imag&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;ima&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2015_04_09_165207_create_table_table.php&#10;tables&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/seeds/LocalTableSeeder.php&#10;Adm&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;produc&#9;null&#9;null&#10;admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;adminCo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;Restaura&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;res&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;UserCont&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;localco&#9;null&#9;null&#10;LocalCont&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/localImageController.php&#10;fun&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;Men&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;Menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalEditMenu.blade.php&#10;Res&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;ModalCre&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;edit&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalEditUser.blade.php&#10;functio&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;us&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;Pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;info&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/principal/infoBtn.blade.php&#10;route&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/routes.php&#10;ModalCrea&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateUser.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;orde&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Orde&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/caja/OrderTable.blade.php&#10;tab&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/CajaRoutes.php&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;Rou&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/CajaRoutes.php&#10;dash&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;admi&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;pr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;Ta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;ca&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/caja/caja.blade.php&#10;rou&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/AdminRoutes.php&#10;produ&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;Im&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;33bbf8c780efc442472e7f26da28bd03&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/storage/framework/views/33bbf8c780efc442472e7f26da28bd03&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;Table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;TableCon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;Pr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;contro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;Ima&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;UserCon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;userConto&#9;null&#9;null&#10;user&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/User.php&#10;userCo&#9;null&#9;null&#10;Prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;Local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;Login&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/LoginController.php&#10;im&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;loc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;imag&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;ima&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productImageController.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2015_04_09_165207_create_table_table.php&#10;tables&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/seeds/LocalTableSeeder.php&#10;Adm&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;produc&#9;null&#9;null&#10;adminCo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;Restaura&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;res&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;UserCont&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;localco&#9;null&#9;null&#10;LocalCont&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/localImageController.php" />
     <property name="ToolWindowTerminal.ShowToolbar" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
@@ -763,6 +667,952 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432870702000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlVhNFI5S0RXQk43UXlHVkZ0cmNCVnc9PSIsInZhbHVlIjoiZU5IaHNuOTFjcFJicmFBdFRZM0NjZ2RvWW9LcFJ1aEdibXZDZWNueDlldEJXZEJHYndGdWdXeEJtUzgreXlKTFhNUkVsYkR0NzRUMlh1Zk85WG1pVFE9PSIsIm1hYyI6IjZmMDU3MTdlNTY2NmYyYzFlZDdjZmYwOWIyNDIwNzQ5YmU4NDRkZjA1ZGE5MTYwMTZmNzhkNWY4ZjAxOWUzYjQifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="caja/infoOrden/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432870690000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IldUNXViZnJNUHNaOE92YndibzdHZWc9PSIsInZhbHVlIjoiTHlXU3p0Z0ZmWFwvZlBUYUF4TVJBVjB4VFArdzdzdHZsZ2Ewc1VFY0tYelVKMGgyeEU1cWtnaktkQkxVYzhDZk83RDlVNUlRZlFvS1pOYlFMdHdwYXhRPT0iLCJtYWMiOiJiYmRmNzdhM2IzNjIzNDdlZTAyZDU4MzEzZDdmYmRiNjY2ZWMwMDdmYjZjMzQ4MDAzZmQ0Y2I2ZmY4YzU3M2ZiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="caja/infoOrden/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432870673000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InRjUkE2WUl3bHc3QlNJUlNyaHllRVE9PSIsInZhbHVlIjoiZ1A1RmpzYjVtMXJOOTJkMDlWMTBzZEFcLzhBcVRFdUdkV2RYTlhrNEFGUStNXC9Gd1Vsa1BjcnBEQ2JkWWFocGg2YmRYV0VTcTJpMUFLOERjNTA3MjhLQT09IiwibWFjIjoiOGI4MjUzOTkwOGU0MjkxYjViYzVhYzNiNGJhYTMzYzBkYjFjN2E0OTNiM2QzMTM2OTlhMDc2YzAxNTQ0M2NmYSJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432234648000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlRhQTY3YktcLzI5MWQwMGFGVmVxUU9nPT0iLCJ2YWx1ZSI6IlRuZTc3S1dEZVh6V3JiOFMrcnBxVVlWT0dhcVYrcjVVUWRMMlwvWTJ3NVdTcTZkK2FFSXlcLzhIcVR3U2tPaTJaZE55TnZNelhnYmZudVdcL3ZVNE41elRBPT0iLCJtYWMiOiI3OTExMDk0MDgyYWUzM2Y1NmUxODNkZGQ4MmQ5NTQyZjJjZDlkZTY4ZjY0OTVhNDE2Njg0OGVkOGJmZDgxMjA1In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="caja/infoOrden/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432234648000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlRhQTY3YktcLzI5MWQwMGFGVmVxUU9nPT0iLCJ2YWx1ZSI6IlRuZTc3S1dEZVh6V3JiOFMrcnBxVVlWT0dhcVYrcjVVUWRMMlwvWTJ3NVdTcTZkK2FFSXlcLzhIcVR3U2tPaTJaZE55TnZNelhnYmZudVdcL3ZVNE41elRBPT0iLCJtYWMiOiI3OTExMDk0MDgyYWUzM2Y1NmUxODNkZGQ4MmQ5NTQyZjJjZDlkZTY4ZjY0OTVhNDE2Njg0OGVkOGJmZDgxMjA1In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="caja/infoOrder/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432234637000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImtMb0Z5ekp5Y3YrdEZOVDRxMXdENEE9PSIsInZhbHVlIjoicmVlM1d1Tmw2SXZTWXZQNXZHWUlFR1R3VnVZUjBVZjZNSEhpNktIN1g5eWdaaTZ3emJlQUJnVlNqeGdBU1EyRkpiNmVOK1JsWERYaFhFM2EwaUxnS0E9PSIsIm1hYyI6IjMwNDlhNDgxMjA4Y2QwNDcxMDBhM2RlYTAwNjE1YjFkMzAwMWM5ZjE3YWQ3OTgxODcxNDQxZDcyYzAxNTgwZGYifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/12" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432234627000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IlwvdVIxbkVDZ0U5VXFmQkgzTmRydHNnPT0iLCJ2YWx1ZSI6ImNaXC9hVXZ4MnlXNmtwR3QxZm9NTTBnWmo5c09UYTV5NkFWRTJybXBcL01cL21rb1FURzcyN2xEWkUzUks0VlpMcFVzRTdwQnZMU0g3NisxME1ObVBFK1d3PT0iLCJtYWMiOiJmZWU5Y2NjYTRkODJiMmYwMTYzNDE3N2RlMzJkMzEyMTRlNDdiZWExMTQ3ZWQ1YTk3OWZhMTgyYTE0MzJmYmU4In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432187609000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Im5CWW5iRkNUOUE1VitEOTduYjF4N0E9PSIsInZhbHVlIjoiNnVldUxcL044cWJFY0pvYTZKMlVoNWpCNW5EZk4wVkROcG9HaEJEV2gzMnNCVmZ0dXZMdUUwVjdKcnRMYUliVlwvUnBmVHVwejZhWjl2QURpUXcwSzF3dz09IiwibWFjIjoiOWVlZjJiZjNiZjliMTBlNmE4NWFhNzdiYTQ5N2U2YjdmMDc0MDAxOTk1NjEwNjZjNDQwODI3YjM0NmRhN2JiYSJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/12" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432187066000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImxwQ1hnOUNIbk5qTFFyNG1sOWdKZUE9PSIsInZhbHVlIjoiZUk1b1lwQWpZMFZoaXFhMmFRWWcxQUtjbmlOK1o0UVA2NHFoZHNGS1JjZ3ZnbzExVGZlQnk0V1B3WUpjZklWSEpYajVGb3grK3NEM281TW9QblN6OGc9PSIsIm1hYyI6IjI3NjNiNGQ4N2Q2NDdkNzA1NDQ0ODY4MzJiNTNjMGQ5YjU0YTMwNGI0ZDNkNDhkODNhN2YxZDZlYzM1NmFkNGUifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/12" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432187055000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjRwMmNzclZxZGJsa3JcL01icjlBNFF3PT0iLCJ2YWx1ZSI6IjFUXC9LMUtjWHVQXC8ra3BwU0tRTDNvTldDU0kreStFbDJYVnRaYjZwTXQ5ZjVYT1RRbHhsOVNSQkxaN3BNTXRXaHdrYUx4M1B2WkpqYURWXC9OQU1hTHdBPT0iLCJtYWMiOiI4NjQ0MTk5MmMzYjdjMDEyYjU4ZTZkYzViMWQwNTRlYWVlYWI1NzgxY2RlODA0ZmJlYjk0YWVlNWVhZGY3ZTU5In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/15" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432187050000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImVSV0VqaWVWNEx5MmV1YzhacmlNRVE9PSIsInZhbHVlIjoiclh2ak5GMnhPdG1RU3k1cks1ZEJiMHU0M01TUGZvVmJjSzBoK1lzT1wvMG1aVzJJNnFGaWhuWXN4WHU2ODBncmZ6TThFbjNaS2VMclJXaVQwdm5lMGJBPT0iLCJtYWMiOiIzOTJiOTAzNWQzYWYwNTVjN2Y3ZmI4Yjg4ZGZlNmMyNWY5ZDVkYjdhN2Y4Yjc1NzZmMzZiZDljYjdkZDY2NWFmIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/0" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432187038000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjlnV1FQUjBBZXlVNkZmbXBtcXY2Wnc9PSIsInZhbHVlIjoiTzJcL3dkTEhoRU5uWWhkQVdxQXc1MmVkZGpLYW5SZHc0dTN0MzRNdnpSQlZQOHVPWWpkc013YzlPa3I2c3QyR1F6WUVvTGY0UjNyczJjZzBXR3FVRzN3PT0iLCJtYWMiOiIwMTNmYmVhZmRiZjZmYTk2MzlkYmU1OTk5ZTgwODcxZmQ3ZjNhZGQyZTBiNTkwODkzY2MzYThkN2EzZjkyNzhjIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/12" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432186968000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImVsMTI2ZUZZaUExa242ZStEQVVZalE9PSIsInZhbHVlIjoibXNqK1k2MnZHRWlCTTlBR2RkNk1WWkh5d1RuOHVidE5GR1wveG94UVlBYzNDdUtcL3J3dHRSckNqXC9oQ2lOSzBRUjFMck9LSFwveVFlOUF3M2d4dWZRWXlnPT0iLCJtYWMiOiJmODI5MTgyZDVjMmU5NWUyZjc0ZTJiMTMwMDFhNmZjNjBlNjkzNDAzNWIzMzkyZmIwOGU5YjljYTAyNDU4NmMyIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432186952000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImhZdEkwbHRtU0dVTlRyM2g2VzJjc1E9PSIsInZhbHVlIjoiTU13eDBsdTRheTFGTTcyZzJvT2FpK3J6T2JSMXRLK3AyWXo1eUFaK2xtYzVoTDhsM1ZDcmFodHZLZ05BTjlsQjcrNFFKS3gyV085VDlCdDlNeGVJN0E9PSIsIm1hYyI6IjA5ODA1MjQ1ZTRkYWIzNTY5OGQ1ZTE4N2Y2MmYxOTdiOTQ4Yjk1YzI3YmQ1ZDM2OGYzYzMwYmJiNDUxMGQzZTMifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432153301000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InhjRHI4a01VaEtIZXNTYUMxbW1FK2c9PSIsInZhbHVlIjoiTzByVm9kWlRFVVRvOUNyS0NvMjFGSzdrT2hYXC9pRVVwQlVQMVBYbk1WY0hpTjNoYVBwekhjZFwvR3FObVFIREJqQ3M3QkNZQVFEZGdqNFowRVQ2cVlBUT09IiwibWFjIjoiMWUwYjRiMGRiMjg2NjcxYjgxYWM1OWY1ZmNkODIxMDFhM2Q2OGY4YjBlODVmMzAzZTQzZmRlMjI3ZGExNGZkMCJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151823000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkZXZFhXSUtIdEFsNDByUGd1eGJMb0E9PSIsInZhbHVlIjoiajVzYUs3Y1hxQXpsWmFxaVRRVmNSTUJnN1BrS3Nlc0JRTXQ0QUFIS0lmTTZoVFEyXC9rR2JReFczVmtBSXpRY1JVZmxmSEtiMlU1NkIyblc2UHNmVlBRPT0iLCJtYWMiOiJmMjYyYWExMzFjNDJmZjhkMWI2ODkwNzM5ZmU4ODNmZjg2ZTkzMzY4MWJmZDk5ODRhNzM4YmI3YWZmODU1MjYxIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151785000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImxMU1hmSVFSQWxwcFJpUEVhTVZlN3c9PSIsInZhbHVlIjoiOTJzTUtzT3pGXC9OR0toYU12a3hycUM3SGxpSWNYa1I5TlJEVFJcL05ObVJQRlwvdEpQMXEyaGZsTlJGOHZZTjY4TG96bWNJRFFwRGpPUW1XeHhFeEk4Wnc9PSIsIm1hYyI6ImVkODAyYWEzNzVlMGE2NDE1Y2QwMWRhZGY3YzI0NGQ2ZTUyMWM2ZWE0MjY4OWZkZGFkZmQ1ZjM1NzdlYWE5MzAifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151514000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InJla0NhTXNaeHoraHpqa3o2aGt1WWc9PSIsInZhbHVlIjoib3hQdU5ncUtrUGtUQTZ5NzhlUDZESVFjYlZzUEVEZStoQ2JCZTFFalhRV0YwYXNtb2pLNk9ybHJoYTZGXC8zTU1zeDZDMm15dHFOTUtNTnljVXpuY0dBPT0iLCJtYWMiOiI4YzJhODk2NzE1YjUzOGZjYTFhOTE4MGNmMDVkNjBhNDI0OTEzZmViMzRmMjhlZGJhNWJmNzAzYWJkOWM3YmRkIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151397000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjBQcm41Q25aYVZ6ZmRUSnd3VTU2eEE9PSIsInZhbHVlIjoiU2MyNjJjTGttOFdhaUFoc0tyZUdGTHh6R3hZZUR0SXRxT1dUc0lQb2ZTZXJUN2ZGNFdiWitwbW5qMlNRYVVCR3FoWU1DaHZBaTFRbm9RcjJ5T1Z1aXc9PSIsIm1hYyI6IjBlZjljNzMzMDQ4MjBiNGU0NGVmMjVlMjUyMDBiODgyYzcwM2YyNThmNDJkMDc3YTc2OGVjMmUzYWFhMTMzNTUifQ%3D%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151337000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjllK0FFamFQM3kxOFwvV2NucStEZHhRPT0iLCJ2YWx1ZSI6InR3bjV5MndSMUhITjFLekh2RFwvNUNWK2VUdWlpbmpoK1ZJaVVQZGNuR1lcL1pxZU9xWW1hUWJ1anRWOHk4dUxPaFAyU2twdVdHKzg1UjJ4TDViXC9Qczh3PT0iLCJtYWMiOiI5MTRjZTlmYTFhNWIwYTA5ZGM5YzQ4NTZlNzU4NWRlZmE3ZWYxM2ZjMTI2NDBlNDdhOTBiZjI1N2FlYjM2NjJiIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1432151321000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImRNT3VpYXJCbGNzV3hmcTRKXC9WYlB3PT0iLCJ2YWx1ZSI6IjdSVlRXUGlKMnpsVlBxamdWNDZhcHVhQWJYa1JjZW1PVlBSckppV0hEOGRUVHZmajk1elZkRmNhUVwvWGIycHNGRkFCNm1GVmliYkJmR0hqempYZEFmQT09IiwibWFjIjoiMTg2NTc3MzI0ZDYyNmZhMjNiMTU3MWI4MjMwMDFhYzI5ZmMxMGE4OTg1ZGFkYjg5YTEwYjYzMGEzYmQ1NGRjMyJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/table/show/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1431213152000" />
+                <option name="domain" value="restaurante.local" />
+                <option name="name" value="laravel_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkFVNjh2Y0JVSTNwazJsYUJYWjNYM1E9PSIsInZhbHVlIjoiaDdHV3lDQ1dRZFRRMTFrbHRwQWNvSWpyNklyeUNCNFpEWklVdDdGb0xhbktPMEplRUgzTlFtcEtIeWlLYndaQ2lsXC9WV3JcL2hGRmUzQmc5Z2tra0RRdz09IiwibWFjIjoiMzNkOWQ4NjM2MWY2YWY5YjQ1NDAyNzhjMzA2M2FjMGE5Mzg2MmQyMTIwYmI0M2M0MDVkOTMyNzY2ZmEyMDVjZSJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://restaurante.local" />
+          <option name="urlPath" value="api/v1/login" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="email" />
+                <option name="value" value="mesonero@luna.com" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="password" />
+                <option name="value" value="12345" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -1962,868 +2812,6 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518782000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6ImVpTERQZXVzWU1BZDdWUlV0UmVDcVE9PSIsInZhbHVlIjoiWTFYWTRQaGU0Q0FMalJSakQ5M1kwMWwyUDdNVllvTkdBREZPQlwva3UwdVBKV3ZZeTN1cmpobHhzRU45TUd2ZzhOTU9EWHdWMEt0WkZGajYybU9jeW93PT0iLCJtYWMiOiIwMWEwMjE2ZmM5ODliZDIyOGRmMjhjNTZkYjljYjUyZGMxMDQyNTY1MGFiY2QzMGM1YjI1NDZiOTY0OTY3NzdiIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/2" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518763000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6ImtmUzNkand3eDNIWE9tMGgra3ZcL3FRPT0iLCJ2YWx1ZSI6IjdHa1V2NU9pWHYrVUhcL24ycStSa1B1U2RJc3B2dFROd2FWYzZjcnZwT2E4akRXeGZnY2NWenhzeVlIVXRKU1BldlRNOWMxbzU3XC9SRmtXWG5XQ0tZN1E9PSIsIm1hYyI6IjYxZTYzZmUzNWY2ZWQxMWRhOGUyZWYyZDUyMjRlNmFkYzYwMmQ5YzhhZTdhMmFjYWI2MDYzYmIwYzllZDlkMTYifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518722000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IjhoZ0dLWEowUFZYNlNvYmtTRFpRUmc9PSIsInZhbHVlIjoiRXJtK1wvTmI1b090bHM2VDBteUU5eXFwZDNURzM1XC9BbHdYb3ltYnZrMEp1OVBMZ3R1Yk41a3lNeVk4cmVwU0tZaU5xVGZkTXloaEdcL1RQOTdCMDBsRHc9PSIsIm1hYyI6ImU5MzUzZDg4MTJhNDc1YjdhOTM1MDczNjc0NWU0ZGRkZDM4M2M0MWU0YzE4YzEzNThmY2RhZGMwMjNjOTJjNjQifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518717000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6Ijc2R1BlRXU0VGVKT1NcL2ZCWDc2ZUpRPT0iLCJ2YWx1ZSI6IkN2ZGNTT2RFZk52RVpJaFR1RUJSY0pweERobXBWN3dMV0tvNHBmKzJ0OHp2eVVTR3hBMGdhS3JIcU1lbVlGd0FCS0p3RmNGR3FxZURuU3dYbXVMUDhnPT0iLCJtYWMiOiJkOGRiZDMzZTBlYjIyMjBiODBjNzMwYzM4MDExMWM1ZjQ5YzNkMTU0YTdmYTZhNmQxNjNmMmI4OGUyZmY1MTViIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518711000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IlY0dXJpbytLUVZiMFwvVDJpTW9ZcXJ3PT0iLCJ2YWx1ZSI6InhmbllmTFAwY2tBVVp3V0pZUm0yZ0lsMUkyMzI0WnpnSkJYU0FmTVJibCt4M1RpZjZ5UkVcLzF6bndaTUtBWnZuN0tJbmtScW9zQUdXekdUc3U5YVFLQT09IiwibWFjIjoiODU5M2IxOGRjOWY0Y2VlM2IyMzUyMDIyYjBjNmUxMThiZjA0NGVlMDI4MjgyNzEyMmFjNmMxNzQ5MmNhZTkwMiJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/14" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518678000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IlBiZ21Pa1wvV1JIMGdMbGxZVll4aGdnPT0iLCJ2YWx1ZSI6IlJkbk4yXC95cnJSempSVHZxbDBYMkswaUlPemZibXFkc0dSXC9zN0Y2aGloQTdwa21jd1paOE9SdEJTdm05S2cxZzlmeVE3YkhGaDBlMDBJSTV2QmhWZ0E9PSIsIm1hYyI6Ijk4MzQwMGEzM2ZhZjhmMDQ3MTFjOWM5NjRjMWFlNWQwNmMxM2I3YWRmNzhlOWQxNzI5YWVjZmVjOTM1NDdkNDEifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/11" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518611000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6Inp4b2VmdmEwMXBvYmJQekFKQlJvT0E9PSIsInZhbHVlIjoiRFJ4VUV2RkVLOWNDeUx6SUQ4alp3ZWxEcDB2WWtrcjBGeG5yMkQ5c2Q0OFR6NHVjdCsxOFNCbGFOQklXMU5ueHJYK2FBMENsTllkWEdXV3BhcFhrNUE9PSIsIm1hYyI6IjBhMTQyYmJiNDczNzYwNGNkN2RkMDdlYjFiODYwNjE1YWQ2YWJmOTkwZmZjNDY3MzU4MGQ3OGIxZDEyOGRjZGYifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/11" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518605000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6InZWbk9kQTRSMkNQekZieXNPYlAzdkE9PSIsInZhbHVlIjoiQUg1RlQ1RTQxOTVaa0V5XC9hNjk2NHU2bGlQRnUrdVIzbVh6M1lXNGR3VG9xd3hOR1l1ZklpRDB1N0xFQmdBV1hWeG9PZkhwUHNaQU9VdFFPNVJsblV3PT0iLCJtYWMiOiJjN2Q5MzkxMzY0ODMyYWZhNzU5ODFhMGFkN2Q0NmFmM2Q1ZmIwMDIxMWEyNTBjN2QxNzMzODgxN2U0ZDBjMjAyIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/11" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518563000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6InFJK2xPMVA1M1ozVHY1bVRJNlwvcnpRPT0iLCJ2YWx1ZSI6ImN6NTdUV2oxZ3FuYVFwNUdTQTk0ZytpZ1NQT1BoWlVwbUVRY0FGYVRablV5emc0VkR6NWJ3TFkrclFIQ2pjSlRMSmVLbHlGR2N5MGcyWDNQamNHaDdRPT0iLCJtYWMiOiI4NzJiYmM4YjIwMzNiMjI5NWQwYTc2MGI0MjA1NDBmYTBkZDBiM2E5MGZiNDc4MTIzOTZmNGUwYmE0Njg1MGQwIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518557000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IkwyZmxFMlhXRDNkcE1obXJoMkYrRnc9PSIsInZhbHVlIjoiR01kTnNMQmVUZXhGZ1ljUmQ5QkxVZXE3TXk3Z0o3Y2swSDZYZlpHWHNVcWFETmlrVWgyRHA3cXRrQXJMT0h0dkRrV01iWjBNZzk4M0NHNzBDQTJtb2c9PSIsIm1hYyI6IjZjNDRmYmVlMjQwYzIwZWI2OTI0NjI2ODk5NTdhNjVjZDhkNjNjNjAwNDE0MGFhYmZlZGEwZmVmZTFjZjQ1OTkifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/11" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518409000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6Ik9zZHlORTZhZVNGNXNrTXlvYWNRclE9PSIsInZhbHVlIjoiZml3aWpOcXhUM0ZSUkVkXC9RUlpuWVNPZGNUY0tqazQ3TUV2VFRLc29VZVdSaXZndUFiSUVidEtFZnhQWkY4Y21BXC8rQUo2ZENSRFgybXB2elYrc0hQZz09IiwibWFjIjoiMjJiYzU3MDBkMzA5MDBlNGY3ODU5MjU0Mzk4MGUwODIzZDI2NWQxM2RkNDI2NjEyZjk0NDUzZmJjNmQyZjlhZCJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/14" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518402000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IjgwRjBtbEZaNStRbFphbnluTmRCQ1E9PSIsInZhbHVlIjoiMlV5YWNhK3pLUE12VXZvZVZlcFFtTjRmblwvOEhWV1E0TUlcL0hXb2MrZWUxbDZoTFNONWZMVk1nR1dMenBTT1cweENhdjh3eWtFYmc2NFwvK1hRKzVBaVE9PSIsIm1hYyI6ImQzYWUyNTZiZDIxZTgwYTAwNzk3MzNjNTJhMTNhZTNmNzcyZWIxZTRmOTVmNDIxY2UxOTc1Mzk1YzdiMjlhMTQifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/14" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518388000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6Inc5cmNjZUpjTXNUMENLQW5QVmhKeHc9PSIsInZhbHVlIjoiV1ZnbXY1cTFTc1VzVGkzM2JaNEpPRkhKYkJWVkdGWW9UblVDdmZDSzQrYTVsMkUzQXEySzhSeE1HaUR6bXJlWVlkMFJXVzRkZEIwZmhyM3pQQUh1a2c9PSIsIm1hYyI6ImNhZjEwZWVmMDA4ODQ3NDU1MzBmYjA2MGUyN2Q2MTRjNDU2MTYyOWMyOTY5ZTQxNGViYmNjYTc0MDVjOGM4ZGMifQ%3D%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518357000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IlZGXC9YUEx5QW5ydWwwZ2x6clwvZzJsUT09IiwidmFsdWUiOiJJQWtxaEsxZG1XYUgzTDdWNjZHd0xFelwvd29BWmhRR3QzYnliNkVrdDNUQ3VOU1hNT0phRHlkUE9OejErUlc3RDVTcFQ2UUxDVUgyK25DNzRzVEVLXC9nPT0iLCJtYWMiOiJiNzk2NDgxOTExMDg5Yzc1MDMwMTI5MzIwYjM0MDczMWI1NmU4YTBhMTE0NWY4MWE5N2YxNWRjN2FmZjE4ZDUyIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518195000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IlhQRXFtTGF0WXhKYUR0aTdcL0pmSENRPT0iLCJ2YWx1ZSI6ImJhUkl2S2NzaktreTVMQVg4d3hYdXo2RDdJNHl6NEo4VjRObFNxWlwvK0UxMWNWWDhEWlMrVm1Ja1wvNTlJdmpqRlFIanQrXC9UY2J2OERQekREUW1jcktnPT0iLCJtYWMiOiI3ODBhYTM4ZTA2NDNkNWVjZTVhOGM3NjZjZjIyNGQ1OGRhNGMxNDYxZWUyYmIzMGYwMDJjNTdkMGJmM2MxNzFiIn0%3D" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430518183000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IngyTGd2TlhRemh2TjU4Q253REV5TlE9PSIsInZhbHVlIjoiVzhYZmJaUmRpMnRuN2RMOUtCc1plaFMrb2hGdzlIVGhWU0lnXC9BM3cyU2tqYnB4Z2ZTM1JhNG0rSk5ISUVFK2hrWFBuXC9Ob3ROSHgxYmZmVU1JcGhpdz09IiwibWFjIjoiYmU3YjgwY2ZkYWVhNjM4NWM2ZTYzNTc4NTE2YTg4NTEzNTE0MDk0ZGZhNTRmMTU0NGFmOTFkMjQ5NjczZTY0ZiJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516111000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IncwXC9PQXVXUHhPdDJcL25cLzZ0U3FPbkE9PSIsInZhbHVlIjoiem53TTUzRXMxTm81Q0xyMURjZGhiQkZoYWRpaVZlcVZOWWxKWFZHK0x0ek5LckxwSzl4ZGtkY01GdE1QTjNXWitYQjFORWVFY0ZBVFwvNWxcL281aHJLdz09IiwibWFjIjoiMTdhZjJhNmYyOGVhN2VmMDJjMmEyZjdmZTJiNjZjNWU0ZTVkMGI0MGQ0MzFlNGNjZjhlZTNkNThkMzJmMGUxNyJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/13" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="13" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516111000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IncwXC9PQXVXUHhPdDJcL25cLzZ0U3FPbkE9PSIsInZhbHVlIjoiem53TTUzRXMxTm81Q0xyMURjZGhiQkZoYWRpaVZlcVZOWWxKWFZHK0x0ek5LckxwSzl4ZGtkY01GdE1QTjNXWitYQjFORWVFY0ZBVFwvNWxcL281aHJLdz09IiwibWFjIjoiMTdhZjJhNmYyOGVhN2VmMDJjMmEyZjdmZTJiNjZjNWU0ZTVkMGI0MGQ0MzFlNGNjZjhlZTNkNThkMzJmMGUxNyJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/13" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516111000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IncwXC9PQXVXUHhPdDJcL25cLzZ0U3FPbkE9PSIsInZhbHVlIjoiem53TTUzRXMxTm81Q0xyMURjZGhiQkZoYWRpaVZlcVZOWWxKWFZHK0x0ek5LckxwSzl4ZGtkY01GdE1QTjNXWitYQjFORWVFY0ZBVFwvNWxcL281aHJLdz09IiwibWFjIjoiMTdhZjJhNmYyOGVhN2VmMDJjMmEyZjdmZTJiNjZjNWU0ZTVkMGI0MGQ0MzFlNGNjZjhlZTNkNThkMzJmMGUxNyJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/12" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516111000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IncwXC9PQXVXUHhPdDJcL25cLzZ0U3FPbkE9PSIsInZhbHVlIjoiem53TTUzRXMxTm81Q0xyMURjZGhiQkZoYWRpaVZlcVZOWWxKWFZHK0x0ek5LckxwSzl4ZGtkY01GdE1QTjNXWitYQjFORWVFY0ZBVFwvNWxcL281aHJLdz09IiwibWFjIjoiMTdhZjJhNmYyOGVhN2VmMDJjMmEyZjdmZTJiNjZjNWU0ZTVkMGI0MGQ0MzFlNGNjZjhlZTNkNThkMzJmMGUxNyJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show/1" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516111000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IncwXC9PQXVXUHhPdDJcL25cLzZ0U3FPbkE9PSIsInZhbHVlIjoiem53TTUzRXMxTm81Q0xyMURjZGhiQkZoYWRpaVZlcVZOWWxKWFZHK0x0ek5LckxwSzl4ZGtkY01GdE1QTjNXWitYQjFORWVFY0ZBVFwvNWxcL281aHJLdz09IiwibWFjIjoiMTdhZjJhNmYyOGVhN2VmMDJjMmEyZjdmZTJiNjZjNWU0ZTVkMGI0MGQ0MzFlNGNjZjhlZTNkNThkMzJmMGUxNyJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/show" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="id" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="biscuits">
-            <list>
-              <Biscuit>
-                <option name="date" value="1430516102000" />
-                <option name="domain" value="restaurante.local" />
-                <option name="name" value="laravel_session" />
-                <option name="path" value="/" />
-                <option name="value" value="eyJpdiI6IjR4elB6VXVUOTF0NXladjNqRTYxQWc9PSIsInZhbHVlIjoiemI0Z29rU3R3UVNiYk15NGlZWXlJK2I0bEdmRUg0WnZpQ3pDaE9tcVUxenpEMFFKOVwveHlCNFhtNnZoejBPRTY5RmtlSnVnbG9ubDhtOVwvbHpCbmRIUT09IiwibWFjIjoiYzlhNGY0YmIwOGRhY2U4ZDYwNWQwODExNTJlMzZmOWRiNGNkOGE3OTg5MjE5YTQ1ZmNiZTJjYjc4MDJhMTJjNiJ9" />
-              </Biscuit>
-            </list>
-          </option>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://restaurante.local" />
-          <option name="urlPath" value="api/v1/table/" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="idTable" />
-                <option name="value" value="12" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="idProduct" />
-                <option name="value" value="2" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -2878,18 +2866,6 @@
       <created>1425477644111</created>
       <option name="number" value="Default" />
       <updated>1425477644111</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Cambios varios. Sistema de firsttime para usuarios normales">
-      <created>1429017043830</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1429017043830</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Parallax para el inicio">
-      <created>1429030558570</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1429030558570</updated>
     </task>
     <task id="LOCAL-00020" summary="Sistema de SoftDelete Propio no de Laravel - Para los usuarios">
       <created>1429246085557</created>
@@ -3173,7 +3149,19 @@
       <option name="project" value="LOCAL" />
       <updated>1432092269582</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Nueva funcion para traer elatributo que se quiera de un producto dado un id">
+      <created>1432146038755</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1432146038756</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Json con muchas info de una mesa segun su id">
+      <created>1432146090578</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1432146090578</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -3197,32 +3185,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31191224" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40595612" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21406959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40595612" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3234,20 +3222,20 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40595612" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40595612" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21406959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3268,8 +3256,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/php-getting-started" />
     </ignored-roots>
-    <MESSAGE value="Cambio de distribución de la rutas" />
-    <MESSAGE value="Modulo restaurante Funcional" />
     <MESSAGE value="Api, sistema de Auth via json" />
     <MESSAGE value="Configurando Api de productos" />
     <MESSAGE value="Configurando Rutas de Api par Order, Invoice" />
@@ -3293,7 +3279,9 @@
     <MESSAGE value="Cambios de direccion de carpetas para manejarlas en linux" />
     <MESSAGE value="Cambios de formatod para leer arvhicos para linux ---SERVER" />
     <MESSAGE value="Funciones para la caja, ahora sabe si esta ono ocupada la caja" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funciones para la caja, ahora sabe si esta ono ocupada la caja" />
+    <MESSAGE value="Nueva funcion para traer elatributo que se quiera de un producto dado un id" />
+    <MESSAGE value="Json con muchas info de una mesa segun su id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Json con muchas info de una mesa segun su id" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3302,42 +3290,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75064933" vertical-offset="0" max-vertical-offset="391">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25" vertical-offset="401" max-vertical-offset="986">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="731">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5471264" vertical-offset="0" max-vertical-offset="435">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/AdminUserSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="51" max-vertical-offset="782">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5862069" vertical-offset="0" max-vertical-offset="1173">
@@ -3356,20 +3308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73246753" vertical-offset="92" max-vertical-offset="510">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59799" vertical-offset="306" max-vertical-offset="4624">
-          <caret line="39" column="11" selection-start-line="18" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="218" max-vertical-offset="2193">
-          <caret line="40" column="56" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -3506,39 +3444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="884">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productImageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcomeP.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcomep.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2057" max-vertical-offset="2261">
           <caret line="121" column="23" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/ApiV1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05821918" vertical-offset="306" max-vertical-offset="935">
-          <caret line="24" column="73" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.051369864" vertical-offset="2571" max-vertical-offset="3417">
-          <caret line="165" column="30" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -3557,13 +3466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62157536" vertical-offset="113" max-vertical-offset="697">
-          <caret line="35" column="104" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32020548" vertical-offset="0" max-vertical-offset="584">
@@ -3575,6 +3477,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="584">
           <caret line="9" column="0" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3583,16 +3486,6 @@
         <state vertical-scroll-proportion="0.46575344" vertical-offset="0" max-vertical-offset="584">
           <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5804794" vertical-offset="2278" max-vertical-offset="2873">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="62" />
-          <folding>
-            <element signature="e#40#79#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3613,70 +3506,180 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/33bbf8c780efc442472e7f26da28bd03">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1819">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productImageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24216524" vertical-offset="255" max-vertical-offset="918">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/ApiV1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="238" max-vertical-offset="935">
+          <caret line="37" column="90" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1904">
+        <state vertical-scroll-proportion="-7.1153846" vertical-offset="801" max-vertical-offset="1904">
           <caret line="63" column="60" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/caja/OrderTable.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
-          <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+        <state vertical-scroll-proportion="-81.73077" vertical-offset="0" max-vertical-offset="2839">
+          <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="1309" max-vertical-offset="1904">
-          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.31678084" vertical-offset="87" max-vertical-offset="697">
+          <caret line="23" column="121" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-75.84615" vertical-offset="629" max-vertical-offset="3417">
+          <caret line="165" column="30" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.192308" vertical-offset="680" max-vertical-offset="2363">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../www/SistemaRestauranteWeb/vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver/Xdebug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0273972" vertical-offset="1184" max-vertical-offset="1768">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/caja/infoPedido.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.538462" vertical-offset="754" max-vertical-offset="1173">
+          <caret line="62" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="952">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/functionsAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.054054" vertical-offset="890" max-vertical-offset="2499">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/CajaRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="238">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.923077" vertical-offset="1303" max-vertical-offset="2567">
-          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+        <state vertical-scroll-proportion="-17.115385" vertical-offset="1017" max-vertical-offset="2261">
+          <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
           <folding>
             <element signature="e#61#101#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/cajaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.961538" vertical-offset="385" max-vertical-offset="1037">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="29" />
+        <state vertical-scroll-proportion="-0.88461536" vertical-offset="895" max-vertical-offset="1530">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/33bbf8c780efc442472e7f26da28bd03">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1802">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state vertical-scroll-proportion="1.1452992" vertical-offset="1162" max-vertical-offset="1904">
+          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/cajaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.576923" vertical-offset="1604" max-vertical-offset="2091">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="e#57#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/caja/OrderTable.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+          <caret line="0" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="172" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/usuarios/caja/caja.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50268817" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="731" max-vertical-offset="1207">
+          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
           <folding>
-            <element signature="e#468#491#0#HTML" expanded="true" />
+            <element signature="e#460#483#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.98644984" vertical-offset="4277" max-vertical-offset="4845">
+          <caret line="273" column="184" selection-start-line="273" selection-start-column="184" selection-end-line="273" selection-end-column="184" />
+          <folding>
+            <marker date="1433182632773" expanded="true" signature="320:384" placeholder="..." />
+            <marker date="1433182632773" expanded="true" signature="2328:2392" placeholder="..." />
+            <marker date="1433182632773" expanded="true" signature="4095:4159" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -60,14 +60,14 @@ $(document).ready(function(){
             }
         });
     }
-    function ajaxGetPageLoader(url) {
+     $.fn.ajaxGetPageLoader = function(url,id) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
         $.ajax({
             type: 'GET',
             url: url,
             dataType: 'json',
             success: function (data) {
-                $('#principalPanel').empty().append($(data));
+                $(id).empty().append($(data));
                 $('.preloader-wrapper').hide();
             },
             error: function (data) {
@@ -213,17 +213,13 @@ $(document).ready(function(){
         CleanForm(form);
         CleanForm('#create_menu')
         $('#editMenu').closeModal();
-        ajaxGetPageLoader('Menu')
-
-
-
-
+        ajaxGetPageLoader('Menu','#principalPanel')
     }
     function deleteProductSuccess(card){
         card = $(card);
         //card.fadeOut();
         $('.modalSoftDeleteProduct').closeModal();
-        ajaxGetPageLoader('Menu')
+        ajaxGetPageLoader('Menu','#principalPanel')
     }
 
 
@@ -242,7 +238,7 @@ $(document).ready(function(){
         form[0].reset();
         CleanForm(form);
         $('#Editlocal').closeModal();
-        ajaxGetPageLoader('Restaurante')
+        ajaxGetPageLoader('Restaurante','#principalPanel')
 
     }
     //Funciones Generales
@@ -264,4 +260,21 @@ $(document).ready(function(){
         });
     }
 
+
+    function infopedido(data){
+        var struct = '<div class="row"> <div class="col s12 126"> <div class="card "> <div class="card-content"> <span class="card-title light-blue-text text-lighten-1 ">Mesa numero '+data['data']['NumberTable'] +'</span> <table class="responsive-table hoverable  "> <thead> <tr> <th data-field="producto">Producto</th> <th data-field="precio">Precio</th> <th data-field="estado">Estado</th> </tr> </thead> <tbody>';
+        var pedido = data['data']['Pedidos']
+        $.each(pedido, function (index, val){
+            struct += '<tr data-id="' + 1 + '" style="cursor: pointer;">'
+                            + '<td>' + val['ProductName'] + '</td>'
+                            + '<td>' + val['ProductCost'] + '</td>'
+                            + '<td>' + val['OrderState'] +'</td>'
+            struct += '</tr>';
+        });
+        struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div> <div class="col m6"> <a class="waves-effect waves-light btn right">Facturar</a> </div> </div> </div> </div> </div> </div>'
+        console.log(struct)
+        $('#infoPedido').empty().append($(struct));
+
+
+    }
 });
