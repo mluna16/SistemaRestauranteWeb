@@ -1,14 +1,15 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
-use SistemaRestauranteWeb\Http\Requests;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
+use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Local;
+use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\Table;
 use SistemaRestauranteWeb\User;
 
@@ -25,20 +26,14 @@ class cajaController extends Controller {
         $user = new User();
         $local = new Local();
         $table = new Table();
+
         $data = $table->getAllTablesForLocal($local->getLocalIdAttribute());
-        if (!$user->getIsAFirstTimeUser()) {
-            if ($request->ajax()) {
-                $data = $table->getInfoTableForNumberTable(1);
-                $view = View::make('usuarios.caja.infoPedido')->with('data', $data);
-                $sections = $view->renderSections();
-                return Response::json($sections['InfoPedido']);
-            } else {
-                return view('usuarios.caja.caja')->with('data', $data);
-            }
-        }else{
-                return $user->ReturnToFirstTime();
-            }
-        }
+
+        if($request->ajax()){
+            $sections = View::make('usuarios.caja.infoPedido')->with('data',$data)->renderSections();
+            return Response::json($sections['tablesPanel']); // se envie el sections con un formato json
+        }else return View::make('usuarios.caja.infoPedido')->with('data',$data);
+    }
 
 	/**
 	 * Show the form for creating a new resource.
@@ -104,14 +99,9 @@ class cajaController extends Controller {
 		//
 	}
 
-    public function getInfotable($id)
-    {
+    public function getInfotable($id)    {
         $table = new Table;
         return Response::json(['success' => true, 'data' => $table->getInfoTableForNumberTable($id)]);
-
-
-
-
-
     }
+
 }

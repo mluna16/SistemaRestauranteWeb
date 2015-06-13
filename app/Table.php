@@ -30,14 +30,14 @@ class Table extends Model {
         $mesa = Table::where(['number_table' => 2,'state' => 'ocupado','id_local' => $id])->take(1);
         for($i = 1 ;$i <= $totalMesas;$i++)
         {
-            $hola = Table::where(['number_table' => $i,'state' => 'ocupado','id_local' => $id])->get();
+            $tabla = Table::where(['number_table' => $i,'state' => 'ocupado','id_local' => $id])->get();
 
-            if ( ! $hola->isEmpty())
+            if ( ! $tabla->isEmpty())
             {
                 $mesas['Mesas'][] = [
 
-                    'NumberTable' => $hola->first()->number_table,
-                    'State' => $hola->first()->state
+                    'NumberTable' => $tabla->first()->number_table,
+                    'State' => $tabla->first()->state
                 ];
 
             }else
