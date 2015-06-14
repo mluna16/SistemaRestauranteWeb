@@ -27,7 +27,6 @@ class Table extends Model {
             'TotalMesas' => $totalMesas,
             'Mesas'  => []
         ];
-        $mesa = Table::where(['number_table' => 2,'state' => 'ocupado','id_local' => $id])->take(1);
         for($i = 1 ;$i <= $totalMesas;$i++)
         {
             $tabla = Table::where(['number_table' => $i,'state' => 'ocupado','id_local' => $id])->get();
@@ -37,7 +36,8 @@ class Table extends Model {
                 $mesas['Mesas'][] = [
 
                     'NumberTable' => $tabla->first()->number_table,
-                    'State' => $tabla->first()->state
+                    'State' => $tabla->first()->state,
+                    'Facturar' => $tabla->first()->facturar
                 ];
 
             }else
@@ -69,6 +69,7 @@ class Table extends Model {
                 $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product, 'cost');
                 $mesa['Pedidos'][] = [
                     'State' => $mesaData->state,
+                    'Facturar' => $mesaData->facturar,
                     'OrderId' => $orderData->id,
                     'OrderState' => $orderData->state,
                     'ProductId' => $orderData->id_product,

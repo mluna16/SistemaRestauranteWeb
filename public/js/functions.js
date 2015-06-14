@@ -275,8 +275,13 @@ $(document).ready(function(){
                             + '<td>' + val['OrderState'] +'</td>'
             struct += '</tr>';
         });
-        struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div> <div class="col m6"> <a class="waves-effect waves-light btn right">Facturar</a> </div> </div> </div> </div> </div> </div>'
-        console.log(struct)
+        struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div>';
+        if(pedido[0]['Facturar']== 1){
+            struct += '<div class="col m6"> <a class="waves-effect waves-light btn right">Facturar</a> </div> </div> </div> </div> </div> </div>'
+
+        }else {
+            struct += '<div class="col m6"> <a class="btn disabled right">Facturar</a> </div> </div> </div> </div> </div> </div>'
+        }
         $('#infoPedido').empty().append($(struct));
 
 

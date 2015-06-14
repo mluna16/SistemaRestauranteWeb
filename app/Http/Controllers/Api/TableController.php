@@ -35,6 +35,7 @@ class TableController extends Controller {
 
                                 'NumberTable' => $i,
                                 'State' => $mesaData->state,
+                                'Facturar' => $mesaData->facturar,
                                 'OrderId' => $orderData->id,
                                 'OrderState' => $orderData->state,
                                 'ProductId' => $orderData->id_product,

@@ -28,11 +28,15 @@ class cajaController extends Controller {
         $table = new Table();
 
         $data = $table->getAllTablesForLocal($local->getLocalIdAttribute());
-
-        if($request->ajax()){
-            $sections = View::make('usuarios.caja.infoPedido')->with('data',$data)->renderSections();
-            return Response::json($sections['tablesPanel']); // se envie el sections con un formato json
-        }else return View::make('usuarios.caja.infoPedido')->with('data',$data);
+        $view = View::make('usuarios.caja.infoPedido')->with('data',$data);
+        if(! $user->getIsAFirstTimeUser()){
+            if($request->ajax()){
+                $sections = $view->renderSections();
+                return Response::json($sections['tablesPanel']); // se envie el sections con un formato json
+            }else return $view;
+        }else{
+            return $user->ReturnToFirstTime();
+        }
     }
 
 	/**
