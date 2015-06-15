@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Table extends Model {
 
     protected $table = 'table';
-    protected $fillable = ['number_table','number_seat', 'state','id_order','id_local'];
+    protected $fillable = ['number_table','number_seat', 'state','id_order','id_local','facturar'];
 
 
     /**
@@ -63,7 +63,7 @@ class Table extends Model {
             'Pedidos' => []
         ];
         if ($id <= $totalMesas) {
-            $mesasData = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute()])->get();
+            $mesasData = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->get();
             foreach ($mesasData as $mesaData) {
                 $orderData = Order::find($mesaData->id_order);
                 $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product, 'cost');
@@ -81,5 +81,23 @@ class Table extends Model {
         }else{
             return false;
         }
+    }
+
+    function changeInvoiceTableStatus($id)
+    {
+        $local = new Local();
+        $mesas = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->get();
+        foreach($mesas as $mesa){
+            if($mesa->facturar == false)
+            {
+                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->update(['facturar' => true]);
+            }
+            else
+            {
+                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->update(['facturar' => false]);
+            }
+        }
+
+
     }
 }

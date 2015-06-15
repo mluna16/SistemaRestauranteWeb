@@ -125,4 +125,11 @@ class TableController extends Controller {
 		//
 	}
 
+    public function getInvoice($id){
+        $table = new Table();
+        $table->changeInvoiceTableStatus($id);
+        return Response::json(array('success' => true),200);
+
+    }
+
 }
