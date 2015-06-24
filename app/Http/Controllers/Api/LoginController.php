@@ -1,6 +1,7 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers\Api;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
@@ -42,11 +43,12 @@ class LoginController extends Controller {
         if ($this->auth->attempt($credentials,false ))
         {
             $response = [
-                            'userData' => Auth::user(),
-                            'userSession'=>Auth::check(),
-                            'localData' => $local->getLocalForUser(),
+                            'userData'      =>  Auth::user(),
+                            'userSession'   =>  Auth::check(),
+                            'userCookie'    =>  $request->cookie('laravel_session'),
+                            'localData'     =>  $local->getLocalForUser(),
                         ];
-            return Response::json(array('success' => true, 'data' => $response),200);
+            return Response::json(array('success' => true, 'data' => $response),200)->withCookie(cookie('laravel_session'));
 
         }else{
             $response = ['error' => 'No tiene credenciales'];
@@ -54,12 +56,14 @@ class LoginController extends Controller {
         }
     }
 
-    public function getLogout()
+    public function getLogout(Request $request)
     {
         //Test curl -X GET   http://restaurante.local/api/v1/logout
+        Cookie::queue('laravel_session',null, -1);
+        $cookie = Cookie::forget('laravel_session');
 
         $this->auth->logout();
-        return Response::json(['success' => true],200);
+        return Response::json(['success' => true],200)->withCookie($cookie);
     }
 
 }
