@@ -20,35 +20,8 @@ class TableController extends Controller {
 	public function index()
 	{
         $local = new Local();
-        $product =new Product();
-		$totalMesas = $local->NumberTable();
-        $mesas = [
-            'TotalMesas' => $totalMesas,
-            'Mesas'  => [],
-        ];
-        for($i = 0 ;$i <= $totalMesas;$i++){
-            if(Table::where('number_table',$i)->get()){
-                $mesasData = Table::where(['number_table' => $i,'id_local' => $local->getLocalIdAttribute()])->get();
-                    foreach ($mesasData as $mesaData){
-                        $orderData = Order::find($mesaData->id_order);
-                        $mesas['Mesas'][] = [
-
-                                'NumberTable' => $i,
-                                'State' => $mesaData->state,
-                                'Facturar' => $mesaData->facturar,
-                                'OrderId' => $orderData->id,
-                                'OrderState' => $orderData->state,
-                                'ProductId' => $orderData->id_product,
-                                'ProductName' => $product->getProductNameAttribute($orderData->id_product),
-                        ];
-                    }
-            }else{
-                $mesas['Mesas'][] = [
-                    'NumberTable' => $i,
-                    'State' => 'disponible'
-                ];
-            }
-        }
+        $table = new Table();
+        $mesas = $table->getAllTablesForLocal($local->getLocalIdAttribute());
 
         return Response::json(['success' =>true, 'data' => $mesas], 200);
 
