@@ -42,14 +42,21 @@ class LoginController extends Controller {
 
         if ($this->auth->attempt($credentials,false ))
         {
-            $response = [
-                            'userData'      =>  Auth::user(),
-                            'userSession'   =>  Auth::check(),
-                            'userCookie'    =>  $request->cookie('laravel_session'),
-                            'localData'     =>  $local->getLocalForUser(),
-                        ];
-            return Response::json(array('success' => true, 'data' => $response),200)->withCookie(cookie('laravel_session'));
+            if(!Auth::user()->type == 'admin' || !Auth::user()->type == 'caja') {
+                $response = [
+                    'userData' => Auth::user(),
+                    'userSession' => Auth::check(),
+                    'userCookie' => $request->cookie('laravel_session'),
+                    'localData' => $local->getLocalForUser(),
+                ];
+                return Response::json(array('success' => true, 'data' => $response), 200)->withCookie(cookie('laravel_session'));
+            }else{
+                $response = ['error' => 'No tiene credenciales'];
+                $this->auth->logout();
+                $cookie = Cookie::forget('laravel_session');
+                return Response::json(array('success' => false, 'data' => $response),401);
 
+            }
         }else{
             $response = ['error' => 'No tiene credenciales'];
             return Response::json(array('success' => false, 'data' => $response),401);
