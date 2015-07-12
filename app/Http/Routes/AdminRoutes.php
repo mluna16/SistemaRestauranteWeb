@@ -27,6 +27,13 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 
     Route::resource('local', 'localController');
 
+    Route::group(['prefix' => 'Estadisticas'], function(){
+
+        Route::get('producto/{time}', 'estadisticaController@getProductosVendidos');
+        Route::get('mesonero/{time}', 'estadisticaController@getMesoneroVenta');
+
+    });
+
 });
 
 Route::resource('users', 'UserController',['only' => ['store']]);
@@ -41,3 +48,4 @@ Route::group(['middleware' => 'auth','except' => 'UserController@store'], functi
     Route::post('localImg', ['uses' => 'localImageController@postUpload', 'as' => 'localImagenUpload']);
 
 });
+
