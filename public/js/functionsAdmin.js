@@ -86,6 +86,7 @@ $(document).ready(function(){
         }
     });
 
+
     //SoftdeleteProduct
     $(document).on('click','.softDeleteProduct',function(event){
         $('.headerSoftDeleteProduct,.ProductNameSoftDeleteProduct').empty()
@@ -139,4 +140,22 @@ $(document).ready(function(){
         var url = form.attr('action').replace(':LOCAL_ID', id);
         $(this).ajaxStore('#editLocalForm',url,"Usuario Editado","LocalEditSuccess","form")
     })
+
+    /*
+    --Estadisticas--
+    */
+
+    $.get( "admin/Estadisticas/producto/1", function( data ) {
+        $(this).charPieFunction("#productosDia", data)
+    })
+    $.get( "admin/Estadisticas/producto/7", function( data ) {
+        $(this).charPieFunction("#productosSemana",data)
+    });
+    $.get( "admin/Estadisticas/producto/30", function( data ) {
+        $(this).charPieFunction("#productosMes",data)
+    });
+    $.get( "admin/Estadisticas/producto/365", function( data ) {
+        $(this).charPieFunction("#productosAno",data)
+    });
+
 })

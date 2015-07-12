@@ -287,4 +287,36 @@ $(document).ready(function(){
 
     }
 
+    /*
+    *
+    *  Funciones de Charts y Estadisiticas
+    *  */
+    $.fn.charPieFunction = function (id,data){
+        $(id).highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: null
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "Brands",
+                colorByPoint: true,
+                data: data
+            }]
+        });
+    }
 });
