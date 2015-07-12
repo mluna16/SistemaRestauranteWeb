@@ -48,4 +48,6 @@
 @endsection
 @section('alternalJS')
     <script src="{{asset('js/functionsAdmin.js')}}"></script>
+    <script src="{{asset('js/charts.js')}}"></script>
 @endsection
+
