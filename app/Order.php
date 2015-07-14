@@ -29,6 +29,16 @@ class Order extends Model {
         return Order::where('created_by' ,$id_user)->where( 'created_at', '>=',Carbon::now()->subDays($time) )->count();
 
     }
+    public function getOrdenVentas($time)
+    {
+        return Order::where('created_at', '>=',$time)->get(['id_product']);
+
+    }
+    public function getOrdenVentasdobles($time,$time2)
+    {
+        return Order::where('created_at', '>=',$time)->where('created_at', '<=',$time2)->get(['id_product']);
+
+    }
 
 
 }

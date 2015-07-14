@@ -153,6 +153,10 @@ class Product extends Model {
 
     }
 
+    public function getCostProduct($id){
+        return Product::find($id)->take(1)->firstOrFail()->cost;
+    }
+
     //Relaciones de clave foraneas
 
     public function User() {

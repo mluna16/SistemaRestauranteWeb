@@ -145,17 +145,40 @@ $(document).ready(function(){
     --Estadisticas--
     */
 
-    $.get( "admin/Estadisticas/producto/1", function( data ) {
-        $(this).charPieFunction("#productosDia", data)
+    $(document).on('click','#eVenta',function(){
+        $.get( "admin/Estadisticas/venta/", function( data ) {
+            $(this).charBarFunction("#ventasDia",data)
+        });
+        $.get( "admin/Estadisticas/ventas/", function( data ) {
+            $(this).charBarFunction("#ventaSemana",data)
+        })
     })
-    $.get( "admin/Estadisticas/producto/7", function( data ) {
-        $(this).charPieFunction("#productosSemana",data)
-    });
-    $.get( "admin/Estadisticas/producto/30", function( data ) {
-        $(this).charPieFunction("#productosMes",data)
-    });
-    $.get( "admin/Estadisticas/producto/365", function( data ) {
-        $(this).charPieFunction("#productosAno",data)
-    });
+    $(document).on('click','#eProducto',function(){
+        $.get( "admin/Estadisticas/producto/1", function( data ) {
+            $(this).charPieFunction("#productosDia", data)
+        })
+        $.get( "admin/Estadisticas/producto/7", function( data ) {
+            $(this).charPieFunction("#productosSemana",data)
+        });
+        $.get( "admin/Estadisticas/producto/30", function( data ) {
+            $(this).charPieFunction("#productosMes",data)
+        });
+        $.get( "admin/Estadisticas/producto/365", function( data ) {
+            $(this).charPieFunction("#productosAno",data)
+        });
+    })
+    $(document).on('click','#eMesonero',function(){
+        $.get( "admin/Estadisticas/mesonero/1", function( data ) {
+            $(this).charPieFunction("#mesonerosDia",data)
+        });
+        $.get( "admin/Estadisticas/mesonero/30", function( data ) {
+            $(this).charPieFunction("#mesonerosSemana",data)
+        });
+    })
+
+
+
+
+
 
 })

@@ -31,6 +31,10 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 
         Route::get('producto/{time}', 'estadisticaController@getProductosVendidos');
         Route::get('mesonero/{time}', 'estadisticaController@getMesoneroVenta');
+        Route::get('venta', 'estadisticaController@getVentaDia');
+        Route::get('ventas', 'estadisticaController@getVentaSemana');
+
+
 
     });
 

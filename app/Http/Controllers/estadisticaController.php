@@ -1,5 +1,6 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Http\Requests;
@@ -54,10 +55,46 @@ class estadisticaController extends Controller {
         foreach($totalUsuarios as $usuario){
             if($usuario['type'] == "mesonero"){
                 $retorno[] = [
-                    'Nombre' => $usuario->full_name,
-                    'venta' => $Order->getOrdenMesoneroPorfecha($usuario['id'], $time)
+                    'name' => $usuario->full_name,
+                    'y' => $Order->getOrdenMesoneroPorfecha($usuario['id'], $time)
                 ];
             }
+        }
+        return Response::json($retorno,200);
+    }
+    public  function getVentaDia(){
+
+        $fecha = Carbon::now();
+        $Order          = new Order();
+        $Product        = new Product();
+        $totalVenta   = 0;
+        $totalVentas = $Order->getOrdenVentas($fecha->subDays(1));
+
+        foreach($totalVentas as $venta){
+          $totalVenta = $totalVenta+  $Product->getCostProduct($venta['id_product']);
+        }
+        $retorno[]= [
+                'name'  => 'Hoy '.Carbon::now()->format('d m y'),
+                'data'  => [$totalVenta]
+        ];
+
+        return Response::json($retorno,200);
+    }
+    public  function getVentaSemana(){
+        $Order          = new Order();
+        $Product        = new Product();
+        $semana       = [1,2,3,4,5,6,7];
+        $retorno          = [];
+        foreach($semana as $i){
+            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now()->subDays($i),Carbon::now()->subDays($i-1));
+            $totalVenta     = 0;
+            foreach($totalVentas as $venta){
+                $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
+            }
+            $retorno[] = [
+                'name' => Carbon::now()->subDays($i)->format('d m y'),
+                'data' => [$totalVenta]
+            ];
         }
         return Response::json($retorno,200);
     }
