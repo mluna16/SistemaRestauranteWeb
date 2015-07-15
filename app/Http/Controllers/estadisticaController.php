@@ -98,4 +98,26 @@ class estadisticaController extends Controller {
         }
         return Response::json($retorno,200);
     }
+    public  function getVentaAno(){
+        $Order          = new Order();
+        $Product        = new Product();
+        $semana       = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+        $retorno          = [];
+
+        foreach($semana as $i){
+            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now()->subMonths($i),Carbon::now()->subMonths($i-1));
+            $totalVenta     = 0;
+            foreach($totalVentas as $venta){
+                $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
+            }
+            setlocale(LC_TIME, 'Spanish');
+            $dt = Carbon::now()->subMonths($i)->formatLocalized('%B %Y');
+            $retorno[] = [
+
+                'name' => $dt,
+                'data' => [$totalVenta]
+            ];
+        }
+        return Response::json($retorno,200);
+    }
 }

@@ -152,6 +152,9 @@ $(document).ready(function(){
         $.get( "admin/Estadisticas/ventas/", function( data ) {
             $(this).charBarFunction("#ventaSemana",data)
         })
+        $.get( "admin/Estadisticas/ventaa/", function( data ) {
+            $(this).charBarFunction("#ventaAno",data)
+        })
     })
     $(document).on('click','#eProducto',function(){
         $.get( "admin/Estadisticas/producto/1", function( data ) {
