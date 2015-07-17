@@ -74,7 +74,7 @@ class estadisticaController extends Controller {
           $totalVenta = $totalVenta+  $Product->getCostProduct($venta['id_product']);
         }
         $retorno[]= [
-                'name'  => 'Hoy '.Carbon::now()->format('d m y'),
+                'name'  => 'Hoy '.Carbon::now('America/Caracas')->format('d m y'),
                 'data'  => [$totalVenta]
         ];
 
@@ -83,7 +83,7 @@ class estadisticaController extends Controller {
     public  function getVentaSemana(){
         $Order          = new Order();
         $Product        = new Product();
-        $semana       = [1,2,3,4,5,6,7];
+        $semana       = [0,1,2,3,4,5,6,7];
         $retorno          = [];
         foreach($semana as $i){
             $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now()->subDays($i),Carbon::now()->subDays($i-1));
@@ -92,7 +92,7 @@ class estadisticaController extends Controller {
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
             }
             $retorno[] = [
-                'name' => Carbon::now()->subDays($i)->format('d m y'),
+                'name' => Carbon::now('America/Caracas')->subDays($i)->format('d m y'),
                 'data' => [$totalVenta]
             ];
         }
@@ -111,7 +111,7 @@ class estadisticaController extends Controller {
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
             }
             setlocale(LC_TIME, 'Spanish');
-            $dt = Carbon::now()->subMonths($i)->formatLocalized('%B %Y');
+            $dt = Carbon::now('America/Caracas')->subMonths($i)->formatLocalized('%B %Y');
             $retorno[] = [
 
                 'name' => $dt,

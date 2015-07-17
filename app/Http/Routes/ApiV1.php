@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
     Route::group(['prefix' => 'table'],function(){
         Route::get('/', ['uses' => 'Api\TableController@index']);
         Route::get('show/{id}', ['uses' => 'Api\TableController@show' , 'as' => 'showTable']);
+        Route::get('show/', ['uses' => 'Api\TableController@showAll', 'as' => 'showAllTables']);
         Route::get('getInvoice/{id}',['uses' => 'Api\TableController@getInvoice']);
     });
 

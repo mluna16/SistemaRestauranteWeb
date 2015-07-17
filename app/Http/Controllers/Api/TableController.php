@@ -105,4 +105,18 @@ class TableController extends Controller {
 
     }
 
+    public function showAll(){
+        $local = new Local();
+        $table = new Table();
+        $mesas = $table->getAllTablesForLocal($local->getLocalIdAttribute());
+
+        foreach($mesas['Mesas'] as $i => $mesa){
+
+            if($mesa['State'] != 'disponible'){
+                $mesas['Mesas'][$i]['dataMesa'] = $table->getInfoTableForNumberTable($mesa['NumberTable']);
+            }
+        }
+        return Response::json(['success' =>true, 'data' => $mesas], 200);
+    }
+
 }
