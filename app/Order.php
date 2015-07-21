@@ -16,7 +16,6 @@ class Order extends Model {
      */
         public  function Table(){
             return $this->hasOne('SistemaRestauranteWeb\Table');
-
         }
 
     public function getOrdenProductoPorfecha($id_product, $time)
@@ -39,6 +38,12 @@ class Order extends Model {
         return Order::where('created_at', '>=',$time)->where('created_at', '<=',$time2)->get(['id_product']);
 
     }
+
+    public function setStatus($id){
+        Order::where('id',$id)->update(['state' => 'listo']);
+        return true;
+    }
+
 
 
 }

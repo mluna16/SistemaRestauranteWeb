@@ -113,4 +113,16 @@ class OrderController extends Controller {
         else return Response::json(array('success' => false),401);
 	}
 
+    public function changeReady(Request $request){
+        $order = new Order();
+        $this->validate($request, [
+            'idOrder' => 'required'
+        ]);
+        if($order->setStatus($request->idOrder)){
+            return Response::json(array('success' => true),200);
+        }
+        else return Response::json(array('success' => false),401);
+
+    }
+
 }
