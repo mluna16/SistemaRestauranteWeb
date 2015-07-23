@@ -31,8 +31,6 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
         Route::post('store',['uses' => 'Api\OrderController@store']);
         Route::delete('delete/{id}',['uses' => 'Api\OrderController@destroy']);
         Route::post('changeReady',['uses' => 'Api\OrderController@changeReady']);
-
-
     });
 
     Route::group(['prefix' => 'table'],function(){

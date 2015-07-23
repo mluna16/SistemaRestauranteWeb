@@ -40,7 +40,12 @@ class Order extends Model {
     }
 
     public function setStatus($id){
-        Order::where('id',$id)->update(['state' => 'listo']);
+        $order = Order::find($id);
+        if($order['state'] == "listo"){
+            Order::where('id',$id)->update(['state' => 'espera']);
+        }else{
+            Order::where('id',$id)->update(['state' => 'listo']);
+        }
         return true;
     }
 
