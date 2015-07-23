@@ -45,7 +45,8 @@ class CreateTableTable extends Migration {
 	 */
 	public function down()
 	{
-		//
-	}
+        Schema::drop('table');
+
+    }
 
 }

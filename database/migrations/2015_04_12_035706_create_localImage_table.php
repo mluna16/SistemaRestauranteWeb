@@ -39,7 +39,7 @@ class CreateLocalImageTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+        Schema::drop('local_image');
 	}
 
 }
