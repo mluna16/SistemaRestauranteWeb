@@ -1,6 +1,8 @@
 $(document).ready(function(){
     //Collapsible de los usuarios
-    $('.collapsible').collapsible()
+
+        $('.collapsible').collapsible()
+
     //Tooltip materialize
     $('.tooltipped').tooltip({delay: 50});
 

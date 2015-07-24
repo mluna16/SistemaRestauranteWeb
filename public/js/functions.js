@@ -4,7 +4,7 @@ $(document).ready(function(){
     //Modales
     $('.modal-trigger').leanModal()
 
-
+    $('.collapsible').collapsible()
 
     // Select
     $('.tipoDeUsuario').material_select();
@@ -207,6 +207,10 @@ $(document).ready(function(){
         CleanForm(form);
         CleanForm('#crear_userForm')
         $('.modal').closeModal();
+        $(this).ajaxGetPageLoader('Usuarios','#principalPanel')
+        $('.collapsible').collapsible()
+
+
     }
     function ProductEditSuccess(form){
         form[0].reset();

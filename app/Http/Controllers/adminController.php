@@ -30,10 +30,19 @@ class adminController extends Controller {
     /**
      * @return $this
      */
-    public function usuariosIndex(){
+    public function usuariosIndex(Request $request){
         $user = new User();
         $users = $user->getUserByCretedBy(Auth::user()->id);
-        if(! $user->getIsAFirstTimeUser()) return view('usuarios.admin.usuarios')->with('users',$users );
+        if(! $user->getIsAFirstTimeUser()){
+            $view = View::make('usuarios.admin.usuarios')->with('users',$users);
+            if($request->ajax()) {
+                $sections = $view->renderSections();
+                return Response::json($sections['infoPanel']);
+            }else return $view;
+        }
+        else {
+            return $user->ReturnToFirstTime();
+        }
     }
     public function menuIndex(Request $request){
         $Product = new Product();

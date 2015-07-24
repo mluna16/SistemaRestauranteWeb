@@ -2,12 +2,14 @@
 @section('title') Usuarios @endsection
 @section('Usuarios') active @endsection
 @section('infoPanel')
+
     <ul class="collapsible"  data-collapsible="expandable">
         <li>
             <div class="collapsible-header ">Administradores</div>
             <div class="collapsible-body">
                 <table class="striped centered responsive-table">
                     @include('partials.admin.UserTable')
+
                     <tbody>
                     @foreach($users as $admin)
                         @if($admin->type == 'admin')
@@ -123,5 +125,7 @@
     </ul>
     @include('partials.admin.ModalSoftDeleteUser')
     @include('partials.admin.ModalEditUser')
-
+    <script>
+        $('.collapsible').collapsible();
+    </script>
 @endsection
