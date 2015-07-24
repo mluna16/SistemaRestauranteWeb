@@ -176,7 +176,7 @@ class productsController extends Controller
             $response = [
                 "error" => "No hay productos para este usuario"
             ];
-            $statusCode = 404;
+            $statusCode = 400;
 
         } finally {
             return Response::json($response, $statusCode);
