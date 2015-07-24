@@ -62,15 +62,11 @@ $(document).ready(function(){
     }
      $.fn.ajaxGetPageLoader = function(url,id) {
         $('body').append("<div class='preloader-wrapper big active' style='position: fixed;left: 85%; margin-top: 5%;top: 5%;z-index: 1000;'> <div class='spinner-layer spinner-blue'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-red'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-yellow'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> <div class='spinner-layer spinner-green'> <div class='circle-clipper left'> <div class='circle'></div> </div> <div class='gap-patch'> <div class='circle'></div> </div> <div class='circle-clipper right'> <div class='circle'></div> </div> </div> </div>")
-         console.log("hola2")
-
          $.ajax({
             type: 'GET',
             url: url,
             dataType: 'json',
             success: function (data) {
-                console.log("hola")
-                console.log(data)
                 $(id).empty().append($(data));
                 $('.preloader-wrapper').hide();
             },
@@ -217,13 +213,13 @@ $(document).ready(function(){
         CleanForm(form);
         CleanForm('#create_menu')
         $('#editMenu').closeModal();
-        ajaxGetPageLoader('Menu','#principalPanel')
+        $(this).ajaxGetPageLoader('Menu','#principalPanel')
     }
     function deleteProductSuccess(card){
         card = $(card);
         //card.fadeOut();
         $('.modalSoftDeleteProduct').closeModal();
-        ajaxGetPageLoader('Menu','#principalPanel')
+        $(this).ajaxGetPageLoader('Menu','#principalPanel')
     }
 
 
