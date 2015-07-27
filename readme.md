@@ -1,23 +1,21 @@
-## Laravel PHP Framework
+##  SistemaRestauranteWeb
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+### Resumen
+Aplicacion web desarrolla como tesis de grada para la Universidad de Oriente Nucleo Nueva Esparta, su funcion es la de administrar todos los porcesos que se ejecutan en un restaurante por medio de esta aplicacion y otra aplicacion movil escrita para Android.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+La idea general es que desde la app Web se adminsitre el local y desde la aplicacion movil se lleven a cabo los procesos de pedidos y cocina. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Este sistema cuenta con una api, la cual se encarga de proveer de informacion a la aplicacion movil y asi adstraer la aplicacion movil de la base de datos. 
 
-## Official Documentation
+La appWeb esta desarrollada en PHP espesificamnte usando el FrameWork [Laravel](http://laravel.com/) para su version [5.0](http://laravel.com/docs/5.0). 
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Utilidades y librerias
+- [Material Desing](https://www.google.com/design/): Guias de diseño de Google 
+- [Materialize](http://materializecss.com/) : Framework CSS con diseño material Desing by Google
+- [Jquery](https://jquery.com/) : Libreria JavaScript 
+- [Dropzone](http://www.dropzonejs.com/) : Subida de archivos (Imagenes) tipo Soltar y Arrastrar 
+- [Highcharts](http://www.highcharts.com/) : Para crear Graficos detallados y estadisticas. 
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Esta aplicacion al igual que Laravel framework es open-sourced con licencia  [MIT license](http://opensource.org/licenses/MIT)
