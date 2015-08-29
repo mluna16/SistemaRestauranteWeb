@@ -29,7 +29,6 @@
             })
             setInterval(function(){
                 if ($('.mostar_mesa').hasClass('facturar')){
-                    Materialize.toast('I am a toast!', 4000)
                 }
                 $.ajax({
                     type: 'GET',
