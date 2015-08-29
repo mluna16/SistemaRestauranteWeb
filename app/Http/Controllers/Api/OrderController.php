@@ -1,5 +1,6 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers\Api;
 
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
@@ -11,6 +12,7 @@ use SistemaRestauranteWeb\Local;
 use SistemaRestauranteWeb\Order;
 use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\Table;
+use SistemaRestauranteWeb\User;
 
 
 class OrderController extends Controller {
@@ -122,6 +124,46 @@ class OrderController extends Controller {
             return Response::json(array('success' => true),200);
         }
         else return Response::json(array('success' => false),401);
+
+    }
+
+    public function getOrders($status)
+    {
+        $order          = new Order;
+        $producto       = new Product();
+        $user           = new User();
+        $local          = new Local();
+        $table          = new Table();
+
+        try{
+            $idLocal = $local->getLocalIdAttribute();
+            $orders = $order->getOrdernerPorEstadoYLocal($status,$idLocal);
+
+            $response    = [];
+            $statusCode = 200;
+
+            foreach($orders as $data){
+                $mesa = $table->getNumeroDeMesaPorOrder($data['id']);
+                foreach($mesa as $data2){
+                    $mesa = $data2['number_table'];
+                }
+
+                $response[] = [
+                                'idOrder'           =>      $data['id'],
+                                'nombrePlato'       =>      $producto->getProductNameAttribute($data['id_product']),
+                                'mesa'              =>      $mesa,
+                                'mesonero'          =>      $user->getFullNameUserById($data['created_by']),
+                            ];
+            }
+
+        } catch (Exception $e) {
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        } finally {
+            return Response::json($response, $statusCode);
+        }
 
     }
 

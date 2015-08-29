@@ -16,8 +16,9 @@ class CreateOrderTable extends Migration {
 		{
             $table->increments('id');
 
-            $table->enum('state',['listo','espera']); // Listo - en espera
+            $table->enum('state',['listo','espera','entregado']); // Listo - en espera - entregado
             $table->integer('created_by')->unsigned();
+            $table->integer('id_local')->unsigned();
             $table->integer('id_product')->unsigned();
 
             //Recordar discriminarporel modelo - Bug buscar solicion por migrations a eso
@@ -30,6 +31,11 @@ class CreateOrderTable extends Migration {
             $table->foreign('created_by')
                 ->references('id')
                 ->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('id_local')
+                ->references('id')
+                ->on('local')
                 ->onDelete('cascade');
 
             $table->foreign('id_product')

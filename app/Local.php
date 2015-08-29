@@ -33,7 +33,6 @@ class Local extends Model {
 
     public function getNameOwnerAttribute(){
        return User::where('id', $this->owner)->firstOrFail()->FullName;
-
     }
 
     public function  getMesasAttribute(){

@@ -97,7 +97,11 @@ class Table extends Model {
                 Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->update(['facturar' => false]);
             }
         }
+    }
 
-
+    function getNumeroDeMesaPorOrder($idOrder)
+    {
+        $table  = Table::where('id_order', $idOrder)->get();
+        return $table;
     }
 }

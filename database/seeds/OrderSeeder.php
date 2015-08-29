@@ -25,8 +25,9 @@ class OrderSeeder extends Seeder {
         for($i=0;$i < 50;$i++) {
             \DB::table('order')->insert(array(
                 'created_by' => $faker->numberBetween(1,12),
-                'state' => "espero",
+                'state' => "espera",
                 'id_product' => $faker->numberBetween(1,12),
+                'id_local' => 1,
                 'created_at' =>$date->now()->addDays(rand(-800,0))->addMinutes(rand(0,60*23))->addSeconds(rand(0,60)),
             ));
         }

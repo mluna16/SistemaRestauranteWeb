@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
     Route::group(['prefix' => 'order'],function(){
         Route::post('store',['uses' => 'Api\OrderController@store']);
         Route::delete('delete/{id}',['uses' => 'Api\OrderController@destroy']);
+        Route::get('/{status}',['uses' => 'Api\OrderController@getOrders']);
         Route::post('changeReady',['uses' => 'Api\OrderController@changeReady']);
     });
 

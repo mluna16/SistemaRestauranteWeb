@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model {
 
     protected $table = 'order';
-    protected $fillable = ['state','created_by', 'id_product',];
+    protected $fillable = ['state','created_by', 'id_product','id_local'];
 
     /**
      * Este Model contiene los siguientes Metodos :
@@ -39,7 +39,14 @@ class Order extends Model {
 
     }
 
-    public function setStatus($id){
+    public function getOrdernerPorEstadoYLocal($estado, $local)
+    {
+        $order  =  Order::where(['id_local' => $local,'state' => $estado ])->get();
+        return $order;
+    }
+
+    public function setStatus($id)
+    {
         $order = Order::find($id);
         if($order['state'] == "listo"){
             Order::where('id',$id)->update(['state' => 'espera']);
