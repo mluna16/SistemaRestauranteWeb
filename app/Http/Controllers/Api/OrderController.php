@@ -51,18 +51,40 @@ class OrderController extends Controller {
             'idTable' => 'required', 'idProduct' => 'required',
         ]);
 
-        $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera'];
-        $order = Order::create($orderAttr);
 
-        if($order->save()){
-            $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $local->getLocalIdAttribute(),'facturar' => false];
-            $table = Table::create($tableAttr);
-            if($table->save()){
-                $product->updateInventory($request->idProduct,true);
-                return Response::json(array('success' => true),200);
+
+        try {
+            $idLocal = $local->getLocalIdAttribute();
+
+            Product::findOrFail($request['idProduct']);
+            $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
+            $order = Order::create($orderAttr);
+
+            if($order->save()){
+                $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
+                $table = Table::create($tableAttr);
+                if($table->save()){
+                    $product->updateInventory($request->idProduct,true);
+                    $statusCode = 200;
+                    $response = ['success' => true];
+
+                }
+                else {
+                    $statusCode = 500;
+                    $response = ['success' => false];
+                }
             }
-            else return Response::json(array('success' => false),500);
+
+           } catch (Exception $e) {
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        } finally {
+            return Response::json($response, $statusCode);
         }
+
+
 	}
 
 	/**
