@@ -62,6 +62,7 @@ class OrderController extends Controller {
 
             if($order->save()){
                 $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
+
                 $table = Table::create($tableAttr);
                 if($table->save()){
                     $product->updateInventory($request->idProduct,true);
