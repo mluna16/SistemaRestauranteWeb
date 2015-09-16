@@ -56,6 +56,12 @@ class Order extends Model {
         return true;
     }
 
+    public function editar($id,$request)
+    {
+        $order  =  Order::where(['id' => $id])->update(['id_product' => $request->idProductEdit]);
+        return $order;
+    }
+
 
 
 }
