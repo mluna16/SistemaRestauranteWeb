@@ -116,9 +116,40 @@ class OrderController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
-		//
+        $product= new Product();
+
+        try{
+            $statusCode = 200;
+            $product->findOrFail($request->idProduct);
+            $product->findOrFail($request->idProductEdit);
+            $order = Order::findOrFail($id);
+            $this->validate($request, [
+                'idProduct'     => 'required',
+                'idProductEdit' => 'required'
+            ]);
+
+            $order->editar($id,$request);
+
+            if($order->save()){
+                $product->updateInventory($request->idProductEdit,true);
+                $product->updateInventory($request->idProduct,false);
+                $response =['success' => true];
+            }
+            else {
+                $statusCode = 401;
+                $response = ['success' => false];
+            }
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response,$statusCode);
+        }
+
 	}
 
 	/**
