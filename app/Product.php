@@ -80,6 +80,7 @@ class Product extends Model {
         foreach($productList as $product){
             /** @var TYPE_NAME $productImages */
             $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
+
             $productImage[] = [
 
                 'id_product' => $product->id,
@@ -89,7 +90,7 @@ class Product extends Model {
                 'description' => $product->description,
                 'status' => $product->stautus,
                 'id_image' => $productImages->id,
-                'image' => $productImages->route.$productImages->name.".".$productImages->type
+                'image' => $this->renameRouteImage($productImages)
             ];
         }
         return Collection::make($productImage);
@@ -109,7 +110,7 @@ class Product extends Model {
                 'description' => $product->description,
                 'status' => $product->stautus,
                 'id_image' => $productImages->id,
-                'image' => $productImages->name.".".$productImages->type
+               'image' => $this->renameRouteImage($productImages)
             ];
 
         return Collection::make($productinfo);
@@ -166,4 +167,11 @@ class Product extends Model {
         return $this->hasOne('SistemaRestauranteWeb\ProductImage');
     }
 
+    public function renameRouteImage($array)
+    {
+        $path = public_path();
+        $route = str_replace($path, "", $array['route']);
+        $route = $route.$array['name'].'.'.$array['type'];
+        return $route;
+    }
 }

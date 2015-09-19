@@ -8,7 +8,7 @@
             <div class="col s12 m6 l4">
                 <div class="card" id="CardMenu{{$menu['id_product']}}">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" style="width: 360px height: 260px" src="{{asset('images/product/'.$menu['id_product'].'/'.$menu['image'])}}">
+                        <img class="activator" style="width: 360px height: 260px" src="{{asset($menu['image'])}}">
                     </div>
                     <div class="card-content">
                         <div class="row">
