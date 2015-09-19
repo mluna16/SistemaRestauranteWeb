@@ -89,7 +89,7 @@ class Product extends Model {
                 'description' => $product->description,
                 'status' => $product->stautus,
                 'id_image' => $productImages->id,
-                'image' => $productImages->name.".".$productImages->type
+                'image' => $productImages->route.$productImages->name.".".$productImages->type
             ];
         }
         return Collection::make($productImage);
