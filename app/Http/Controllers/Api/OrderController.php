@@ -3,6 +3,7 @@
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
+use SistemaRestauranteWeb\Devuelto;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
@@ -219,6 +220,33 @@ class OrderController extends Controller {
             return Response::json($response, $statusCode);
         }
 
+    }
+
+    public function returnedOrder(Request $request)
+    {
+        $retunred   = New Devuelto();
+        $local      = New Local();
+        $order      = New Order();
+        try{
+            $this->validate($request, [
+                'id_order' => 'required', 'id_product' => 'required','type' => 'required',
+            ]);
+            $request['id_local']= $local->getLocalIdAttribute();
+
+            $retunred->crearNuevo($request->all());
+            $order->setStatusReturned($request->id_order);
+            $response = ['success'=>true];
+            $statusCode = 200;
+
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response, $statusCode);
+
+        }
     }
 
 }

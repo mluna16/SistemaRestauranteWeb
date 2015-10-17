@@ -1,3 +1,5 @@
+/public/images/local
+/public/images/product
 /vendor
 /node_modules
 .env

@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
         Route::put('edit/{id}',['uses' => 'Api\OrderController@update']);
         Route::get('/{status}',['uses' => 'Api\OrderController@getOrders']);
         Route::post('changeReady',['uses' => 'Api\OrderController@changeReady']);
+        Route::post('returned',['uses' => 'Api\OrderController@returnedOrder']);
     });
 
     Route::group(['prefix' => 'table'],function(){

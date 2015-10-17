@@ -56,6 +56,13 @@ class Order extends Model {
         return true;
     }
 
+    public function setStatusReturned($id)
+    {
+        Order::where('id',$id)->update(['state' => 'devuelto']);
+
+        return true;
+    }
+
     public function editar($id,$request)
     {
         $order  =  Order::where(['id' => $id])->update(['id_product' => $request->idProductEdit]);
