@@ -48,7 +48,9 @@
                 });
             },5000);
 
-
+            $(document).on('click','.facturar',function(){
+                    console.log("dfdf")
+            })
 
         })
     </script>

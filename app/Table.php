@@ -63,7 +63,10 @@ class Table extends Model {
             'Pedidos' => []
         ];
         if ($id <= $totalMesas) {
-            $mesasData = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->get();
+            $mesasData = Table::where(['number_table' => $id,
+                                        'id_local' => $local->getLocalIdAttribute(),
+                                        'state' => 'ocupado'])->get();
+
             foreach ($mesasData as $mesaData) {
                 $orderData = Order::find($mesaData->id_order);
                 $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product, 'cost');
@@ -86,15 +89,18 @@ class Table extends Model {
     function changeInvoiceTableStatus($id)
     {
         $local = new Local();
-        $mesas = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->get();
+        $mesas = Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])
+                        ->get();
         foreach($mesas as $mesa){
             if($mesa->facturar == false)
             {
-                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->update(['facturar' => true]);
+                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])
+                            ->update(['facturar' => true]);
             }
             else
             {
-                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])->update(['facturar' => false]);
+                Table::where(['number_table' => $id, 'id_local' => $local->getLocalIdAttribute(),'state' => 'ocupado'])
+                        ->update(['facturar' => false]);
             }
         }
     }

@@ -276,10 +276,10 @@ $(document).ready(function(){
         });
         struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div>';
         if(pedido[0]['Facturar']== 1){
-            struct += '<div class="col m6"> <a class="waves-effect waves-light btn right">Facturar</a> </div> </div> </div> </div> </div> </div>'
+            struct += '<div class="col m6"> <a class="waves-effect waves-light btn right facturar">Facturar</a> </div> </div> </div> </div> </div> </div>'
 
         }else {
-            struct += '<div class="col m6"> <a class="btn disabled right">Facturar</a> </div> </div> </div> </div> </div> </div>'
+            struct += '<div class="col m6"> <a class="btn disabled right ">Facturar</a> </div> </div> </div> </div> </div> </div>'
         }
         $('#infoPedido').empty().append($(struct));
 

@@ -12,5 +12,7 @@ Route::group(['middleware' => 'auth','prefix' => 'caja'], function()
 {
     Route::get('/','cajaController@index');
     Route::get('infoOrden/{id}','cajaController@getInfotable');
+    Route::post('storeAjax', ['uses' => 'InvoiceController@store', 'as' => 'invoiceStoreAjax']);
+
     Route::resource('pedido','pedidoController');
 });
