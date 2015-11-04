@@ -19,6 +19,7 @@ class CreateInvoiceTable extends Migration {
             $table->string('client_id');
             $table->string('client_name');
             $table->string('client_phone');
+            $table->integer('costo');
 
             $table->integer('created_by')->unsigned();
             $table->foreign('created_by')

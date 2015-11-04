@@ -99,4 +99,17 @@ class Local extends Model {
         $locals = Local::find($local->getLocalIdAttribute());
         return $locals->number_tables;
     }
+
+    public function getLocalNameForUser()
+    {
+        $user = new User();
+        if (Auth::user()->getIsASystemGod()) {
+            if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+            else return 000;
+        } else {
+            $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
+
+            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
+        }
+    }
 }

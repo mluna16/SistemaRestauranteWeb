@@ -276,15 +276,44 @@ $(document).ready(function(){
         });
         struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div>';
         if(pedido[0]['Facturar']== 1){
-            struct += '<div class="col m6"> <a class="waves-effect waves-light btn right facturar">Facturar</a> </div> </div> </div> </div> </div> </div>'
+            struct += '<div class="col m6"> <a data-id ="'+data['data']['NumberTable']+'" class="waves-effect waves-light btn right facturar">Facturar</a> </div> </div> </div> </div> </div> </div>'
 
         }else {
             struct += '<div class="col m6"> <a class="btn disabled right ">Facturar</a> </div> </div> </div> </div> </div> </div>'
         }
         $('#infoPedido').empty().append($(struct));
+    }
 
+    $(document).on('click','.facturar', function(event){
+        var id = $(this).attr('data-id')
+        var url = 'caja/invoiceDatails/'+id;
+        $(this).ajaxGetData(url,'inoviceDetails','data')
+    });
+
+    function inoviceDetails(data){
+        activeLabelForm('#EditmenuForm');
+        $('body').append($(data['data']))
+        $('#create_invoice').openModal();
+    }
+
+    $(document).on('click','#crear_InvoiceSubmit',function () {
+        var  form = $('#crear_invoiceForm');
+        var id = $(this).attr('data-id')
+        var url = form.attr('action')
+        $(this).ajaxStore('#crear_invoiceForm',url,"Factura Generada","invoiceGenerateSuccuess","data")
+    });
+
+    function invoiceGenerateSuccuess(data){
+
+        $('#create_invoice').closeModal();
+        $('#create_invoice').empty();
+        console.log(data['url']);
+
+        window.open(data['url'], '_blank');
 
     }
+
+
 
     /*
     *

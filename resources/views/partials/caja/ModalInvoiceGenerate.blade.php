@@ -1,37 +1,35 @@
-<div id="create_user" class="modal ">
+@section('Modalinvoice')
+<div id="create_invoice" class="modal ">
     <div class="modal-content">
-        <h4>Crear nuevo usuario </h4>
+        <h4>Datos del Cliente</h4>
 
         {!!Form::open([
         'route' => 'invoiceStoreAjax',
         'method' => 'POST',
-        'id' => 'crear_userForm',
+        'id' => 'crear_invoiceForm',
         ])
         !!}
-                @include('partials.admin.FormUser')
-                <div class="row">
-                    <div class="col s12">
-                        <label>Tipo de Usuario</label>
-                        <select class="browser-default" name="type">
-                            <option value="" disabled selected>Seleccione</option>
-                            <option value="caja">Caja</option>
-                            <option value="cocina">Cocina</option>
-                            <option value="mesonero">Mesonero</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="input-field col s12">
+                {!! Form::text('client_id', null,['class' => 'validate firstNameUser'])!!}
+                {!! Form::label('client_id', 'Numero Identificacion  cliente ',['for' => 'client_id'])!!}
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                {!! Form::text('client_name', null,['class' => 'validate lastNameUser'])!!}
+                {!! Form::label('client_name', 'Nombre del Cliente ',['for' => 'client_name'])!!}
+            </div>
+        </div>
+
 
         <div class="modal-footer">
-            <a href="#" id="crear_userSubmit" type="submit" class="waves-effect waves-green btn-flat ">Crear</a>
+            <a href="#" id="crear_InvoiceSubmit" data-id="{{$data['idtable']}}" type="submit" class="waves-effect waves-green btn-flat ">Crear</a>
 
 
         </div>
-        {!! Form::hidden('password_', '12345',['class' => 'hidden']) !!}
-        {!! Form::hidden('password', '12345',['class' => 'hidden']) !!}
+        <input name="idtable" type="hidden" value="{{$data['idtable']}}">
         {!!Form::close()!!}
             </div>
-
-
-
-
 </div>
+@endsection

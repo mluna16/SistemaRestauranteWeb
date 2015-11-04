@@ -18,7 +18,7 @@ class CreateTableTable extends Migration {
 
             $table->integer("number_table");
             $table->integer("number_seat");
-            $table->enum('state',['ocupado','disponible']);
+            $table->enum('state',['ocupado','disponible','facturado']);
             $table->boolean('facturar');
 
             $table->integer('id_order')->unsigned();

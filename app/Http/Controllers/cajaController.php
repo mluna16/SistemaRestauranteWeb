@@ -44,5 +44,4 @@ class cajaController extends Controller {
         $table = new Table;
         return Response::json(['success' => true, 'data' => $table->getInfoTableForNumberTable($id)]);
     }
-
 }

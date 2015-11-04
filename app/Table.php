@@ -105,6 +105,16 @@ class Table extends Model {
         }
     }
 
+    public function changeStatusTable($id)
+    {
+        $local = new Local();
+
+         Table::where(['number_table' => $id,
+                                    'id_local' => $local->getLocalIdAttribute(),
+                                    'state' => 'ocupado'])->update(['state'=>'facturado']);
+    }
+
+
     function getNumeroDeMesaPorOrder($idOrder)
     {
         $table  = Table::where('id_order', $idOrder)->get();
