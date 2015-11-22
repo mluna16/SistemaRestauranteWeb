@@ -76,7 +76,9 @@ class Product extends Model {
 
     public  function getAllProductInformationByLocalFor(){
         $local = new Local();
-        $productList = Product::where('local_for',$local->getLocalIdAttribute())->get();
+        $productList = Product::where('local_for',$local->getLocalIdAttribute())
+                                ->where(['inventory','>',0])
+                                ->get();
         foreach($productList as $product){
             /** @var TYPE_NAME $productImages */
             $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
@@ -140,7 +142,6 @@ class Product extends Model {
         if($action==true)   $Inventory= $product->inventory - 1;
         else                $Inventory= $product->inventory + 1;
         Product::where('id', $value)->update(['inventory' => $Inventory]);
-        dd($product);
     }
 
     public function resetInventory(){
