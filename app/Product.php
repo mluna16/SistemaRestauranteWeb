@@ -140,7 +140,7 @@ class Product extends Model {
         if($action==true)   $Inventory= $product->inventory - 1;
         else                $Inventory= $product->inventory + 1;
         Product::where('id', $value)->update(['inventory' => $Inventory]);
-
+        dd($product);
     }
 
     public function resetInventory(){

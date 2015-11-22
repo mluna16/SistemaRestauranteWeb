@@ -21,9 +21,9 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <br><br>
-                <h1 class="header center orange-text text-darken-4">No tenemos nombre aun</h1>
+                <h1 class="header center   deep-orange-text text-darken-3">No tenemos nombre aun</h1>
                 <div class="row center">
-                    <h5 class="header col s12 brown-text text-darken-3 light">Pero este sistema web y movíl para <span class="red-text text-darken-4">Restaurante</span> lo tendra! </h5>
+                    <h5 class="header col s12 red-text text-darken-2 light">Pero este sistema web y movíl para <span class="red-text text-darken-4">Restaurante</span> lo tendra! </h5>
                 </div>
 
                 <br><br>
