@@ -77,7 +77,7 @@ class Product extends Model {
     public  function getAllProductInformationByLocalFor(){
         $local = new Local();
         $productList = Product::where('local_for',$local->getLocalIdAttribute())
-                                ->where(['inventory','>',0])
+                                ->where('inventory','>',0)
                                 ->get();
         foreach($productList as $product){
             /** @var TYPE_NAME $productImages */
