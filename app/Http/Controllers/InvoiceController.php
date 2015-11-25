@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
-
+use Barryvdh\DomPDF\ServiceProvider;
 use Illuminate\Http\Request;
 use SistemaRestauranteWeb\Invoice;
 use SistemaRestauranteWeb\InvoiceProduct;
