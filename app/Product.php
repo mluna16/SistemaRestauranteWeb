@@ -89,6 +89,7 @@ class Product extends Model {
                 'name' => $product->name,
                 'cost' => $product->cost,
                 'limit' => $product->limit,
+                'inventory' => $product->inventory,
                 'description' => $product->description,
                 'status' => $product->stautus,
                 'id_image' => $productImages->id,
