@@ -140,7 +140,7 @@ return [
          * Vendor Service Providers
          */
         'Collective\Html\HtmlServiceProvider',
-        'Barryvdh\DomPDF\ServiceProvider',
+        Barryvdh\DomPDF\ServiceProvider::class,
 
 		/*
 		 * Application Service Providers...
