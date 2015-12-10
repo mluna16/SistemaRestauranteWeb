@@ -208,6 +208,8 @@ class OrderController extends Controller {
                                 'nombrePlato'       =>      $producto->getProductNameAttribute($data['id_product']),
                                 'mesa'              =>      $mesa,
                                 'mesonero'          =>      $user->getFullNameUserById($data['created_by']),
+                                'comentario'        =>      $data['comentario'],
+                                'visto'             =>      $data['comentario_visto']
                             ];
             }
 
@@ -235,6 +237,48 @@ class OrderController extends Controller {
 
             $retunred->crearNuevo($request->all());
             $order->setStatusReturned($request->id_order);
+            $response = ['success'=>true];
+            $statusCode = 200;
+
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response, $statusCode);
+
+        }
+    }
+
+    public function addComentario(Request $request)
+    {
+        $order = New Order();
+        try{
+            Order::findOrFail($request['idOrder']);
+            $order->addOrEditComentario($request['idOrder'],$request);
+
+            $response = ['success'=>true];
+            $statusCode = 200;
+
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response, $statusCode);
+
+        }
+    }
+    public function deleteComentario(Request $request)
+    {
+        $order = New Order();
+        try{
+            Order::findOrFail($request['idOrder']);
+            $request['comentario'] = "";
+            $order->addOrEditComentario($request['idOrder'],$request);
+
             $response = ['success'=>true];
             $statusCode = 200;
 

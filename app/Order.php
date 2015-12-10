@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model {
 
     protected $table = 'order';
-    protected $fillable = ['state','created_by', 'id_product','id_local'];
+    protected $fillable = ['state','created_by', 'id_product','id_local','comentario','comentario_visto'];
 
     /**
      * Este Model contiene los siguientes Metodos :
@@ -66,6 +66,15 @@ class Order extends Model {
     public function editar($id,$request)
     {
         $order  =  Order::where(['id' => $id])->update(['id_product' => $request->idProductEdit]);
+        return $order;
+    }
+
+    public function addOrEditComentario($id,$request)
+    {
+        $order  =  Order::where(['id' => $id])->update([
+                                                        'comentario' => $request->comentario,
+                                                        'comentario_visto' => false
+                                                        ]);
         return $order;
     }
 

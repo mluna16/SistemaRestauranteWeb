@@ -34,6 +34,8 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
         Route::get('/{status}',['uses' => 'Api\OrderController@getOrders']);
         Route::post('changeReady',['uses' => 'Api\OrderController@changeReady']);
         Route::post('returned',['uses' => 'Api\OrderController@returnedOrder']);
+        Route::post('comentario',['uses' => 'Api\OrderController@addComentario']);
+        Route::post('delete/comentario',['uses' => 'Api\OrderController@deleteComentario']);
     });
 
     Route::group(['prefix' => 'table'],function(){
