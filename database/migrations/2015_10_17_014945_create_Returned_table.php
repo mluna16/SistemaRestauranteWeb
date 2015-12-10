@@ -25,7 +25,7 @@ class CreateReturnedTable extends Migration {
 
             $table->foreign('id_order')
                 ->references('id')
-                ->on('local')
+                ->on('order')
                 ->onDelete('cascade');
 
             $table->foreign('id_local')

@@ -72,8 +72,8 @@ class Order extends Model {
     public function addOrEditComentario($id,$request)
     {
         $order  =  Order::where(['id' => $id])->update([
-                                                        'comentario' => $request->comentario,
-                                                        'comentario_visto' => false
+                                                        'comentario'        => $request->comentario,
+                                                        'comentario_visto'  => false
                                                         ]);
         return $order;
     }
