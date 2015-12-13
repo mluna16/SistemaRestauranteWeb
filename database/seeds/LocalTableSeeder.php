@@ -25,7 +25,7 @@ class LocalTableSeeder extends Seeder {
         ));
         \DB::table('local_image')->insert(array(
             'name' =>  'imgDemo',
-            'route' =>  public_path().'/images/local/'.$id,
+            'route' =>  public_path().'/images/local/',
             'type' => 'jpeg',
             'size' => '44.529296875',
             'id_local' => $id
