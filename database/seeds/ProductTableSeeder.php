@@ -27,7 +27,7 @@ class ProductTableSeeder extends Seeder {
             ));
 
             \DB::table('product_image')->insert([
-                'name' =>  '$2y$10$3TFW56bPHmHpJf0sP7rEdORp2.GqA5nB9YJD24rmsDQYmvevu3IeW',
+                'name' =>  'imgDemo',
                 'route' => public_path().'/images/product/'.$id,
                 'type' => 'jpeg',
                 'size' => '44.529296875',

@@ -24,8 +24,8 @@ class LocalTableSeeder extends Seeder {
 
         ));
         \DB::table('local_image')->insert(array(
-            'name' =>  \Hash::make('local'),
-            'route' => 'C:\wamp\VirtualHost\SistemaRestauranteWeb\public/Images/Local/'.$id.'/',
+            'name' =>  'imgDemo',
+            'route' =>  public_path().'/images/local/'.$id,
             'type' => 'jpeg',
             'size' => '44.529296875',
             'id_local' => $id
