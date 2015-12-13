@@ -172,6 +172,8 @@ class productsController extends Controller
             $statusCode = 200;
             $response = $Product->getAllProductInformationByLocalFor();
 
+
+
         }catch (Exception $e) {
             $response = [
                 "error" => "No hay productos para este usuario"

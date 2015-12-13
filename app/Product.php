@@ -173,7 +173,7 @@ class Product extends Model {
     {
         $path = public_path();
         $route = str_replace($path, "", $array['route']);
-        $route = $route.$array['name'].'.'.$array['type'];
+        $route = $route.'/'.$array['name'].'.'.$array['type'];
         return $route;
     }
 }
