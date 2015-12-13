@@ -12,6 +12,7 @@
             <h1>{{$data['local']}}</h1>
             <h3>Factura #{{ $data['invoiceId'] }}</h3>
             <h4>Nombre Cliente : {{ $data['clientName'] }}</h4>
+            <h4>ID cliente : {{ $data['clientId'] }}</h4>
             <div class="date">Fecha: {{ $data['date'] }}</div>
         </div>
     </div>

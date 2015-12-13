@@ -83,7 +83,7 @@ class InvoiceController extends Controller {
 
             $data = [
                 'local'         => $local->getLocalNameForUser(),
-                'date'         => Carbon::parse($invoice->created_at)->format('d/m/Y h:s'),
+                'date'         => Carbon::parse($invoice->created_at)->setTimezone('America/Caracas')->format('d/m/Y h:s'),
                 'clientName'    => $invoice->client_name,
                 'clientId'      => $invoice->client_id,
                 'invoiceId'       => $invoice->id,
