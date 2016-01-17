@@ -49,35 +49,38 @@ class OrderController extends Controller {
         $local = new Local();
         $product = new Product();
         $this->validate($request, [
-            'idTable' => 'required', 'idProduct' => 'required',
+            'idTable' => 'required', 'idProduct' => 'required','cantidad' => 'required'
         ]);
-
+        $cantidad = intval($request['cantidad']);
 
 
         try {
             $idLocal = $local->getLocalIdAttribute();
+            for($i = 0; $i < $cantidad ;$i++){
+                Product::findOrFail($request['idProduct']);
+                $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
+                $order = Order::create($orderAttr);
 
-            Product::findOrFail($request['idProduct']);
-            $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
-            $order = Order::create($orderAttr);
+                if($order->save()){
+                    $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
 
-            if($order->save()){
-                $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
+                    $table = Table::create($tableAttr);
+                    if($table->save()){
+                        $product->updateInventory($request->idProduct,true);
 
-                $table = Table::create($tableAttr);
-                if($table->save()){
-                    $product->updateInventory($request->idProduct,true);
-                    $statusCode = 200;
-                    $response = ['success' => true];
-
-                }
-                else {
-                    $statusCode = 500;
-                    $response = ['success' => false];
+                    }
+                    else {
+                        $statusCode = 400;
+                        $response = ['success' => false];
+                    }
                 }
             }
+            $statusCode = 200;
+            $response = ['success' => true];
 
-           } catch (Exception $e) {
+
+
+        } catch (Exception $e) {
             $response = [
                 "error" => $e->getMessage(),
             ];
