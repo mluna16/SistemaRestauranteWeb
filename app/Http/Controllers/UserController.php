@@ -1,5 +1,6 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request as Requests_Facades;
 use Illuminate\Support\Facades\Response;
@@ -111,15 +112,20 @@ class UserController extends Controller {
         }
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+	public function addCodigo(Request $request)
+    {
+        $user = new User();
 
+        try{
+           $response = $user->addCodigoUser($request->all());
+            $statusCode = 200;
+        } catch (Exception $e) {
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        } finally {
+            return Response::json($response, $statusCode);
+        }
+    }
 }

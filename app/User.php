@@ -23,7 +23,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = array('first_name','last_name', 'email', 'password','type','img_profile','first_time','status','created_by');
+	protected $fillable = array('first_name','last_name', 'email',
+                                'password','type','img_profile','first_time',
+                                'status','created_by','codigo');
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -107,5 +109,17 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         $user = User::where('id',$value)->firstOrFail();
         return $user->getFullNameAttribute();
 
+    }
+
+    public function addCodigoUser($request)
+    {
+        $data = $this->where('id',$request['iduser'])->update(['codigo' => $request['codigo']]);
+        return $data;
+    }
+
+    public function getCodeUser($id)
+    {
+        $data = $this->find($id)->codigo;
+        return $data;
     }
 }
