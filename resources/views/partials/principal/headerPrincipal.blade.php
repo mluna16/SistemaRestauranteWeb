@@ -5,11 +5,17 @@
     <div class="nav-wrapper ">
         <ul class="right">
             @if(Auth::check()== true)
-                <a class='dropdown-button modal-trigger' href="#LoginInformation">
+                <li>
+                    <a class="waves-effect waves-light btn"  onclick="introJs().start();">Stuff</a>
+
+                </li>
+               <li>
+                   <a class='dropdown-button modal-trigger' href="#LoginInformation">
                         {{Auth::user()->FullName}}
                          <i class="small mdi-social-person right"></i>
 
                 </a>
+               </li>
             @else
                 <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
                 <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>

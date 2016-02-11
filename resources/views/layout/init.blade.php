@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Restaurante | @yield('title','Restaurante')</title>
     <!-- CSS  -->
+    <link href="{{asset('css/introjs.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{asset('css/mobile.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="{{asset('css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
 
 
@@ -22,6 +24,7 @@
 <script src="{{asset('js/jQueryMaster.js')}}"></script>
 <script src="{{asset('js/functions.js')}}"></script>
 <script src="{{asset('js/dropzone.js')}}"></script>
+<script src="{{asset('js/intro.js')}}"></script>
 <script src="{{asset('js/materialize.js')}}"></script>
 
 @section('alternalJS')

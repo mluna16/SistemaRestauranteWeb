@@ -1,6 +1,6 @@
 @extends('usuarios.caja.caja')
 @section('tablesPanel')
-    <div class="col s12 m12 l6">
+    <div class="col s12 m12 l6" data-step="1" data-intro="Ok, wasn't that fun?" data-position='right'>
         <div class="row">
             @for($i=1; $i <= $data['TotalMesas'];$i++)
                 @if($data['Mesas'][$i-1]['State'] == 'ocupado')

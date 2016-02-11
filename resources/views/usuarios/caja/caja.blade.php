@@ -3,12 +3,12 @@
 @section('content')
     @include('partials.principal.headerPrincipal')
     <div class="row">
-        <div id="infoTables">
+        <div id="infoTables"  >
                 @section('tablesPanel')
 
                 @show
         </div>
-        <div class="col s12 m12 l6">
+        <div class="col s12 m12 l6" data-step="2" data-intro="Ok, wasn't that fun?" data-position='left' >
                 <div id="infoPedido">
 
                 </div>
@@ -16,6 +16,8 @@
             </div>
     </div>
 @endsection
+@include('tours.caja')
+
 @section('alternalJS')
 
     <script src="{{asset('js/functionsUser.js')}}"></script>
@@ -51,6 +53,7 @@
             $(document).on('click','.facturar',function(){
                     console.log("dfdf")
             })
+
 
         })
     </script>
