@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //Collapsible de los usuarios
 
-        $('.collapsible').collapsible()
+       // $('.collapsible').collapsible()
 
     //Tooltip materialize
     $('.tooltipped').tooltip({delay: 50});
@@ -183,7 +183,11 @@ $(document).ready(function(){
 
 
 
+    $(document).on('click','.tourActive',function(){
+        $('#eVenta').trigger('click');
+        $('#userCaja').trigger('click');
 
+    });
 
 
 })

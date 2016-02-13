@@ -8,7 +8,7 @@
 
     @include('partials.principal.headerPrincipal')
     <div class="row">
-        <div class="col s12 m2 l2 ">
+        <div class="col s12 m2 l2 "data-step="1" data-intro="@yield('TextoTour')" data-position='right'>
             <div class="row fixed ">
                 <div class="collection light-blue lighten-1">
                     <a href="{{ url('admin/Estadisticas') }}" class="collection-item @yield('Estadisticas') ">Estadisticas</a>
@@ -25,8 +25,8 @@
 
                     @show
                 </div>
-                <div class="col m1 s1">
-                    <div class="fixed-action-btn" >
+                <div class="col m1 s1" >
+                    <div class="fixed-action-btn" data-step="@yield('numeroBotonFlotante')" data-intro="permite agregar un nuevo producto o un nuevo usuario al sistema, esta funcion esta disponible en todos los modulos del sistema" data-position='left'>
                         <a class="btn-floating btn-large light-blue lighten-1">
                             <i class="large mdi-content-add"></i>
                         </a>

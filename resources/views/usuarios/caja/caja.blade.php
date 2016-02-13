@@ -8,7 +8,7 @@
 
                 @show
         </div>
-        <div class="col s12 m12 l6" data-step="2" data-intro="Ok, wasn't that fun?" data-position='left' >
+        <div class="col s12 m12 l6" data-step="2" data-intro="Muestra los pedidos de una mesa en especifico y da la posibilidad de facturar" data-position='left' >
                 <div id="infoPedido">
 
                 </div>

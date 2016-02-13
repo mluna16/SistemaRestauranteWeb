@@ -1,5 +1,5 @@
 @extends('layout.dashboard')
-@section('title') Estadisticas @endsection
+@section('title') Menu @endsection
 @section('Menu') active @endsection
 <div id="MenuPrincipal">
 @section('infoPanel')

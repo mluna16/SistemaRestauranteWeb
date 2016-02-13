@@ -1,10 +1,12 @@
 @extends('layout.dashboard')
 @section('title') Estadisticas @endsection
 @section('Estadisticas') active @endsection
+@section('numeroBotonFlotante') 5 @endsection
+@section('TextoTour') El modulo de estadisticas, genera una serie de calculos estadistico que miden el comportamiento del Restaurante @endsection
 
 @section('infoPanel')
     <ul class="collapsible" data-collapsible="accordion">
-        <li>
+        <li data-step="2" data-intro="Indica las estadisticas de venta" data-position='left'>
             <div class="collapsible-header" id="eVenta">Estadisticas de Ventas</div>
             <div class="collapsible-body">
                 <div class="row">
@@ -43,7 +45,7 @@
                 </div>
             </div>
         </li>
-        <li>
+        <li data-step="3" data-intro="Señala la tolalidad de productos despachados" data-position='left'>
             <div class="collapsible-header" id="eProducto">Estadisticas de Productos</div>
             <div class="collapsible-body">
                 <div class="row">
@@ -92,7 +94,7 @@
 
             </div>
         </li>
-        <li>
+        <li data-step="4" data-intro="Muestra el desempeño de los mesoneros basados en la cantidad de ordenes generadas" data-position='left'>
             <div class="collapsible-header" id="eMesonero">Estadisticas de Mesonero</div>
             <div class="collapsible-body">
                 <div class="row">
