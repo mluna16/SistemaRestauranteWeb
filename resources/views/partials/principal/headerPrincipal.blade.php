@@ -6,7 +6,7 @@
         <ul class="right">
             @if(Auth::check()== true)
                 <li>
-                    <a class="waves-effect waves-light btn tourActive"  onclick="introJs().start();">Stuff</a>
+                    <a class="waves-effect waves-light btn tourActive"  onclick="introJs().start();">Tour</a>
 
                 </li>
                <li>
