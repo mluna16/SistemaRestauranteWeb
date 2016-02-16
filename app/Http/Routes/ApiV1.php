@@ -51,6 +51,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
 
     Route::group(['prefix' => 'user'],function(){
         Route::post('code', ['uses' => 'UserController@addCodigo']);
+        Route::get('send', ['uses' => 'UserController@test']);
     });
 
 

@@ -128,4 +128,29 @@ class UserController extends Controller {
             return Response::json($response, $statusCode);
         }
     }
+
+    public function test()
+    {
+        $utilities = new UtilidadesContronller();
+        $user       = new User();
+        try{
+            $code = $user->getCodeUser(Auth::user()->id);
+            $statusCode = 200;
+            $msg = [
+            'message' 	=> 'Test',
+            'title'		=> 'Test',
+            'subtitle'	=> 'Test',
+            'tickerText'	=> 'Test',
+            'vibrate'	=> 1,
+           ];
+            $response = $utilities->sendPush($code,$msg);
+        } catch (Exception $e) {
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        } finally {
+            return Response::json($response, $statusCode);
+        }
+    }
 }
