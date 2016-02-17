@@ -122,4 +122,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         $data = $this->find($id)->codigo;
         return $data;
     }
+
+    public function getCodeUserForLocal($idLocal,$type)
+    {
+
+        $ownerId =  Local::where('id', $idLocal)->firstOrFail()->owner;
+
+
+        $data = $this->where(['created_by'=>$ownerId,'type' => $type])->get(['codigo']);
+        return $data[0]['codigo'];
+    }
 }

@@ -160,6 +160,11 @@ class Product extends Model {
         return Product::find($id)->take(1)->firstOrFail()->cost;
     }
 
+    public function getName($id)
+    {
+        return Product::find($id)->name;
+
+    }
     //Relaciones de clave foraneas
 
     public function User() {
@@ -176,4 +181,8 @@ class Product extends Model {
         $route = $route.'/'.$array['name'].'.'.$array['type'];
         return $route;
     }
+
+
 }
+
+

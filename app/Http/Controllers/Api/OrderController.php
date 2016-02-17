@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Devuelto;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
+use SistemaRestauranteWeb\Http\Controllers\UtilidadesContronller;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
@@ -46,8 +47,10 @@ class OrderController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-        $local = new Local();
-        $product = new Product();
+        $local      = new Local();
+        $user       = new User();
+        $product    = new Product();
+        $util       = new UtilidadesContronller();
         $this->validate($request, [
             'idTable' => 'required', 'idProduct' => 'required','cantidad' => 'required'
         ]);
@@ -55,7 +58,10 @@ class OrderController extends Controller {
 
 
         try {
-            $idLocal = $local->getLocalIdAttribute();
+            $idLocal            = $local->getLocalIdAttribute();
+            $code             = $user->getCodeUserForLocal($idLocal,'cocina');
+            $nombreProducto     = $product->getName($request['idProduct']);
+
             for($i = 0; $i < $cantidad ;$i++){
                 Product::findOrFail($request['idProduct']);
                 $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
@@ -67,6 +73,15 @@ class OrderController extends Controller {
                     $table = Table::create($tableAttr);
                     if($table->save()){
                         $product->updateInventory($request->idProduct,true);
+                        $statusCode = 200;
+                        $msg = [
+                            'message' 	=> 'Se creo una order para la mesa '.$request['idTable'],
+                            'title'		=> 'Nueva Orden',
+                            'subtitle'	=> 'Producto solicitado: '.$nombreProducto,
+                            'tickerText'	=> 'Test',
+                            'vibrate'	=> 1,
+                        ];
+                        $util->sendPush($code,$msg);
 
                     }
                     else {
@@ -122,8 +137,10 @@ class OrderController extends Controller {
 	 */
 	public function update(Request $request, $id)
 	{
-        $product= new Product();
-
+        $user       = New User();
+        $product    = New Product();
+        $table      = New Table();
+        $util       = New UtilidadesContronller();
         try{
             $statusCode = 200;
             $product->findOrFail($request->idProduct);
@@ -133,12 +150,25 @@ class OrderController extends Controller {
                 'idProduct'     => 'required',
                 'idProductEdit' => 'required'
             ]);
-
+            $orden                  =  Order::findOrFail($id);
+            $code                   = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $nombreProductoEntra    = $product->getName($orden->idProduct);
+            $nombreProductoSale     = $product->getName($orden->idProductEdit);
+            $mesa                   = $table->getNumeroDeMesaPorOrder($id);
+            $msg = [
+                'message' 	=> 'Se edito una orden en la mesa '.$mesa[0]->number_table,
+                'title'		=> 'Orden edita',
+                'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
+                'tickerText'	=> 'Test',
+                'vibrate'	=> 1,
+            ];
             $order->editar($id,$request);
 
             if($order->save()){
                 $product->updateInventory($request->idProductEdit,true);
                 $product->updateInventory($request->idProduct,false);
+                $util->sendPush($code,$msg);
+
                 $response =['success' => true];
             }
             else {
@@ -164,24 +194,82 @@ class OrderController extends Controller {
 	 */
 	public function destroy($id)
 	{
-        $order = Order::find($id);
-        $product= new Product();
-        if($order->delete()){
-            $product->updateInventory($order->id_product,false);
-            return Response::json(array('success' => true),200);
+        $order      = New Order();
+        $user       = New User();
+        $product    = New Product();
+        $table      = New Table();
+        $util       = New UtilidadesContronller();
+        try{
+            $orden =  Order::findOrFail($id);
+            $code             = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $nombreProducto     = $product->getName($orden->id_product);
+            $mesa               = $table->getNumeroDeMesaPorOrder($id);
+            $msg = [
+                'message' 	=> 'Se elimino una orden en la mesa '.$mesa[0]->number_table,
+                'title'		=> 'Orden Eliminada',
+                'subtitle'	=> 'Producto eliminado: '.$nombreProducto,
+                'tickerText'	=> 'Test',
+                'vibrate'	=> 1,
+            ];
+
+            if($order->delete()){
+                $product->updateInventory($order->id_product,false);
+                $util->sendPush($code,$msg);
+                return Response::json(array('success' => true),200);
+            }
+            else return Response::json(array('success' => false),401);
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+        $statusCode = 400;
+        }finally{
+            return Response::json($response,$statusCode);
         }
-        else return Response::json(array('success' => false),401);
 	}
 
     public function changeReady(Request $request){
-        $order = new Order();
-        $this->validate($request, [
-            'idOrder' => 'required'
-        ]);
-        if($order->setStatus($request->idOrder)){
-            return Response::json(array('success' => true),200);
+
+        $order      = New Order();
+        $user       = New User();
+        $product    = New Product();
+        $table      = New Table();
+        $util       = New UtilidadesContronller();
+        try{
+            $this->validate($request, [
+                'idOrder' => 'required'
+            ]);
+
+            $orden =  Order::findOrFail($request['idOrder']);
+            $code             = $user->getCodeUser(Auth::user()->id);
+            $nombreProducto     = $product->getName($orden->id_product);
+            $mesa               = $table->getNumeroDeMesaPorOrder($request['idOrder']);
+            $msg = [
+                'message' 	=> 'El producto  '.$nombreProducto.' de la mesa '.$mesa[0]->number_table.' esta listo',
+                'title'		=> 'Orden Lista',
+                'subtitle'	=> 'Producto : '.$nombreProducto,
+                'tickerText'	=> 'Test',
+                'vibrate'	=> 1,
+            ];
+            if($order->setStatus($request->idOrder)){
+                $response = ['success' => true];
+                $util->sendPush($code,$msg);
+                    $statusCode = 200;
+            }
+            else {
+                $response = ['success' => false];
+                $statusCode = 401;
+            }
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response,$statusCode);
         }
-        else return Response::json(array('success' => false),401);
+
+
 
     }
 
@@ -232,14 +320,32 @@ class OrderController extends Controller {
         $retunred   = New Devuelto();
         $local      = New Local();
         $order      = New Order();
+        $user       = New User();
+        $product    = New Product();
+        $table      = New Table();
+        $util       = New UtilidadesContronller();
         try{
             $this->validate($request, [
                 'id_order' => 'required', 'id_product' => 'required','type' => 'required',
             ]);
+
+            $orden =  Order::findOrFail($request['id_order']);
+            $code             = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $nombreProducto     = $product->getName($request['id_product']);
+            $mesa               = $table->getNumeroDeMesaPorOrder($request['id_order']);
+
+            $msg = [
+                'message' 	=> 'Se genero una devolucion para la mesa '.$mesa[0]->number_table,
+                'title'		=> 'Nueva Devolucion',
+                'subtitle'	=> 'Producto devuelto: '.$nombreProducto,
+                'tickerText'	=> 'Test',
+                'vibrate'	=> 1,
+            ];
             $request['id_local']= $local->getLocalIdAttribute();
 
             $retunred->crearNuevo($request->all());
             $order->setStatusReturned($request->id_order);
+            $util->sendPush($code,$msg);
             $response = ['success'=>true];
             $statusCode = 200;
 
@@ -277,8 +383,10 @@ class OrderController extends Controller {
     public function deleteComentario(Request $request)
     {
         $order = New Order();
+
         try{
-            Order::findOrFail($request['idOrder']);
+           $orden =  Order::findOrFail($request['idOrder']);
+
             $request['comentario'] = "";
             $order->addOrEditComentario($request['idOrder'],$request);
 
