@@ -78,7 +78,7 @@ class OrderController extends Controller {
                             'message' 	=> 'Se creo una order para la mesa '.$request['idTable'],
                             'title'		=> 'Nueva Orden',
                             'subtitle'	=> 'Producto solicitado: '.$nombreProducto,
-                            'tickerText'	=> 'Test',
+                            'tickerText'	=> 'cocina',
                             'vibrate'	=> 1,
                         ];
                         $util->sendPush($code,$msg);
@@ -159,7 +159,7 @@ class OrderController extends Controller {
                 'message' 	=> 'Se edito una orden en la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Orden edita',
                 'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
-                'tickerText'	=> 'Test',
+                'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
             ];
             $order->editar($id,$request);
@@ -208,7 +208,7 @@ class OrderController extends Controller {
                 'message' 	=> 'Se elimino una orden en la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Orden Eliminada',
                 'subtitle'	=> 'Producto eliminado: '.$nombreProducto,
-                'tickerText'	=> 'Test',
+                'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
             ];
 
@@ -248,9 +248,10 @@ class OrderController extends Controller {
                 'message' 	=> 'El producto  '.$nombreProducto.' de la mesa '.$mesa[0]->number_table.' esta listo',
                 'title'		=> 'Orden Lista',
                 'subtitle'	=> 'Producto : '.$nombreProducto,
-                'tickerText'	=> 'Test',
+                'tickerText'	=> 'mesonero',
                 'vibrate'	=> 1,
             ];
+
             if($order->setStatus($request->idOrder)){
                 $response = ['success' => true];
                 $util->sendPush($code,$msg);
@@ -338,7 +339,7 @@ class OrderController extends Controller {
                 'message' 	=> 'Se genero una devolucion para la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Nueva Devolucion',
                 'subtitle'	=> 'Producto devuelto: '.$nombreProducto,
-                'tickerText'	=> 'Test',
+                'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
             ];
             $request['id_local']= $local->getLocalIdAttribute();
