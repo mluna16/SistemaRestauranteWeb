@@ -241,7 +241,7 @@ class OrderController extends Controller {
             ]);
 
             $orden =  Order::findOrFail($request['idOrder']);
-            $code             = $user->getCodeUser(Auth::user()->id);
+            $code             = $user->getCodeUser($orden->created_by);
             $nombreProducto     = $product->getName($orden->id_product);
             $mesa               = $table->getNumeroDeMesaPorOrder($request['idOrder']);
             $msg = [
