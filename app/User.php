@@ -129,7 +129,29 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         $ownerId =  Local::where('id', $idLocal)->firstOrFail()->owner;
 
 
-        $data = $this->where(['created_by'=>$ownerId,'type' => $type])->get(['codigo']);
+        $data = $this->where(['created_by'=>$ownerId,'type' => $type,'verification_seesion' => 1])->get(['codigo']);
         return $data[0]['codigo'];
+    }
+
+    public function changeVerificationSession($id,$value)
+    {
+        $data = $this->where('id',$id)->update(['verification_seesion' => $value]);
+        return $data;
+    }
+
+    public function getUserCodes($idlocal)
+    {
+
+        $ownerId =  Local::where('id', $idlocal)->firstOrFail()->owner;
+
+
+        $data = $this->where(['created_by'=>$ownerId,
+                                'type' => 'mesonero',
+                                'verification_seesion' => 1,
+                                'type' => 'mesonero'])
+                    ->get(['codigo']);
+
+        return $data;
+
     }
 }

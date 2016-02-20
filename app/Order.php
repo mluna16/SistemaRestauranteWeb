@@ -78,6 +78,11 @@ class Order extends Model {
         return $order;
     }
 
+    public function remove($id){
+        $data = $this->where('id', $id)->delete();
+        dd($data);
+        return $data;
+    }
 
 
 }

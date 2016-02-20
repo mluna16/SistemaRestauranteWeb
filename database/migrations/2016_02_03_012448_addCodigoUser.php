@@ -27,7 +27,7 @@ class AddCodigoUser extends Migration {
 	{
 
         Schema::table('users', function(Blueprint $table){
-            $table->removeColumn("comentario_visto");
+            $table->removeColumn("codigo");
         });
     }
 

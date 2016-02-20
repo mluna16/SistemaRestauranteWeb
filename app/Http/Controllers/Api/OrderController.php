@@ -59,9 +59,8 @@ class OrderController extends Controller {
 
         try {
             $idLocal            = $local->getLocalIdAttribute();
-            $code             = $user->getCodeUserForLocal($idLocal,'cocina');
+            $code             = $user->getUserCodes($idLocal);
             $nombreProducto     = $product->getName($request['idProduct']);
-
             for($i = 0; $i < $cantidad ;$i++){
                 Product::findOrFail($request['idProduct']);
                 $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
@@ -81,8 +80,9 @@ class OrderController extends Controller {
                             'tickerText'	=> 'cocina',
                             'vibrate'	=> 1,
                         ];
-                        $util->sendPush($code,$msg);
-
+                        foreach($code as $data){
+                            $util->sendPush($data['codigo'],$msg);
+                        }
                     }
                     else {
                         $statusCode = 400;
@@ -151,7 +151,7 @@ class OrderController extends Controller {
                 'idProductEdit' => 'required'
             ]);
             $orden                  =  Order::findOrFail($id);
-            $code                   = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $code                   = $user->getUserCodes($orden->id_local);
             $nombreProductoEntra    = $product->getName($orden->idProduct);
             $nombreProductoSale     = $product->getName($orden->idProductEdit);
             $mesa                   = $table->getNumeroDeMesaPorOrder($id);
@@ -167,8 +167,9 @@ class OrderController extends Controller {
             if($order->save()){
                 $product->updateInventory($request->idProductEdit,true);
                 $product->updateInventory($request->idProduct,false);
-                $util->sendPush($code,$msg);
-
+                foreach($code as $data){
+                    $util->sendPush($data['codigo'],$msg);
+                }
                 $response =['success' => true];
             }
             else {
@@ -201,7 +202,7 @@ class OrderController extends Controller {
         $util       = New UtilidadesContronller();
         try{
             $orden =  Order::findOrFail($id);
-            $code             = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $code             = $user->getUserCodes($orden->id_local);
             $nombreProducto     = $product->getName($orden->id_product);
             $mesa               = $table->getNumeroDeMesaPorOrder($id);
             $msg = [
@@ -212,12 +213,19 @@ class OrderController extends Controller {
                 'vibrate'	=> 1,
             ];
 
-            if($order->delete()){
-                $product->updateInventory($order->id_product,false);
-                $util->sendPush($code,$msg);
-                return Response::json(array('success' => true),200);
+            if($orden->delete()){
+                $product->updateInventory($orden->id_product,false);
+                foreach($code as $data){
+                    $util->sendPush($data['codigo'],$msg);
+                }
+            $response = ['success', true];
+            $statusCode = 200;
+
             }
-            else return Response::json(array('success' => false),401);
+            else {
+                $response = ['success', false];
+                $statusCode = 401;
+            }
         }catch (Exception $e){
             $response = [
                 "error" => $e->getMessage(),
@@ -241,7 +249,7 @@ class OrderController extends Controller {
             ]);
 
             $orden =  Order::findOrFail($request['idOrder']);
-            $code             = $user->getCodeUser($orden->created_by);
+            $code             = $user->getUserCodes($orden->id_local);
             $nombreProducto     = $product->getName($orden->id_product);
             $mesa               = $table->getNumeroDeMesaPorOrder($request['idOrder']);
             $msg = [
@@ -254,7 +262,10 @@ class OrderController extends Controller {
 
             if($order->setStatus($request->idOrder)){
                 $response = ['success' => true];
-                $util->sendPush($code,$msg);
+
+                foreach($code as $data){
+                    $util->sendPush($data['codigo'],$msg);
+                }
                     $statusCode = 200;
             }
             else {
@@ -325,16 +336,16 @@ class OrderController extends Controller {
         $product    = New Product();
         $table      = New Table();
         $util       = New UtilidadesContronller();
+        $request['id_order'] = intval($request['id_order']);
         try{
             $this->validate($request, [
                 'id_order' => 'required', 'id_product' => 'required','type' => 'required',
             ]);
 
             $orden =  Order::findOrFail($request['id_order']);
-            $code             = $user->getCodeUserForLocal($orden->id_local,'cocina');
+            $code             = $user->getUserCodes($orden->id_local);
             $nombreProducto     = $product->getName($request['id_product']);
             $mesa               = $table->getNumeroDeMesaPorOrder($request['id_order']);
-
             $msg = [
                 'message' 	=> 'Se genero una devolucion para la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Nueva Devolucion',
@@ -346,7 +357,10 @@ class OrderController extends Controller {
 
             $retunred->crearNuevo($request->all());
             $order->setStatusReturned($request->id_order);
-            $util->sendPush($code,$msg);
+            foreach($code as $data){
+                $util->sendPush($data['codigo'],$msg);
+            }
+
             $response = ['success'=>true];
             $statusCode = 200;
 
