@@ -74,11 +74,13 @@ class OrderController extends Controller {
                         $product->updateInventory($request->idProduct,true);
                         $statusCode = 200;
                         $msg = [
-                            'message' 	=> 'Se creo una order para la mesa '.$request['idTable'],
-                            'title'		=> 'Nueva Orden',
-                            'subtitle'	=> 'Producto solicitado: '.$nombreProducto,
-                            'tickerText'	=> 'cocina',
-                            'vibrate'	=> 1,
+                            'message' 	        => 'Se creo una order para la mesa '.$request['idTable'],
+                            'title'		        => 'Nueva Orden',
+                            'subtitle'	        => 'Producto solicitado: '.$nombreProducto,
+                            'tickerText'	    => 'cocina',
+                            'idusario'          => $order->created_by,
+                            'numero_mesa'       => $request['idTable'],
+                            'idorder'           => $order->id,
                         ];
                         foreach($code as $data){
                             $util->sendPush($data['codigo'],$msg);
@@ -160,6 +162,9 @@ class OrderController extends Controller {
                 'title'		=> 'Orden edita',
                 'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
                 'tickerText'	=> 'cocina',
+                'idusario'          => $orden->created_by,
+                'numero_mesa'       => $mesa[0]->number_table,
+                'idorder'           => $id,
                 'vibrate'	=> 1,
             ];
             $order->editar($id,$request);
@@ -211,6 +216,10 @@ class OrderController extends Controller {
                 'subtitle'	=> 'Producto eliminado: '.$nombreProducto,
                 'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
+                'idusario'          => $orden->created_by,
+                'numero_mesa'       => $mesa[0]->number_table,
+                'idorder'           => $id,
+
             ];
 
             if($orden->delete()){
@@ -258,6 +267,9 @@ class OrderController extends Controller {
                 'subtitle'	=> 'Producto : '.$nombreProducto,
                 'tickerText'	=> 'mesonero',
                 'vibrate'	=> 1,
+                'idusario'          => $orden->created_by,
+                'numero_mesa'       => $mesa[0]->number_table,
+                'idorder'           => $request['idOrder'],
             ];
 
             if($order->setStatus($request->idOrder)){
@@ -352,6 +364,10 @@ class OrderController extends Controller {
                 'subtitle'	=> 'Producto devuelto: '.$nombreProducto,
                 'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
+                'idusario'          => $orden->created_by,
+                'numero_mesa'       => $mesa[0]->number_table,
+                'idorder'           => $request['idOrder'],
+
             ];
             $request['id_local']= $local->getLocalIdAttribute();
 
