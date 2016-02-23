@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
         Route::get('resetInventory',['uses' => 'productsController@resetInventory']);
     });
     Route::group(['prefix' => 'order'],function(){
-        Route::post('store', ['uses' => 'Api\OrderController@store']);
+        Route::post('/', ['uses' => 'Api\OrderController@store']);
         Route::delete('delete/{id}',['uses' => 'Api\OrderController@destroy']);
         Route::put('edit/{id}',['uses' => 'Api\OrderController@update']);
         Route::get('/{status}',['uses' => 'Api\OrderController@getOrders']);
