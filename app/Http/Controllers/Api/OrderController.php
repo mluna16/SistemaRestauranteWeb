@@ -316,10 +316,7 @@ class OrderController extends Controller {
 
             foreach($orders as $data){
                 $mesa = $table->getNumeroDeMesaPorOrder($data['id']);
-                foreach($code as $data){
-                    $msg['idusuario'] = $data['id'];
-                    $util->sendPush($data['codigo'],$msg);
-                }
+
 
                 $response[] = [
                                 'idOrder'           =>      $data['id'],
