@@ -149,7 +149,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                                 'type' => 'mesonero',
                                 'verification_seesion' => 1,
                                 'type' => 'mesonero'])
-                    ->get(['codigo']);
+                    ->get(['codigo','id']);
 
         return $data;
 

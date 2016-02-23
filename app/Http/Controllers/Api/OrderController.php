@@ -65,7 +65,6 @@ class OrderController extends Controller {
                 Product::findOrFail($request['idProduct']);
                 $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
                 $order = Order::create($orderAttr);
-
                 if($order->save()){
                     $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
 
@@ -78,12 +77,12 @@ class OrderController extends Controller {
                             'title'		        => 'Nueva Orden',
                             'subtitle'	        => 'Producto solicitado: '.$nombreProducto,
                             'tickerText'	    => 'cocina',
-                            'idusario'          => $order->created_by,
                             'numero_mesa'       => $request['idTable'],
                             'idorder'           => $order->id,
                         ];
                         foreach($code as $data){
-                            $util->sendPush($data['codigo'],$msg);
+                            $msg['idusuario'] = $data['id'];
+                           $util->sendPush($data['codigo'],$msg);
                         }
                     }
                     else {
@@ -173,6 +172,7 @@ class OrderController extends Controller {
                 $product->updateInventory($request->idProductEdit,true);
                 $product->updateInventory($request->idProduct,false);
                 foreach($code as $data){
+                    $msg['idusuario'] = $data['id'];
                     $util->sendPush($data['codigo'],$msg);
                 }
                 $response =['success' => true];
@@ -225,6 +225,7 @@ class OrderController extends Controller {
             if($orden->delete()){
                 $product->updateInventory($orden->id_product,false);
                 foreach($code as $data){
+                    $msg['idusuario'] = $data['id'];
                     $util->sendPush($data['codigo'],$msg);
                 }
             $response = ['success', true];
@@ -276,6 +277,7 @@ class OrderController extends Controller {
                 $response = ['success' => true];
 
                 foreach($code as $data){
+                    $msg['idusuario'] = $data['id'];
                     $util->sendPush($data['codigo'],$msg);
                 }
                     $statusCode = 200;
@@ -314,8 +316,9 @@ class OrderController extends Controller {
 
             foreach($orders as $data){
                 $mesa = $table->getNumeroDeMesaPorOrder($data['id']);
-                foreach($mesa as $data2){
-                    $mesa = $data2['number_table'];
+                foreach($code as $data){
+                    $msg['idusuario'] = $data['id'];
+                    $util->sendPush($data['codigo'],$msg);
                 }
 
                 $response[] = [
