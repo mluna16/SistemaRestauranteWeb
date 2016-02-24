@@ -154,4 +154,20 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $data;
 
     }
+
+    public function getCocinaId($idLocal)
+    {
+        $ownerId =  Local::where('id', $idLocal)->firstOrFail()->owner;
+
+
+        $data = $this->where(['created_by'=>$ownerId,
+            'type' => 'cocina',
+            'verification_seesion' => 1,
+            'type' => 'mesonero'])
+            ->get(['id']);
+        if($data==null){
+            $data[0]['id'] =0;
+        }
+        return $data[0]['id'];
+    }
 }

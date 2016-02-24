@@ -59,7 +59,8 @@ class OrderController extends Controller {
 
         try {
             $idLocal            = $local->getLocalIdAttribute();
-            $code             = $user->getUserCodes($idLocal);
+            $code               = $user->getUserCodes($idLocal);
+            $cocinaId           = $user->getCocinaId($idLocal);
             $nombreProducto     = $product->getName($request['idProduct']);
             for($i = 0; $i < $cantidad ;$i++){
                 Product::findOrFail($request['idProduct']);
@@ -77,6 +78,7 @@ class OrderController extends Controller {
                             'title'		        => 'Nueva Orden',
                             'subtitle'	        => 'Producto solicitado: '.$nombreProducto,
                             'tickerText'	    => 'cocina',
+                            'idusuario'         =>  $cocinaId,
                             'numero_mesa'       => $request['idTable'],
                             'idorder'           => $order->id,
                         ];
@@ -156,12 +158,14 @@ class OrderController extends Controller {
             $nombreProductoEntra    = $product->getName($orden->idProduct);
             $nombreProductoSale     = $product->getName($orden->idProductEdit);
             $mesa                   = $table->getNumeroDeMesaPorOrder($id);
+            $cocinaId               = $user->getCocinaId($orden->id_local);
+
             $msg = [
                 'message' 	=> 'Se edito una orden en la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Orden edita',
                 'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
                 'tickerText'	=> 'cocina',
-                'idusario'          => $orden->created_by,
+                'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $id,
                 'vibrate'	=> 1,
@@ -210,13 +214,14 @@ class OrderController extends Controller {
             $code             = $user->getUserCodes($orden->id_local);
             $nombreProducto     = $product->getName($orden->id_product);
             $mesa               = $table->getNumeroDeMesaPorOrder($id);
+            $cocinaId               = $user->getCocinaId($orden->id_local);
             $msg = [
                 'message' 	=> 'Se elimino una orden en la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Orden Eliminada',
                 'subtitle'	=> 'Producto eliminado: '.$nombreProducto,
                 'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
-                'idusario'          => $orden->created_by,
+                'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $id,
 
@@ -353,13 +358,14 @@ class OrderController extends Controller {
             $code             = $user->getUserCodes($orden->id_local);
             $nombreProducto     = $product->getName($request['id_product']);
             $mesa               = $table->getNumeroDeMesaPorOrder($request['id_order']);
+            $cocinaId               = $user->getCocinaId($orden->id_local);
             $msg = [
                 'message' 	=> 'Se genero una devolucion para la mesa '.$mesa[0]->number_table,
                 'title'		=> 'Nueva Devolucion',
                 'subtitle'	=> 'Producto devuelto: '.$nombreProducto,
                 'tickerText'	=> 'cocina',
                 'vibrate'	=> 1,
-                'idusario'          => $orden->created_by,
+                'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['idOrder'],
 
