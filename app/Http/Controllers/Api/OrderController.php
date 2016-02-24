@@ -306,28 +306,25 @@ class OrderController extends Controller {
         $user           = new User();
         $local          = new Local();
         $table          = new Table();
-
         try{
             $idLocal = $local->getLocalIdAttribute();
             $orders = $order->getOrdernerPorEstadoYLocal($status,$idLocal);
-
             $response    = [];
             $statusCode = 200;
-
             foreach($orders as $data){
                 $mesa = $table->getNumeroDeMesaPorOrder($data['id']);
-
-
+                foreach($mesa as $data2){
+                    $mesa = $data2['number_table'];
+                }
                 $response[] = [
-                                'idOrder'           =>      $data['id'],
-                                'nombrePlato'       =>      $producto->getProductNameAttribute($data['id_product']),
-                                'mesa'              =>      $mesa,
-                                'mesonero'          =>      $user->getFullNameUserById($data['created_by']),
-                                'comentario'        =>      $data['comentario'],
-                                'visto'             =>      $data['comentario_visto']
-                            ];
+                    'idOrder'           =>      $data['id'],
+                    'nombrePlato'       =>      $producto->getProductNameAttribute($data['id_product']),
+                    'mesa'              =>      $mesa,
+                    'mesonero'          =>      $user->getFullNameUserById($data['created_by']),
+                    'comentario'        =>      $data['comentario'],
+                    'visto'             =>      $data['comentario_visto']
+                ];
             }
-
         } catch (Exception $e) {
             $response = [
                 "error" => $e->getMessage(),
@@ -336,9 +333,7 @@ class OrderController extends Controller {
         } finally {
             return Response::json($response, $statusCode);
         }
-
     }
-
     public function returnedOrder(Request $request)
     {
         $retunred   = New Devuelto();
