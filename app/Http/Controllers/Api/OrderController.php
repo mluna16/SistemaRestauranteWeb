@@ -132,31 +132,34 @@ class OrderController extends Controller {
 		//
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param  int $id
+     * @return Response
+     */
 	public function update(Request $request, $id)
 	{
         $user       = New User();
         $product    = New Product();
         $table      = New Table();
         $util       = New UtilidadesContronller();
+
         try{
             $statusCode = 200;
             $product->findOrFail($request->idProduct);
             $product->findOrFail($request->idProductEdit);
-            $order = Order::findOrFail($id);
+            $orden                  =  Order::findOrFail($id);
+
             $this->validate($request, [
                 'idProduct'     => 'required',
                 'idProductEdit' => 'required'
             ]);
-            $orden                  =  Order::findOrFail($id);
+
             $code                   = $user->getUserCodes($orden->id_local);
-            $nombreProductoEntra    = $product->getName($orden->idProduct);
-            $nombreProductoSale     = $product->getName($orden->idProductEdit);
+            $nombreProductoEntra    = $product->getName($request['idProduct']);
+            $nombreProductoSale     = $product->getName($request->idProductEdit);
             $mesa                   = $table->getNumeroDeMesaPorOrder($id);
             $cocinaId               = $user->getCocinaId($orden->id_local);
 
@@ -170,9 +173,9 @@ class OrderController extends Controller {
                 'idorder'           => $id,
                 'vibrate'	=> 1,
             ];
-            $order->editar($id,$request);
+            $orden->editar($id,$request);
 
-            if($order->save()){
+            if($orden->save()){
                 $product->updateInventory($request->idProductEdit,true);
                 $product->updateInventory($request->idProduct,false);
                 foreach($code as $data){
@@ -233,12 +236,12 @@ class OrderController extends Controller {
                     $msg['idusuario'] = $data['id'];
                     $util->sendPush($data['codigo'],$msg);
                 }
-            $response = ['success', true];
+            $response = ['success' => true];
             $statusCode = 200;
 
             }
             else {
-                $response = ['success', false];
+                $response = ['success' => false];
                 $statusCode = 401;
             }
         }catch (Exception $e){
@@ -368,6 +371,7 @@ class OrderController extends Controller {
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['idOrder'],
+
 
             ];
             $request['id_local']= $local->getLocalIdAttribute();

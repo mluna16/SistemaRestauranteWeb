@@ -111,7 +111,7 @@ class TableController extends Controller {
         $mesas = $table->getAllTablesForLocal($local->getLocalIdAttribute());
 
         foreach($mesas['Mesas'] as $i => $mesa){
-
+    
             if($mesa['State'] != 'disponible'){
                 $mesas['Mesas'][$i]['dataMesa'] = $table->getInfoTableForNumberTable($mesa['NumberTable']);
             }

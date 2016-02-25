@@ -118,6 +118,11 @@ class UserController extends Controller {
 
         try{
            $response = $user->addCodigoUser($request->all());
+            if($response== 1){
+                $response = ['success' => true];
+            }else{
+                $response = ['success' =>false];
+            }
             $statusCode = 200;
         } catch (Exception $e) {
             $response = [
