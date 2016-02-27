@@ -15,6 +15,7 @@ use SistemaRestauranteWeb\Invoice;
 use SistemaRestauranteWeb\InvoiceProduct;
 use SistemaRestauranteWeb\Local;
 use SistemaRestauranteWeb\Table;
+use SistemaRestauranteWeb\User;
 
 class InvoiceController extends Controller {
 
@@ -23,6 +24,8 @@ class InvoiceController extends Controller {
         $invoice        = new Invoice();
         $invoiceProduct = new InvoiceProduct();
         $table          = new Table();
+        $utilites       = new UtilidadesContronller();
+        $user           = new User();
         try{
             $statusCode = 200;
             $response = ['success'=> true];
@@ -30,6 +33,8 @@ class InvoiceController extends Controller {
             $tables = $table->getInfoTableForNumberTable($request['idtable']);
             $request['created_by'] = Auth::user()->id;
             $request['costo']      = $tables['CostTable'];
+            $code             = $user->getUserCodes($request['created_by']);
+
             $invoiceData = $invoice->createNew($request->all());
 
             foreach($tables['Pedidos'] as $mesa){
@@ -40,9 +45,23 @@ class InvoiceController extends Controller {
                 ];
                 $invoiceProduct->createNew($data);
             }
+
             $table->changeStatusTable($request['idtable']);
             $response['url'] = url().'/caja/factura/'.$invoiceData['id'];
 
+            $msg = [
+                'message' 	=> 'La mesa '.$request['idtable'].' ha sido facurada, por favor asearla para nuevos clientes',
+                'title'		=> 'Mesa Lista',
+                'subtitle'	=> '',
+                'tickerText'	=> 'mesonero',
+                'vibrate'	=> 1,
+                'idusario'          => $request['created_by'],
+                'numero_mesa'       => $request['idtable'],
+                'idorder'           => '',
+            ];
+            foreach($code as $data){
+                $utilites->sendPush($data['codigo'],$msg);
+            }
 
 
         }catch (Exception $e) {
