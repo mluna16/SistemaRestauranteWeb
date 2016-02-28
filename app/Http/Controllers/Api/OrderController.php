@@ -279,6 +279,8 @@ class OrderController extends Controller {
                 'idusario'          => $orden->created_by,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['idOrder'],
+                'idproduct'         => $orden->id_product,
+                'costproduct'       => $product->getCostProduct($orden->id_product)
             ];
 
             if($order->setStatus($request->idOrder)){
