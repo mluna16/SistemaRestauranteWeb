@@ -79,8 +79,8 @@ class OrderController extends Controller {
                             'subtitle'	        => 'Producto solicitado: '.$nombreProducto,
                             'tickerText'	    => 'cocina',
                             'idusuario'         =>  $cocinaId,
-                            'numero_mesa'       => $request['idTable'],
-                            'idorder'           => $order->id,
+                            'numero_mesa'       =>  $request['idTable'],
+                            'idorder'           =>  $order->id,
                         ];
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
@@ -171,6 +171,8 @@ class OrderController extends Controller {
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $id,
+                'idproduct'         => $orden->id_product,
+                'costproduct'       => $product->getCostProduct($orden->id_product),
                 'vibrate'	=> 1,
             ];
             $orden->editar($id,$request);
@@ -279,9 +281,9 @@ class OrderController extends Controller {
                 'idusario'          => $orden->created_by,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['idOrder'],
-                'idproduct'         => $orden->id_product,
-                'costproduct'       => $product->getCostProduct($orden->id_product)
+
             ];
+            dd($msg);
 
             if($order->setStatus($request->idOrder)){
                 $response = ['success' => true];
