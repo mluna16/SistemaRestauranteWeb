@@ -175,6 +175,8 @@ class OrderController extends Controller {
                 'costproduct'       => $product->getCostProduct($orden->id_product),
                 'vibrate'	=> 1,
             ];
+
+            dd($msg);
             $orden->editar($id,$request);
 
             if($orden->save()){
