@@ -84,7 +84,6 @@ class OrderController extends Controller {
                             'costproduct'       => $product->getCostProduct($order->id_product),
                             'idorder'           =>  $order->id,
                         ];
-                        dd($msg);
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
                            $util->sendPush($data['codigo'],$msg);
