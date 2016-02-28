@@ -80,8 +80,11 @@ class OrderController extends Controller {
                             'tickerText'	    => 'cocina',
                             'idusuario'         =>  $cocinaId,
                             'numero_mesa'       =>  $request['idTable'],
+                            'idproduct'         => $order->id_product,
+                            'costproduct'       => $product->getCostProduct($order->id_product),
                             'idorder'           =>  $order->id,
                         ];
+                        dd($msg);
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
                            $util->sendPush($data['codigo'],$msg);
@@ -171,12 +174,9 @@ class OrderController extends Controller {
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $id,
-                'idproduct'         => $orden->id_product,
-                'costproduct'       => $product->getCostProduct($orden->id_product),
-                'vibrate'	=> 1,
+                 'vibrate'	=> 1,
             ];
 
-            dd($msg);
             $orden->editar($id,$request);
 
             if($orden->save()){
