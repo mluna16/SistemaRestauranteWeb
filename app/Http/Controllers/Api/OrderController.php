@@ -284,7 +284,6 @@ class OrderController extends Controller {
                 'idorder'           => $request['idOrder'],
 
             ];
-            dd($msg);
 
             if($order->setStatus($request->idOrder)){
                 $response = ['success' => true];
