@@ -157,7 +157,7 @@ class Product extends Model {
     }
 
     public function getCostProduct($id){
-        return Product::find($id)->take(1)->firstOrFail()->cost;
+        return Product::find($id)->cost;
     }
 
     public function getName($id)

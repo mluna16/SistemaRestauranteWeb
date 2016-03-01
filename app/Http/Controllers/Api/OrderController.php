@@ -81,7 +81,7 @@ class OrderController extends Controller {
                             'idusuario'         =>  $cocinaId,
                             'numero_mesa'       =>  $request['idTable'],
                             'idproduct'         => $order->id_product,
-                            'costproduct'       => $product->getCostProduct($order->id_product),
+                            'costproduct'       => $product->getCostProduct($request->idProduct),
                             'idorder'           =>  $order->id,
                         ];
                         foreach($code as $data){
@@ -374,7 +374,7 @@ class OrderController extends Controller {
                 'vibrate'	=> 1,
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
-                'idorder'           => $request['idOrder'],
+                'idorder'           => $request['id_order'],
 
 
             ];
