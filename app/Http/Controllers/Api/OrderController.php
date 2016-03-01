@@ -172,6 +172,8 @@ class OrderController extends Controller {
                 'tickerText'	=> 'cocina',
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
+                'idporductin'       => $request['idProduct'],
+                'idproductout'      => $request['idProductEdit'],
                 'idorder'           => $id,
                  'vibrate'	=> 1,
             ];
