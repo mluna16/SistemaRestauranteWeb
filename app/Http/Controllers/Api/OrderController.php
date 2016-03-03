@@ -380,7 +380,6 @@ class OrderController extends Controller {
 
 
             ];
-            dd($msg) ;
             $request['id_local']= $local->getLocalIdAttribute();
 
             $retunred->crearNuevo($request->all());
