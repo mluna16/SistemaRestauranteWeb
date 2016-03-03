@@ -167,7 +167,7 @@ class OrderController extends Controller {
 
             $msg = [
                 'message' 	=> 'Se edito una orden en la mesa '.$mesa[0]->number_table,
-                'title'		=> 'Orden edita',
+                'title'		=> 'Orden editada',
                 'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
                 'tickerText'	=> 'cocina',
                 'idusario'          => $cocinaId,
