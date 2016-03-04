@@ -166,16 +166,16 @@ class OrderController extends Controller {
             $cocinaId               = $user->getCocinaId($orden->id_local);
 
             $msg = [
-                'message' 	=> 'Se edito una orden en la mesa '.$mesa[0]->number_table,
-                'title'		=> 'Orden editada',
+                'message' 	        => 'Se edito una orden en la mesa '.$mesa[0]->number_table,
+                'title'		        => 'Orden editada',
                 'subtitle'	=> 'Se quito el prodcuto: '.$nombreProductoSale.' y se cambio por '.$nombreProductoEntra,
-                'tickerText'	=> 'cocina',
+                'tickerText'	    => 'cocina',
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idporductin'       => $request['idProduct'],
                 'idproductout'      => $request['idProductEdit'],
                 'idorder'           => $id,
-                 'vibrate'	=> 1,
+                'vibrate'	=> 1,
             ];
 
             $orden->editar($id,$request);
