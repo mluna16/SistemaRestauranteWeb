@@ -67,6 +67,8 @@ class InvoiceController extends Controller {
         }catch (Exception $e) {
             $response = [
                 "error" => $e->getMessage(),
+                "linea" => $e->getLine(),
+                "file"  => $e->getFile()
             ];
             $statusCode = 400;
         }
