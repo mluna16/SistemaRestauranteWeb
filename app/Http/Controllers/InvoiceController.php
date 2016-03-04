@@ -26,6 +26,7 @@ class InvoiceController extends Controller {
         $table          = new Table();
         $utilites       = new UtilidadesContronller();
         $user           = new User();
+        $local          = new Local();
         try{
             $statusCode = 200;
             $response = ['success'=> true];
@@ -33,7 +34,7 @@ class InvoiceController extends Controller {
             $tables = $table->getInfoTableForNumberTable($request['idtable']);
             $request['created_by'] = Auth::user()->id;
             $request['costo']      = $tables['CostTable'];
-            $code             = $user->getUserCodes($request['created_by']);
+            $code             = $user->getUserCodes($local->getLocalIdAttribute());
 
             $invoiceData = $invoice->createNew($request->all());
 
