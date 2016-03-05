@@ -97,16 +97,24 @@ $(document).ready(function(){
     $(".menuPaso2Atras").click(function(){
         $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
         $(".crear_menuSubmit").removeClass("crear_menuSubmit")
-        $( ".menuPaso1" ).show()
-        $( ".menuPaso2" ).hide();
+
     })
     $(".crear_menuSubmitnone ").click(function(){
         $( ".menuPaso1" ).hide()
         $( ".menuPaso2" ).show();
     })
 
+    $(document).on('click','#menu2success',function(){
+
+        console.log("entro")
+        $("#resetmenu").trigger( "click" )
+        $('#create_menu').closeModal();
+        $( ".menuPaso1" ).show()
+        $( ".menuPaso2" ).hide();    })
+
     //DropZone
     //DropZone de Menu
+
     Dropzone.options.crearMenuFormImages={
         autoProcessQueue: true,
         maxFilesize: 0.5,
@@ -313,7 +321,35 @@ $(document).ready(function(){
 
     }
 
+    /*
+    *
+    * Modals
+     */
+    $(document).on('click','#create_user_modal',function(){
+        $(this).ajaxGetData('admin/modaluser','generateModalCreateUser','data')
+   })
+    function generateModalCreateUser (data){
+        console.log('entrando')
+        $('#modalPrincipal').empty().append($(data));
+        $('.preloader-wrapper').hide();
+        $('#create_user').openModal();
+    }
 
+    $(document).on('click','#create_menu_modal',function(){
+        $(this).ajaxGetData('admin/modalmenu','generateModalCreateMenu','data')
+    })
+    function generateModalCreateMenu (data){
+        console.log('entrando')
+        $('#modalPrincipal').empty().append($(data));
+        $('.preloader-wrapper').hide();
+        $('#create_menu').openModal();
+        Dropzone.options.crearMenuFormImages = {
+            autoProcessQueue: true,
+            maxFilesize: 0.5,
+            acceptedFiles: ".jpg, .jpeg, .png",
+            maxFiles: 5
+        };
+    }
 
     /*
     *

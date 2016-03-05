@@ -11,10 +11,12 @@ $(document).ready(function(){
      --USERS--
      */
     //Sudmits para los modales - crear
-    $('#crear_userSubmit').click(function () {
+    $(document).on('click','#crear_userSubmit',function () {
         var  form = $('#crear_userForm');
         var url = form.attr('action')
         $(this).ajaxStore('#crear_userForm',url,"Usuario Creado Correctamente","crearUserSuccess","form")
+        $('#modalPrincipal').empty()
+
     });
 
     $('.editUserSubmit').click(function () {
@@ -69,10 +71,11 @@ $(document).ready(function(){
      --PRODUCTS--
      */
 
-    $('.crear_menuSubmit').click(function () {
+    $(document).on('click','.crear_menuSubmit',function () {
         var  form = $('#crear_menuForm');
         var url = form.attr('action')
         $(this).ajaxStore('#crear_menuForm',url,"Menu Creado Correctamente","crearMenuSuccess","'.dropzone' , last_id")
+
     });
 
     $(document).on('click','.submitSoftDeleteProduct',function(event){
@@ -87,6 +90,12 @@ $(document).ready(function(){
             $(this).ajaxStore('#formSoftDeleteProduct',url+'/1',"Producto actualizado","softDeleteUserSuccess","'.changeActionSoftDelete'")
         }
     });
+
+    $(document).on('click','#closeMenuModal',function(){
+        $('#create_menu').closeModal();
+
+        $('#modalPrincipal').empty()
+    })
 
 
     //SoftdeleteProduct

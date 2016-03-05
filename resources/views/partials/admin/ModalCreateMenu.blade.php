@@ -1,4 +1,4 @@
-<div id="create_menu" class="modal modal-fixed-footer">
+    <div id="create_menu" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4> Crear nuevo producto para el menu </h4>
 
@@ -40,7 +40,7 @@
         </div> -->
         <a href="#"  class="waves-effect waves-green btn-flat modal-action crear_menuSubmit ">Siguiente</a>
         <a href="#"  style="display:none"class="waves-effect waves-green btn-flat modal-action  crear_menuSubmitnone menuPaso1">Siguiente</a>
-        <a href="#"  style="display:none"class="waves-effect waves-green btn-flat modal-action modal-close menuPaso2">Finalizar</a>
+        <a href="#" id="menu2success" style="display:none"class="waves-effect waves-green btn-flat modal-action modal-close menuPaso2">Finalizar</a>
         <a href="#"  style="display:none" class="waves-effect waves-green btn-flat modal-action  menuPaso2 menuPaso2Atras">Atras</a>
 
 

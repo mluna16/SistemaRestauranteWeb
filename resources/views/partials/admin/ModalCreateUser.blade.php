@@ -1,3 +1,4 @@
+@section('modalUser')
 <div id="create_user" class="modal ">
     <div class="modal-content">
         <h4>Crear nuevo usuario </h4>
@@ -30,8 +31,5 @@
         {!! Form::hidden('password', '12345',['class' => 'hidden']) !!}
         {!!Form::close()!!}
             </div>
-
-
-
-
 </div>
+@endsection

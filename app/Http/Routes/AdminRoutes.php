@@ -10,7 +10,8 @@
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function()
 {
-
+    Route::get('modaluser','adminController@createUserModal');
+    Route::get('modalmenu','adminController@createMenuModal');
     Route::get('/', 'adminController@estadisticasIndex');
 
     Route::get('Estadisticas', 'adminController@estadisticasIndex');

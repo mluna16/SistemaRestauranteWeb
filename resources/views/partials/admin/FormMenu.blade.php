@@ -18,4 +18,5 @@
         {!! Form::label('description', 'Descripcion ',['for' => 'description'])!!}
 
     </div>
+    <input type="reset" id='resetmenu' style="display: none !important;">
 </div>
