@@ -145,10 +145,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         $ownerId =  Local::where('id', $idlocal)->firstOrFail()->owner;
 
 
-        $data = $this->where(['created_by'=>$ownerId,
+        $data = $this->where([
+                                'created_by'=>$ownerId,
                                 'type' => 'mesonero',
-                                'verification_seesion' => 1]
-                                )->where(['type' => 'cocina'])->get(['codigo','id']);
+                                'verification_seesion' => 1,
+                                'type' => 'cocina'])
+                                ->get(['codigo','id']);
 
         return $data;
 
