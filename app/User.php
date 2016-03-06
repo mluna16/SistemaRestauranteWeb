@@ -148,7 +148,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         $data = $this->where(['created_by'=>$ownerId,
                                 'type' => 'mesonero',
                                 'verification_seesion' => 1,
-                                'type' => 'mesonero'])
+                                'type' => 'cocina'])
                     ->get(['codigo','id']);
 
         return $data;

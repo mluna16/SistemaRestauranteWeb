@@ -82,7 +82,7 @@ class OrderController extends Controller {
                             'numero_mesa'       =>  $request['idTable'],
                             'idproduct'         => $order->id_product,
                             'costproduct'       => $product->getCostProduct($request->idProduct),
-                            'idorder'           =>  $order->id,
+                            'idorder'           => $order->id,
                         ];
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
