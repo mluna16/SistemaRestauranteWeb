@@ -149,7 +149,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                                 'created_by'=>$ownerId,
                                 'verification_seesion' => 1])
                         ->where('type','mesonero')
-                        ->where('type','cocina')
+                        ->orWhere('type','cocina')
                         ->get(['codigo','id']);
         dd($data);
 
