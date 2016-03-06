@@ -151,7 +151,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                         ->where('type','mesonero')
                         ->orWhere('type','cocina')
                         ->get(['codigo','id']);
-        dd($data);
 
         return $data;
 
