@@ -151,6 +151,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                                 'verification_seesion' => 1,
                                 'type' => 'cocina'])
                                 ->get(['codigo','id']);
+        dd($data);
 
         return $data;
 
