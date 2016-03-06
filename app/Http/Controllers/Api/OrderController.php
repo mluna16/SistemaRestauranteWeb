@@ -84,9 +84,11 @@ class OrderController extends Controller {
                             'costproduct'       => $product->getCostProduct($request->idProduct),
                             'idorder'           => $order->id,
                         ];
+
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
-                           $util->sendPush($data['codigo'],$msg);
+                            var_dump($msg);
+                           //$util->sendPush($data['codigo'],$msg);
                         }
                     }
                     else {
