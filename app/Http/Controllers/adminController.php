@@ -33,6 +33,7 @@ class adminController extends Controller {
     public function usuariosIndex(Request $request){
         $user = new User();
         $users = $user->getUserByCretedBy(Auth::user()->id);
+        $users['primero'] = true;
         if(! $user->getIsAFirstTimeUser()){
             $view = View::make('usuarios.admin.usuarios')->with('users',$users);
             if($request->ajax()) {

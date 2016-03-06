@@ -18,7 +18,7 @@
                </li>
             @else
                 <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
-                <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+                <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
             @endif
 
         </ul>

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             @include('partials.errors')
-            <h3>Iniciar Sesion</h3>
+            <h3>Iniciar Sesión</h3>
             {!!Form::open([
             'url' => '/auth/login',
             'method' => 'POST'])
@@ -21,13 +21,13 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 {!! Form::email('email', null,['class' => 'validate'])!!}
-                                {!! Form::label('email', 'Correo Electronico ',['for' => 'email'])!!}
+                                {!! Form::label('email', 'Correo Electrónico ',['for' => 'email'])!!}
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 {!! Form::password('password', ['class' => 'validate'])!!}
-                                {!! Form::label('password', 'Clave ',['for' => 'password'])!!}
+                                {!! Form::label('password', 'Contraseña ',['for' => 'password'])!!}
                             </div>
                         </div>
                         <div class="row">
@@ -43,11 +43,11 @@
                                 <div class="container">
                                     <div class="input-field col l6 s12 m6">
                                         <div>
-                                            <a href="#/password/email">Forgot Your Password?</a>
+                                            {{--<a href="#/password/email">Forgot Your Password?</a>--}}
                                         </div>
                                     </div>
                                     <div class="input-field col l6 s12 m4">
-                                        <button class="btn waves-effect waves-light " type="submit">Iniciar Sesion!
+                                        <button class="btn waves-effect waves-light " type="submit">Iniciar Sesión
                                             <i class="mdi-content-send right"></i>
                                         </button>
                                     </div>

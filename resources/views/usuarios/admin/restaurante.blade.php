@@ -3,18 +3,18 @@
 @section('Restaurante') active @endsection
 @section('infoPanel')
 @section('numeroBotonFlotante') 4 @endsection
-@section('TextoTour') El modulo de Restaurante, muestrala informacion del restaurante  @endsection
+@section('TextoTour') El módulo de Restaurante, muestra la información del restaurante  @endsection
 
 @foreach($local as $datos)
 
-    <div class="card large" data-step="2" data-intro="Informacion del restaurante." data-position='left'>
+    <div class="card large" data-step="2" data-intro="Información del restaurante" data-position='left'>
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" style="width: 360px: height: 260px" src="{{asset('images/local/'.$datos['id_local'].'/'.$datos['image'])}}">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{$datos['name']}}<i data-step="3" data-intro="Boton que muestra informacion mas detallada." data-position='left' class="mdi-navigation-more-vert right"></i></span>
-                <br><span class="grey-text text-darken-4 card-title">Numero de mesas: {{$datos['number_tables']}}</span>
+                <span class="card-title activator grey-text text-darken-4">{{$datos['name']}}<i data-step="3" data-intro="Botón que muestra información más detallada." data-position='left' class="mdi-navigation-more-vert right"></i></span>
+                <br><span class="grey-text text-darken-4 card-title">Número de mesas: {{$datos['number_tables']}}</span>
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4"> <i  class="mdi-navigation-close right"></i></span>

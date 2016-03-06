@@ -396,13 +396,14 @@ $(document).ready(function(){
                 text: null
             },
             xAxis: {
+
                 categories: [
                     null
                 ],
                 crosshair: true
             },
             yAxis: {
-                min: 0,
+                min: null,
                 title: {
                     text: 'Ganancias Totales'
                 }

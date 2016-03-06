@@ -6,12 +6,12 @@
             <a id="logo-container" href="#" class="brand-logo"></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
-                <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+                <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="{{url('auth/register')}}">Crear cuenta</a></li>
-                <li><a href="{{url('auth/login')}}">Iniciar sesion</a></li>
+                <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
@@ -44,16 +44,16 @@
                         <h2 class="center green-text  text-darken-4"><i class="mdi-action-face-unlock"></i></h2>
                         <h5 class="center">Desarrollado para Personas</h5>
 
-                        <p class="light">El sistema esta efocado para que cualquier persona pueda usarla sin complejidad.</p>
+                        <p class="light">El sistema esta efocado para que cualquier persona pueda usarlo sin complejidad.</p>
                     </div>
                 </div>
 
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center green-text  text-darken-4"><i class="mdi-social-group"></i></h2>
-                        <h5 class="center">Porqué dos son mejor que uno</h5>
+                        <h5 class="center">Dos son mejor que uno</h5>
 
-                        <p class="light">Son dos sistemas en uno. Por un lado tienes el sistema web para gestinar el restaurante y manejar la caja. Y otro una aplicacion Android para manejar las Mesas, los pedidos y la cocina.</p>
+                        <p class="light">Son dos sistemas en uno. Por un lado tienes el sistema web para gestionar el restaurante y el manejo de caja. Por otro una aplicación Android para manejar las mesas, los pedidos y la cocina.</p>
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@
                         <h2 class="center green-text  text-darken-4"><i class="mdi-hardware-cast-connected"></i></h2>
                         <h5 class="center">Conecta tu Chromecast</h5>
 
-                        <p class="light">Puedes tener toda la aplicacion Android enlazada en tu dispositivo Chromecast.</p>
+                        <p class="light">Puedes tener toda la aplicación Android enlazada en tu dispositivo Chromecast.</p>
                     </div>
                 </div>
             </div>
@@ -87,8 +87,8 @@
             <div class="row">
                 <div class="col s12 center">
                     <h3><i class="green-text  text-darken-4 mdi-hardware-keyboard-alt"></i></h3>
-                    <h4>¿ Por qué somos útiles para tí ?</h4>
-                    <p class="left-align light">El reemplazo de sistemas anticuados o desactualizados como el de pedidos en un restaurante por un sistema móvil que se encargue de la comunicación de los mesoneros con la cocina, contribuirá a que estos procesos sean más eficientes y atractivos, además que se unen a la idea de un mundo cada vez más evolucionado que aprovecha las nuevas tecnologías para hacer cómodos y funcionales hasta los procesos cotidianos. En este sentido, el propósito de la investigación es precisamente construir una aplicación informática que combine las prestaciones de las aplicaciones móviles con el uso de las web y dispositivos streaming. De esta manera, atender de mejor forma las solicitudes de servicio y despacho en un restaurante, tal como el caso de estudio</p>
+                    <h4>¿ Por qué somos útiles para ti ?</h4>
+                    <p class="left-align light">El reemplazo de sistemas anticuados o desactualizados, como el de pedidos en un restaurante, por un sistema móvil que se encargue de la comunicación de los mesoneros con la cocina, contribuirá a que estos procesos sean más eficientes y atractivos, además que se unen a la idea de un mundo cada vez más evolucionado que aprovecha las nuevas tecnologías para hacer cómodos y funcionales hasta los procesos cotidianos.</p>
                 </div>
             </div>
 
@@ -109,8 +109,8 @@
         <div class="container">
             <div class="row">
                 <div class="col  s12">
-                    <h5 class="white-text">No tenemos nombre aun !</h5>
-                    <p class="grey-text text-lighten-4">Este Sistema está siendo desarrollado como proyecto tesis para la obtención de un título Universitario de Licenciado en Informática de la Universidad de Oriente Núcleo Nueva Esparta.</p>
+                    <h5 class="white-text">No tenemos nombre aún !</h5>
+                    <p class="grey-text text-lighten-4">Este Sistema está siendo desarrollado como proyecto tesis para la obtención de título de Licenciado en Informática de la Universidad de Oriente Núcleo Nueva Esparta.</p>
 
 
                 </div>
@@ -119,7 +119,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Made by <a class="text-white" href="https://www.facebook.com/pedro.moyahernandez">Pedro Moya</a>
+                Developed by <a class="text-white" href="https://www.facebook.com/pedro.moyahernandez">Pedro Moya</a>
                 & <a class="text-white" href="http://marcoslunah.herokuapp.com">Marcos Luna H</a>
 
             </div>

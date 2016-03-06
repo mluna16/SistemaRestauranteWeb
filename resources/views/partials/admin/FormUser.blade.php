@@ -11,6 +11,6 @@
 <div class="row">
     <div class="input-field col s12">
         {!! Form::email('email', null,['class' => 'validate emailUser'])!!}
-        {!! Form::label('email', 'Correo Electronico',['for' => 'correo'])!!}
+        {!! Form::label('email', 'Correo Electrónico',['for' => 'correo'])!!}
     </div>
 </div>

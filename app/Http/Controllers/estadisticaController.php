@@ -74,7 +74,7 @@ class estadisticaController extends Controller {
           $totalVenta = $totalVenta+  $Product->getCostProduct($venta['id_product']);
         }
         $retorno[]= [
-                'name'  => 'Hoy '.Carbon::now('America/Caracas')->format('d m y'),
+                'name'  => 'Hoy '.Carbon::now('America/Caracas')->format('d-m-y'),
                 'data'  => [$totalVenta]
         ];
 
@@ -92,7 +92,7 @@ class estadisticaController extends Controller {
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
             }
             $retorno[] = [
-                'name' => Carbon::now('America/Caracas')->subDays($i)->format('d m y'),
+                'name' => Carbon::now('America/Caracas')->subDays($i)->format('d-m-y'),
                 'data' => [$totalVenta]
             ];
         }

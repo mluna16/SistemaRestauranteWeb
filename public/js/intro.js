@@ -34,9 +34,9 @@
       /* Next button label in tooltip box */
       nextLabel: 'Siguiente &rarr;',
       /* Previous button label in tooltip box */
-      prevLabel: '&larr; Atras',
+      prevLabel: '&larr; Atrás',
       /* Skip button label in tooltip box */
-      skipLabel: 'salir',
+      skipLabel: 'Salir',
       /* Done button label in tooltip box */
       doneLabel: 'Listo',
       /* Default tooltip box position */

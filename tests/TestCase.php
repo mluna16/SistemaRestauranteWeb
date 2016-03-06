@@ -17,7 +17,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://45.55.227.224';
+    protected $baseUrl = 'http://restaurante.local';
 
     /**
      * Creates the application.
