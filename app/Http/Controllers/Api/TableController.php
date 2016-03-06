@@ -1,6 +1,8 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers\Api;
 
+use Exception;
 use Illuminate\Support\Facades\Response;
+use SistemaRestauranteWeb\Http\Controllers\UtilidadesContronller;
 use SistemaRestauranteWeb\Http\Requests;
 use SistemaRestauranteWeb\Http\Controllers\Controller;
 
@@ -9,6 +11,7 @@ use SistemaRestauranteWeb\Local;
 use SistemaRestauranteWeb\Order;
 use SistemaRestauranteWeb\Product;
 use SistemaRestauranteWeb\Table;
+use SistemaRestauranteWeb\User;
 
 class TableController extends Controller {
 
@@ -99,9 +102,41 @@ class TableController extends Controller {
 	}
 
     public function getInvoice($id){
-        $table = new Table();
-        $table->changeInvoiceTableStatus($id);
-        return Response::json(array('success' => true),200);
+        $table      = New Table();
+        $util       = New UtilidadesContronller();
+        $user       = New User();
+        $local      = New Local();
+
+        try{
+            $statusCode = 200;
+
+            $code                   = $user->getUserCodes($local->getLocalIdAttribute());
+
+            $msg = [
+                'message' 	        => 'La mesa '.$id.' ha solicitado factura',
+                'title'		        => 'Facturando mesa',
+                'subtitle'	        => '',
+                'tickerText'	    => 'mesonero',
+                'numero_mesa'       => $id,
+                'vibrate'	=> 1,
+            ];
+            $table->changeInvoiceTableStatus($id);
+              foreach($code as $data){
+                    $msg['idusuario'] = $data['id'];
+                    $util->sendPush($data['codigo'],$msg);
+                }
+                $response =['success' => true];
+
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response,$statusCode);
+        }
+
+
 
     }
 
