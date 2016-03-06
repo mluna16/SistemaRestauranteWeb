@@ -65,7 +65,7 @@ class Order extends Model {
 
     public function editar($id,$request)
     {
-        $order  =  Order::where(['id' => $id])->update(['id_product' => $request->idProductEdit]);
+        $order  =  Order::where(['id' => $id])->update(['id_product' => $request->idProduct]);
         return $order;
     }
 
