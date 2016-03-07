@@ -1,6 +1,7 @@
 <?php namespace SistemaRestauranteWeb\Http\Controllers;
 
 
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
@@ -43,5 +44,24 @@ class cajaController extends Controller {
     public function getInfotable($id)    {
         $table = new Table;
         return Response::json(['success' => true, 'data' => $table->getInfoTableForNumberTable($id)]);
+    }
+
+    public function getInvoiceModal(Request $request)
+    {
+        try{
+           $statusCode =200;
+            $view = View::make('partials.caja.ModalInvoiceGenerate');
+            if($request->ajax()) {
+                $sections = $view->renderSections();
+                return Response::json($sections['Modalinvoice']);
+            }else return $view;
+        }catch (Exception $e){
+            $response = [
+                "error" => $e->getMessage(),
+            ];
+            $statusCode = 400;
+        }finally{
+            return Response::json($response,$statusCode);
+        }
     }
 }

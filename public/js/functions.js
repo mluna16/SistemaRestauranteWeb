@@ -300,7 +300,7 @@ $(document).ready(function(){
 
     function inoviceDetails(data){
         activeLabelForm('#EditmenuForm');
-        $('body').append($(data['data']))
+        $('#modalPrincipal').append($(data['data']))
         $('#create_invoice').openModal();
     }
 
@@ -314,8 +314,7 @@ $(document).ready(function(){
     function invoiceGenerateSuccuess(data){
 
         $('#create_invoice').closeModal();
-        $('#create_invoice').empty();
-        console.log(data['url']);
+        $('#modalPrincipal').empty();
 
         window.open(data['url'], '_blank');
 
