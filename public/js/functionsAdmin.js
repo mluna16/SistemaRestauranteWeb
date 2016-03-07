@@ -160,7 +160,7 @@ $(document).ready(function(){
         $.get( "Estadisticas/venta/", function( data ) {
             $(this).charBarFunction("#ventasDia",data)
         });
-        $.get( "admin/Estadisticas/ventas/", function( data ) {
+        $.get( "Estadisticas/ventas/", function( data ) {
             $(this).charBarFunction("#ventaSemana",data)
         })
         $.get( "Estadisticas/ventaa/", function( data ) {
