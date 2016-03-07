@@ -18,24 +18,35 @@ class Order extends Model {
             return $this->hasOne('SistemaRestauranteWeb\Table');
         }
 
-    public function getOrdenProductoPorfecha($id_product, $time)
+    public function getOrdenProductoPorfecha($id_product, $time,$idLocal)
     {
-        return Order::where('id_product' ,$id_product)->where( 'created_at', '>=',Carbon::now()->subDays($time) )->count();
+        return Order::where('id_product' ,$id_product)
+                    ->where( 'created_at', '>=',Carbon::now()->subDays($time) )
+                    ->where('id_local',$idLocal)
+                    ->count();
 
     }
-    public function getOrdenMesoneroPorfecha($id_user, $time)
+    public function getOrdenMesoneroPorfecha($id_user, $time,$idLocal)
     {
-        return Order::where('created_by' ,$id_user)->where( 'created_at', '>=',Carbon::now()->subDays($time) )->count();
+        return Order::where('created_by' ,$id_user)
+                        ->where( 'created_at', '>=',Carbon::now()
+                        ->where('id_local',$idLocal)
+                        ->subDays($time) )->count();
 
     }
-    public function getOrdenVentas($time)
+    public function getOrdenVentas($time,$idLocal)
     {
-        return Order::where('created_at', '>=',$time)->get(['id_product']);
+        return Order::where('created_at', '>=',$time)
+                    ->where('id_local',$idLocal)
+                    ->get(['id_product']);
 
     }
-    public function getOrdenVentasdobles($time,$time2)
+    public function getOrdenVentasdobles($time,$time2,$idLocal)
     {
-        return Order::where('created_at', '>=',$time)->where('created_at', '<=',$time2)->get(['id_product']);
+        return Order::where('created_at', '>=',$time)
+                    ->where('created_at', '<=',$time2)
+                    ->where('id_local',$idLocal)
+                      ->get(['id_product']);
 
     }
 

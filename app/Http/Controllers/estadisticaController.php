@@ -23,13 +23,15 @@ class estadisticaController extends Controller {
 
         $Product    = new Product();
         $Order      = new Order();
+        $local          = new Local();
+        $idLocal        = $local->getLocalIdAttribute();
         $totalProductos = $Product->getAllProductInformationByLocalFor();
         $sumaTotal = 0;
 
         foreach($totalProductos as $Producto){
             $data[] = [
                         'name'  => $Producto['name'],
-                        'y'     => $Order->getOrdenProductoPorfecha($Producto['id_product'],$time),
+                        'y'     => $Order->getOrdenProductoPorfecha($Producto['id_product'],$time,$idLocal),
             ];
 
         }
@@ -50,13 +52,15 @@ class estadisticaController extends Controller {
 
         $User    = new User();
         $Order      = new Order();
+        $local          = new Local();
+        $idLocal        = $local->getLocalIdAttribute();
         $totalUsuarios = $User->getUserByCretedBy(Auth::user()->id);
 
         foreach($totalUsuarios as $usuario){
             if($usuario['type'] == "mesonero"){
                 $retorno[] = [
                     'name' => $usuario->full_name,
-                    'y' => $Order->getOrdenMesoneroPorfecha($usuario['id'], $time)
+                    'y' => $Order->getOrdenMesoneroPorfecha($usuario['id'], $time,$idLocal)
                 ];
             }
         }
@@ -67,8 +71,10 @@ class estadisticaController extends Controller {
         $fecha = Carbon::now('America/Caracas');
         $Order          = new Order();
         $Product        = new Product();
+        $local          = new Local();
+        $idLocal        = $local->getLocalIdAttribute();
         $totalVenta   = 0;
-        $totalVentas = $Order->getOrdenVentas($fecha->subDays(1));
+        $totalVentas = $Order->getOrdenVentas($fecha->subDays(1),$idLocal);
 
         foreach($totalVentas as $venta){
           $totalVenta = $totalVenta+  $Product->getCostProduct($venta['id_product']);
@@ -83,11 +89,13 @@ class estadisticaController extends Controller {
     public  function getVentaSemana(){
         $Order          = new Order();
         $Product        = new Product();
+        $local          = new Local();
+        $idLocal        = $local->getLocalIdAttribute();
         $semana       = [0,1,2,3,4,5,6,7];
         $retorno          = [];
         foreach($semana as $i){
             $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now('America/Caracas')
-                                    ->subDays($i),Carbon::now('America/Caracas')->subDays($i-1));
+                                    ->subDays($i),Carbon::now('America/Caracas')->subDays($i-1),$idLocal);
             $totalVenta     = 0;
             foreach($totalVentas as $venta){
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
@@ -103,12 +111,14 @@ class estadisticaController extends Controller {
     public  function getVentaAno(){
         $Order          = new Order();
         $Product        = new Product();
+        $local          = new Local();
+        $idLocal        = $local->getLocalIdAttribute();
         $semana       = [0,1,2,3,4,5,6,7,8,9,10,11,12];
         $retorno          = [];
 
         foreach($semana as $i){
             $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now('America/Caracas')
-                                    ->subMonths($i),Carbon::now('America/Caracas')->subMonths($i-1));
+                                    ->subMonths($i),Carbon::now('America/Caracas')->subMonths($i-1),$idLocal);
             $totalVenta     = 0;
             foreach($totalVentas as $venta){
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
