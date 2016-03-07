@@ -64,7 +64,7 @@ class estadisticaController extends Controller {
     }
     public  function getVentaDia(){
 
-        $fecha = Carbon::now();
+        $fecha = Carbon::now('America/Caracas');
         $Order          = new Order();
         $Product        = new Product();
         $totalVenta   = 0;
@@ -86,7 +86,8 @@ class estadisticaController extends Controller {
         $semana       = [0,1,2,3,4,5,6,7];
         $retorno          = [];
         foreach($semana as $i){
-            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now()->subDays($i),Carbon::now()->subDays($i-1));
+            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now('America/Caracas')
+                                    ->subDays($i),Carbon::now('America/Caracas')->subDays($i-1));
             $totalVenta     = 0;
             foreach($totalVentas as $venta){
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
@@ -96,6 +97,7 @@ class estadisticaController extends Controller {
                 'data' => [$totalVenta]
             ];
         }
+
         return Response::json($retorno,200);
     }
     public  function getVentaAno(){
@@ -105,7 +107,8 @@ class estadisticaController extends Controller {
         $retorno          = [];
 
         foreach($semana as $i){
-            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now()->subMonths($i),Carbon::now()->subMonths($i-1));
+            $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now('America/Caracas')
+                                    ->subMonths($i),Carbon::now('America/Caracas')->subMonths($i-1));
             $totalVenta     = 0;
             foreach($totalVentas as $venta){
                 $totalVenta = $totalVenta +  $Product->getCostProduct($venta['id_product']);
