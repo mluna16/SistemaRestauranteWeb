@@ -1,4 +1,5 @@
-    <div id="create_menu" class="modal modal-fixed-footer">
+@section('modalMenu')
+<div id="create_menu" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4> Crear nuevo producto para el menu </h4>
 
@@ -46,3 +47,7 @@
 
     </div>
 </div>
+    <script>
+        var imageDropZone = new Dropzone("#crearMenuFormImages", { url: "-"});
+    </script>
+    @endsection

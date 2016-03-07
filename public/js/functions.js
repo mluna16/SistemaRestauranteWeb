@@ -92,6 +92,7 @@ $(document).ready(function(){
     function crearMenuSuccess(form,id){
         $( ".menuPaso1, .crear_menuSubmit" ).hide()
         $( ".menuPaso2" ).show();
+        imageDropZone.options.url = "productImg/"+id;
         $(form).attr('action').replace('MENU_ID', id);
     }
     $(".menuPaso2Atras").click(function(){
@@ -325,7 +326,7 @@ $(document).ready(function(){
     * Modals
      */
     $(document).on('click','#create_user_modal',function(){
-        $(this).ajaxGetData('modaluser','generateModalCreateUser','data')
+        $(this).ajaxGetData('admin/modaluser','generateModalCreateUser','data')
    })
     function generateModalCreateUser (data){
         console.log('entrando')
@@ -335,7 +336,7 @@ $(document).ready(function(){
     }
 
     $(document).on('click','#create_menu_modal',function(){
-        $(this).ajaxGetData('modalmenu','generateModalCreateMenu','data')
+        $(this).ajaxGetData('admin/modalmenu','generateModalCreateMenu','data')
     })
     function generateModalCreateMenu (data){
         console.log('entrando')

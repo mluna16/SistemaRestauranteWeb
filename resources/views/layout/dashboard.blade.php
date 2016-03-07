@@ -32,7 +32,7 @@
                         </a>
                         <ul>
                             <li><a class="btn-floating  purple lighten-1 modal-trigger" id="create_user_modal" href=""><i class="large mdi-image-timer-auto"></i></a></li>
-                            <li><a class="btn-floating green darken-1 modal-trigger" href="#create_menu"><i class="large mdi-maps-local-restaurant"></i></a></li>
+                            <li><a class="btn-floating green darken-1 modal-trigger" id ="create_menu_modal" href=""><i class="large mdi-maps-local-restaurant"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
 
     </div>
     @if(Auth::user()->type == 'admin')
-        @include('partials.admin.ModalCreateMenu')
+        {{--@include('partials.admin.ModalCreateMenu')--}}
     @endif
 
 @endsection

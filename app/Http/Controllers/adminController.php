@@ -33,7 +33,6 @@ class adminController extends Controller {
     public function usuariosIndex(Request $request){
         $user = new User();
         $users = $user->getUserByCretedBy(Auth::user()->id);
-        $users['primero'] = true;
         if(! $user->getIsAFirstTimeUser()){
             $view = View::make('usuarios.admin.usuarios')->with('users',$users);
             if($request->ajax()) {
@@ -87,7 +86,7 @@ class adminController extends Controller {
         $view = View::make('partials.admin.ModalCreateMenu');
         if($request->ajax()) {
             $sections = $view->renderSections();
-            return Response::json($sections['modalMunu']);
+            return Response::json($sections['modalMenu']);
         }
     }
 }
