@@ -56,11 +56,11 @@ class InvoiceController extends Controller {
                 'subtitle'	=> '',
                 'tickerText'	=> 'mesonero',
                 'vibrate'	=> 1,
-                'idusario'          => $request['created_by'],
                 'numero_mesa'       => $request['idtable'],
                 'idorder'           => '',
             ];
             foreach($code as $data){
+                $msg['idusuario'] = $data['id'];
                 $utilites->sendPush($data['codigo'],$msg);
             }
 
