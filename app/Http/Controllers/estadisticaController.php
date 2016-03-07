@@ -94,12 +94,11 @@ class estadisticaController extends Controller {
         $semana       = [0,1,2,3,4,5,6,7];
         $retorno          = [];
         foreach($semana as $i){
-            var_dump($i);
             if($i==0){
                 $totalVentas = $Order->getOrdenVentas(Carbon::now('America/Caracas')->subDays(1),$idLocal);
             }else{
                 $totalVentas    = $Order->getOrdenVentasdobles(Carbon::now('America/Caracas')
-                    ->subDays($i),Carbon::now('America/Caracas')->subDays($i-1),$idLocal);
+                    ->subDays($i),Carbon::now('America/Caracas')->subDays($i-1)->startOfDay(),$idLocal);
             }
 
             $totalVenta     = 0;
