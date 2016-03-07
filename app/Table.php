@@ -120,4 +120,18 @@ class Table extends Model {
         $table  = Table::where('id_order', $idOrder)->get();
         return $table;
     }
+
+    function checkTableInit($numTable)
+    {
+        $data = $this->where('number_table',$numTable)
+                    ->where('state','ocupado')
+                    ->count();
+        if($data > 0){
+            $data = false;
+        }else{
+            $data = true;
+        }
+
+        return $data;
+    }
 }

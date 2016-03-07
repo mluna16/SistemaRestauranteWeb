@@ -19,38 +19,13 @@ use SistemaRestauranteWeb\User;
 
 class OrderController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-
-
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store(Request $request)
 	{
         $local      = new Local();
         $user       = new User();
         $product    = new Product();
         $util       = new UtilidadesContronller();
+        $table      = New Table();
         $this->validate($request, [
             'idTable' => 'required', 'idProduct' => 'required','cantidad' => 'required'
         ]);
@@ -62,6 +37,8 @@ class OrderController extends Controller {
             $code               = $user->getUserCodes($idLocal);
             $cocinaId           = $user->getCocinaId($idLocal);
             $nombreProducto     = $product->getName($request['idProduct']);
+            $checkTable         = $table->checkTableInit($request->idTable);
+
             for($i = 0; $i < $cantidad ;$i++){
                 Product::findOrFail($request['idProduct']);
                 $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
@@ -89,6 +66,8 @@ class OrderController extends Controller {
                             $msg['idusuario'] = $data['id'];
                             $util->sendPush($data['codigo'],$msg);
                         }
+
+                        if($checkTable) $this->sendTableInit($code,$request['idTable']);
                     }
                     else {
                         $statusCode = 400;
@@ -445,6 +424,25 @@ class OrderController extends Controller {
             return Response::json($response, $statusCode);
 
         }
+    }
+
+    private  function sendTableInit($code,$idmesa)
+    {
+        $util = new UtilidadesContronller();
+
+        $msg = [
+            'message' 	        => 'La mesa '.$idmesa.' hasido ocupada',
+            'title'		        => 'Mesa ocupada',
+            'subtitle'	        => 'Mesa ',
+            'tickerText'	    => 'cocina',
+            'numero_mesa'       =>  $idmesa
+        ];
+
+        foreach($code as $data){
+            $msg['idusuario'] = $data['id'];
+            $util->sendPush($data['codigo'],$msg);
+        }
+
     }
 
 }
