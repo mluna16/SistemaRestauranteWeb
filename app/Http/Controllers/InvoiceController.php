@@ -57,7 +57,6 @@ class InvoiceController extends Controller {
                 'tickerText'	=> 'mesonero',
                 'vibrate'	=> 1,
                 'numero_mesa'       => $request['idtable'],
-                'idorder'           => '',
             ];
             foreach($code as $data){
                 $msg['idusuario'] = $data['id'];
