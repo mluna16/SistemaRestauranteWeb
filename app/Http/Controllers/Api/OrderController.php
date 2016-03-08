@@ -225,7 +225,7 @@ class OrderController extends Controller {
                 $checkTable         = $table->checkTableInit($mesa[0]->number_table);
 
                 if($checkTable){
-                    $this->sendTableInit($code,$mesa[0]->number_table);
+                    $this->sendTableEnd($code,$mesa[0]->number_table);
                 }
 
                 $response = ['success' => true];
@@ -438,8 +438,27 @@ class OrderController extends Controller {
         $util = new UtilidadesContronller();
 
         $msg = [
-            'message' 	        => 'La mesa '.$idmesa.' hasido ocupada',
+            'message' 	        => 'La mesa '.$idmesa.' ha sido ocupada',
             'title'		        => 'Mesa ocupada',
+            'subtitle'	        => 'Mesa ',
+            'tickerText'	    => 'cocina',
+            'numero_mesa'       =>  $idmesa
+        ];
+
+        foreach($code as $data){
+            $msg['idusuario'] = $data['id'];
+            $util->sendPush($data['codigo'],$msg);
+        }
+
+    }
+
+    private  function sendTableEnd($code,$idmesa)
+    {
+        $util = new UtilidadesContronller();
+
+        $msg = [
+            'message' 	        => 'La mesa '.$idmesa.' ha sido desocupada',
+            'title'		        => 'Mesa desocupada',
             'subtitle'	        => 'Mesa ',
             'tickerText'	    => 'cocina',
             'numero_mesa'       =>  $idmesa
