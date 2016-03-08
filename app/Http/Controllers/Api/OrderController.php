@@ -154,6 +154,7 @@ class OrderController extends Controller {
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idporductin'       => $request['idProduct'],
                 'idproductout'      => $request['idProductEdit'],
+                'costproduct'       => $product->getCostProduct($request['idProduct']),
                 'idorder'           => $id,
                 'vibrate'	=> 1,
             ];
@@ -221,7 +222,13 @@ class OrderController extends Controller {
                     $msg['idusuario'] = $data['id'];
                     $util->sendPush($data['codigo'],$msg);
                 }
-            $response = ['success' => true];
+                $checkTable         = $table->checkTableInit($mesa[0]->number_table);
+
+                if($checkTable){
+                    $this->sendTableInit($code,$mesa[0]->number_table);
+                }
+
+                $response = ['success' => true];
             $statusCode = 200;
 
             }
