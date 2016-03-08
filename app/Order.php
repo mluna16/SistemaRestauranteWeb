@@ -29,7 +29,7 @@ class Order extends Model {
     public function getOrdenMesoneroPorfecha($id_user, $time,$idLocal)
     {
         return Order::where('created_by' ,$id_user)
-                        ->where( 'created_at', '>=',Carbon::now())
+                        ->where( 'created_at', '>=',Carbon::now()->subDays($time))
                         ->where('id_local',$idLocal)
                         ->subDays($time)->count();
 
