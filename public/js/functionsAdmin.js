@@ -177,7 +177,7 @@ $(document).ready(function(){
         $.get( "admin/Estadisticas/producto/30", function( data ) {
             $(this).charPieFunction("#productosMes",data)
         });
-        $.get( "Estadisticas/producto/365", function( data ) {
+        $.get( "admin/Estadisticas/producto/365", function( data ) {
             $(this).charPieFunction("#productosAno",data)
         });
     })
