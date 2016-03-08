@@ -60,6 +60,7 @@ class OrderController extends Controller {
                             'idproduct'         => $order->id_product,
                             'costproduct'       => $product->getCostProduct($request->idProduct),
                             'idorder'           => $order->id,
+                            'createdby'         => $order->created_by
                         ];
 
                         foreach($code as $data){
@@ -156,6 +157,7 @@ class OrderController extends Controller {
                 'idproductout'      => $request['idProductEdit'],
                 'costproduct'       => $product->getCostProduct($request['idProduct']),
                 'idorder'           => $id,
+                'createdby'         => $orden->created_by,
                 'vibrate'	=> 1,
             ];
 
@@ -212,6 +214,7 @@ class OrderController extends Controller {
                 'vibrate'	=> 1,
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
+                'createdby'         => $orden->created_by,
                 'idorder'           => $id,
 
             ];
@@ -271,6 +274,8 @@ class OrderController extends Controller {
                 'idusario'          => $orden->created_by,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['idOrder'],
+                'createdby'         => $orden->created_by,
+
 
             ];
 
@@ -364,6 +369,8 @@ class OrderController extends Controller {
                 'idusario'          => $cocinaId,
                 'numero_mesa'       => $mesa[0]->number_table,
                 'idorder'           => $request['id_order'],
+                'createdby'         => $orden->created_by,
+
 
 
             ];
@@ -433,7 +440,7 @@ class OrderController extends Controller {
         }
     }
 
-    private  function sendTableInit($code,$idmesa)
+    private  function sendTableInit($code,$idmesa,$createdBy)
     {
         $util = new UtilidadesContronller();
 
@@ -442,7 +449,9 @@ class OrderController extends Controller {
             'title'		        => 'Mesa ocupada',
             'subtitle'	        => 'Mesa ',
             'tickerText'	    => 'cocina',
-            'numero_mesa'       =>  $idmesa
+            'numero_mesa'       =>  $idmesa,
+            'createdby'         => $createdBy,
+
         ];
 
         foreach($code as $data){
@@ -452,7 +461,7 @@ class OrderController extends Controller {
 
     }
 
-    private  function sendTableEnd($code,$idmesa)
+    private  function sendTableEnd($code,$idmesa,$createdBy)
     {
         $util = new UtilidadesContronller();
 
@@ -461,7 +470,9 @@ class OrderController extends Controller {
             'title'		        => 'Mesa desocupada',
             'subtitle'	        => 'Mesa ',
             'tickerText'	    => 'cocina',
-            'numero_mesa'       =>  $idmesa
+            'numero_mesa'       =>  $idmesa,
+            'createdby'         => $createdBy,
+
         ];
 
         foreach($code as $data){
