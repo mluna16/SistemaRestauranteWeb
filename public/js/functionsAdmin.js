@@ -163,7 +163,7 @@ $(document).ready(function(){
         $.get( "admin/Estadisticas/ventas/", function( data ) {
             $(this).charBarFunction("#ventaSemana",data)
         })
-        $.get( "admin/Estadisticas/ventas/", function( data ) {
+        $.get( "admin/Estadisticas/ventaa/", function( data ) {
             $(this).charBarFunction("#ventaAno",data)
         })
     })
