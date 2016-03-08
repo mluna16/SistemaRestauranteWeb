@@ -79,11 +79,11 @@ class Product extends Model {
         $productList = Product::where('local_for',$local->getLocalIdAttribute())
                                 ->where('inventory','>',0)
                                 ->get();
-        foreach($productList as $product){
+        foreach($productList as $i => $product){
             /** @var TYPE_NAME $productImages */
-            $productImages = ProductImage::where('id_product',$product->id)->firstOrFail();
+            $productImages = ProductImage::where('id_product',$product->id)->first();
 
-            $productImage[] = [
+            $productImage[$i] = [
 
                 'id_product' => $product->id,
                 'name' => $product->name,
@@ -92,9 +92,15 @@ class Product extends Model {
                 'inventory' => $product->inventory,
                 'description' => $product->description,
                 'status' => $product->stautus,
-                'id_image' => $productImages->id,
-                'image' => $this->renameRouteImage($productImages)
             ];
+
+            if($productImages!=null){
+                $productImage[$i]['image'] = $this->renameRouteImage($productImages);
+                $productImage[$i]['id_image'] = $productImages->id;
+            }else{
+                $productImage[$i]['image'] = 0;
+                $productImage[$i]['id_image'] = '';
+            }
         }
         return Collection::make($productImage);
 

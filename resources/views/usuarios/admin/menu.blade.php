@@ -13,7 +13,12 @@
                     @if($i == 0)
                     <div class="card" id="CardMenu{{$menu['id_product']}}" data-step="3" data-intro="Información detalla del producto {{$menu['name']}}" data-position='left'>
                         <div class="card-image waves-effect waves-block waves-light">
+                            @if($menu['image']!==0)
                             <img class="activator" style="width: 360px height: 260px" src="{{asset($menu['image'])}}">
+
+                            @else
+                            <img class="activator" style="width: 360px height: 260px" src="{{asset('images/default.jpg')}}">
+                            @endif
                         </div>
                         <div class="card-content">
                             <div class="row">
