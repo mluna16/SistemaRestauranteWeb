@@ -34,6 +34,7 @@ class adminController extends Controller {
         $user = new User();
         $users = $user->getUserByCretedBy(Auth::user()->id);
         if(! $user->getIsAFirstTimeUser()){
+            $users['primero'] = true;
             $view = View::make('usuarios.admin.usuarios')->with('users',$users);
             if($request->ajax()) {
                 $sections = $view->renderSections();
