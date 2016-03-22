@@ -62,6 +62,7 @@
                                 <span class="card-title grey-text text-darken-4">{{$menu['name']}} <i class="mdi-navigation-close right"></i></span>
                                 <span class="card-title grey-text text-darken-4">Precio : Bs {{$menu['cost']}} </span>
                                 <span class="card-title grey-text text-darken-4">Limite Diario : {{$menu['limit']}} </span>
+                                <span class="card-title grey-text text-darken-4">Tipo : {{$menu['type']}} </span>
                                 <p>{{$menu['description']}}</p>
                                 <div class="row">
                                     <a data-step="5" data-intro="Para editar la informacion del producto" data-position='top' href="#" class="btn tooltipped col s4 offset-s4 l2 offset-l1 EditProduct" data-position="top" data-delay="50" data-tooltip="Editar" data-id="{{$menu['id_product']}}"><i class="tiny mdi-editor-mode-edit "></i></a>

@@ -13,7 +13,15 @@
     </div>
 </div>
 <div class="row">
-    <div class="input-field col s12">
+    <div class="col s4">
+        <label>Tipo de Usuario</label>
+        <select class="browser-default" name="type">
+            <option value="" disabled selected>Seleccione</option>
+            <option value="menu">Menu</option>
+            <option value="extra">Extra</option>
+        </select>
+    </div>
+    <div class="input-field col s8">
         {!! Form::textarea('description', null, ['class' => 'materialize-textarea descriptionProduct']) !!}
         {!! Form::label('description', 'Descripcion ',['for' => 'description'])!!}
 
