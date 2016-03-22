@@ -26,6 +26,7 @@ class CreateProductsRequest extends Request {
             'description' => 'required',
             'cost' => 'required|numeric',
             'limit' => 'required|numeric',
+            'type'  => 'required'
 
         ];
 	}

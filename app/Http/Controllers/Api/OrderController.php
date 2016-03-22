@@ -4,6 +4,7 @@ use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use SistemaRestauranteWeb\Devuelto;
+use SistemaRestauranteWeb\ExtraOrden;
 use SistemaRestauranteWeb\Http\Controllers\productsController;
 use SistemaRestauranteWeb\Http\Controllers\UtilidadesContronller;
 use SistemaRestauranteWeb\Http\Requests;
@@ -26,6 +27,7 @@ class OrderController extends Controller {
         $product    = new Product();
         $util       = new UtilidadesContronller();
         $table      = New Table();
+        $extra      = new ExtraOrden();
         $this->validate($request, [
             'idTable' => 'required', 'idProduct' => 'required','cantidad' => 'required'
         ]);
@@ -43,7 +45,20 @@ class OrderController extends Controller {
                 Product::findOrFail($request['idProduct']);
                 $orderAttr = ['id_product' => $request->idProduct, 'created_by' => Auth::user()->id,'state' => 'espera','id_local' => $idLocal];
                 $order = Order::create($orderAttr);
+
                 if($order->save()){
+                    if($request['extra'] !=null){
+                        foreach($request['extra'] as $data2){
+                            $dataExtra = [
+                                            'id_order'      => $order->id,
+                                            'id_product'    => $data2['id_product']
+                                            ];
+                            $extra->createNew($dataExtra);
+
+                        }
+
+                    }
+
                     $tableAttr = ['number_table' => $request->idTable, 'id_order' => $order->id,'state' => 'ocupado','id_local' => $idLocal,'facturar' => false];
 
                     $table = Table::create($tableAttr);
@@ -68,7 +83,7 @@ class OrderController extends Controller {
                             $util->sendPush($data['codigo'],$msg);
                         }
 
-                        if($checkTable) $this->sendTableInit($code,$request['idTable']);
+                        if($checkTable) $this->sendTableInit($code,$request['idTable'],$order->created_by);
                     }
                     else {
                         $statusCode = 400;
@@ -228,7 +243,7 @@ class OrderController extends Controller {
                 $checkTable         = $table->checkTableInit($mesa[0]->number_table);
 
                 if($checkTable){
-                    $this->sendTableEnd($code,$mesa[0]->number_table);
+                    $this->sendTableEnd($code,$mesa[0]->number_table,$orden->created_by);
                 }
 
                 $response = ['success' => true];
@@ -312,13 +327,15 @@ class OrderController extends Controller {
         $user           = new User();
         $local          = new Local();
         $table          = new Table();
+        $extra          = new ExtraOrden();
         try{
             $idLocal = $local->getLocalIdAttribute();
             $orders = $order->getOrdernerPorEstadoYLocal($status,$idLocal);
             $response    = [];
             $statusCode = 200;
-            foreach($orders as $data){
+            foreach($orders as $i => $data){
                 $mesa = $table->getNumeroDeMesaPorOrder($data['id']);
+
                 foreach($mesa as $data2){
                     $mesa = $data2['number_table'];
                 }
@@ -328,8 +345,13 @@ class OrderController extends Controller {
                     'mesa'              =>      $mesa,
                     'mesonero'          =>      $user->getFullNameUserById($data['created_by']),
                     'comentario'        =>      $data['comentario'],
-                    'visto'             =>      $data['comentario_visto']
+                    'visto'             =>      $data['comentario_visto'],
+                    'extra'             =>      null
                 ];
+                if($extra->countExtra($data['id']) >0){
+                    $extraData  = $extra->getForIsOrder($data['id']);
+                    $response[$i]['extra'] = $extraData['data'];
+                }
             }
         } catch (Exception $e) {
             $response = [

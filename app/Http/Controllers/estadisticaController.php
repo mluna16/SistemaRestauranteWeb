@@ -25,7 +25,7 @@ class estadisticaController extends Controller {
         $Order      = new Order();
         $local          = new Local();
         $idLocal        = $local->getLocalIdAttribute();
-        $totalProductos = $Product->getAllProductInformationByLocalFor();
+        $totalProductos = $Product->getAllProductInformationByLocalFor(null);
         $sumaTotal = 0;
 
         foreach($totalProductos as $Producto){

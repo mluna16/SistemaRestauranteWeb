@@ -22,6 +22,7 @@ Route::group(['middleware' => 'auth','prefix' => 'api/v1'], function(){
      */
     Route::group(['prefix' => 'producto'],function(){
         Route::get('/', ['uses' => 'productsController@getProducts']);
+        Route::get('extra', ['uses' => 'productsController@getExtraProducts']);
         Route::get('Info/{id}', ['uses' => 'productsController@getProduct']);
         Route::get('Info/{attr}/{id}', ['uses' => 'productsController@getProductsForAttrAndID']);
         Route::get('resetInventory',['uses' => 'productsController@resetInventory']);

@@ -56,6 +56,7 @@ class Table extends Model {
     {
         $local = new Local();
         $product = new Product();
+        $extra      = new ExtraOrden();
         $totalMesas = $local->NumberTable();
         $mesa = [
             'CostTable' => 0,
@@ -67,8 +68,11 @@ class Table extends Model {
                                         'id_local' => $local->getLocalIdAttribute(),
                                         'state' => 'ocupado'])->get();
 
-            foreach ($mesasData as $mesaData) {
+            foreach ($mesasData as $i =>$mesaData) {
                 $orderData = Order::find($mesaData->id_order);
+                $extraData = $extra->getForIsOrder($mesaData->id_order);
+
+
                 $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product, 'cost');
                 $mesa['Pedidos'][] = [
                     'State' => $mesaData->state,
@@ -78,7 +82,15 @@ class Table extends Model {
                     'ProductId' => $orderData->id_product,
                     'ProductName' => $product->getProductNameAttribute($orderData->id_product),
                     'ProductCost' => $product->getProductAttributeForId($orderData->id_product, 'cost'),
+                    'Extra'         => null,
                 ];
+
+                if($extraData != null){
+                    $mesa['CostTable'] = $mesa['CostTable'] + $extraData['costoExtra'];
+                    $mesa['Pedidos'][$i]['Extra'] = $extraData['data'];
+                    $mesa['Pedidos'][$i]['ProductCost'] = $mesa['Pedidos'][$i]['ProductCost'] + $extraData['costoExtra'];
+
+                }
             }
             return $mesa;
         }else{

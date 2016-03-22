@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 class Product extends Model {
 
     protected $table = 'product';
-    protected $fillable = ['name','cost', 'description','limit','created_by','inventory','local_for'];
+    protected $fillable = ['name','cost', 'description','limit','created_by','inventory','local_for','type'];
 
     /**
      * @param $value
@@ -74,11 +74,19 @@ class Product extends Model {
         return false;
     }
 
-    public  function getAllProductInformationByLocalFor(){
+    public  function getAllProductInformationByLocalFor($type){
         $local = new Local();
-        $productList = Product::where('local_for',$local->getLocalIdAttribute())
-                                ->where('inventory','>',0)
-                                ->get();
+        if($type== null){
+            $productList = Product::where('local_for',$local->getLocalIdAttribute())
+                ->where('inventory','>',0)
+                ->get();
+        }
+        else {
+            $productList = Product::where('local_for', $local->getLocalIdAttribute())
+                ->where('inventory', '>', 0)
+                ->where('type', $type)
+                ->get();
+        }
         foreach($productList as $i => $product){
             /** @var TYPE_NAME $productImages */
             $productImages = ProductImage::where('id_product',$product->id)->first();
@@ -92,6 +100,7 @@ class Product extends Model {
                 'inventory' => $product->inventory,
                 'description' => $product->description,
                 'status' => $product->stautus,
+                'type'      => $product->type,
             ];
 
             if($productImages!=null){
@@ -187,6 +196,8 @@ class Product extends Model {
         $route = $route.'/'.$array['name'].'.'.$array['type'];
         return $route;
     }
+
+
 
 
 }

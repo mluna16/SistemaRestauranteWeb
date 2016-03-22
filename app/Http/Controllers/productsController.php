@@ -59,6 +59,7 @@ class productsController extends Controller
             $product->description = $request->description;
             $product->limit = $request->limit;
             $product->inventory = $request->limit;
+            $product->type = $request->type;
             $product->save();
             if ($product->save()) {
 
@@ -170,7 +171,7 @@ class productsController extends Controller
 
         try {
             $statusCode = 200;
-            $response = $Product->getAllProductInformationByLocalFor();
+            $response = $Product->getAllProductInformationByLocalFor('menu');
 
 
 
@@ -200,6 +201,22 @@ class productsController extends Controller
             ];
             $statusCode = 404;
 
+        } finally {
+            return Response::json($response, $statusCode);
+        }
+    }
+
+    public function getExtraProducts(){
+        $Product = new Product();
+
+        try {
+            $statusCode = 200;
+            $response = $Product->getAllProductInformationByLocalFor('extra');
+        }catch (Exception $e) {
+            $response = [
+                "error" => "No hay productos para este usuario"
+            ];
+            $statusCode = 400;
         } finally {
             return Response::json($response, $statusCode);
         }
