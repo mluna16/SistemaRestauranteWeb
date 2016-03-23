@@ -12,7 +12,7 @@ class ExtraOrden extends Migration
      */
     public function up()
     {
-        Schema::create('ExtraOrder', function(Blueprint $table) {
+        Schema::create('extraorder', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('id_order')->unsigned();
             $table->integer('id_product')->unsigned();

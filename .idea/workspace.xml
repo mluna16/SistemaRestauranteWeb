@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php" afterPath="$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php" afterPath="$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ExtraOrden.php" afterPath="$PROJECT_DIR$/app/ExtraOrden.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="467bdade-441a-43cf-8262-c53bae2193fd" name="Failed commit: Default" comment="Solo Imganes" />
@@ -36,32 +36,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExtraOrden.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ExtraOrden.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.538462" vertical-offset="160" max-vertical-offset="714">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4" vertical-offset="5729" max-vertical-offset="8721">
-              <caret line="348" column="44" selection-start-line="348" selection-start-column="44" selection-end-line="348" selection-end-column="44" />
-              <folding>
-                <element signature="e#61#75#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ModalCreateMenu.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="1003">
+            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1003">
               <caret line="14" column="45" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="45" />
               <folding />
             </state>
@@ -71,7 +49,7 @@
       <file leaf-file-name="FormMenu.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.884615" vertical-offset="126" max-vertical-offset="612">
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="612">
               <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
               <folding />
             </state>
@@ -81,18 +59,8 @@
       <file leaf-file-name="menu.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2545455" vertical-offset="964" max-vertical-offset="1615">
+            <state vertical-scroll-proportion="0.0" vertical-offset="964" max-vertical-offset="1615">
               <caret line="64" column="101" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModalCreateUser.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateUser.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846" vertical-offset="119" max-vertical-offset="680">
-              <caret line="21" column="26" selection-start-line="13" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -101,18 +69,48 @@
       <file leaf-file-name="adminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.076923" vertical-offset="548" max-vertical-offset="1513">
+            <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1513">
               <caret line="50" column="64" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7083333" vertical-offset="1394" max-vertical-offset="3519">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="3519">
               <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiV1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Routes/ApiV1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.192307" vertical-offset="212" max-vertical-offset="1122">
+              <caret line="33" column="72" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_03_20_190552_ExtraOrden.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="782">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExtraOrden.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/ExtraOrden.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3655914" vertical-offset="0" max-vertical-offset="714">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -121,7 +119,7 @@
       <file leaf-file-name="CreateProductsRequest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateProductsRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="153" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="680">
               <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding />
             </state>
@@ -131,7 +129,7 @@
       <file leaf-file-name="productsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.115385" vertical-offset="551" max-vertical-offset="3740">
+            <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3740">
               <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
@@ -191,10 +189,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_03_04_175811_create_order_table.php" />
         <option value="$PROJECT_DIR$/app/Table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_03_20_203930_addTypeProduct.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/estadisticaController.php" />
         <option value="$PROJECT_DIR$/app/Http/Routes/ApiV1.php" />
-        <option value="$PROJECT_DIR$/app/ExtraOrden.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php" />
@@ -202,6 +198,8 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/CreateProductsRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/productsController.php" />
         <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php" />
+        <option value="$PROJECT_DIR$/app/ExtraOrden.php" />
       </list>
     </option>
   </component>
@@ -817,7 +815,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../deepfloat" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;modalC&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateUser.blade.php&#10;Modalcre&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;create&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;orde&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;ap&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;ord&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Extra&#9;null&#9;null&#10;ExtraOr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2016_03_20_190552_ExtraOrden.php&#10;us&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;est&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;or&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Order.php&#10;tab&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;esta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;loginc&#9;null&#9;null&#10;ta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;welco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/welcomep.blade.php&#10;admi&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Order.php&#10;fun&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;dash&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;funct&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;caja.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/caja/caja.blade.php&#10;caja.b&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/tours/caja.blade.php&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/cajaController.php&#10;orderc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;menu.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;resta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;usuarios.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;das&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;adm&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;admincon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;functions&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;adminc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;lo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;user&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/User.php&#10;Invo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/InvoiceController.php&#10;cajar&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/CajaRoutes.php&#10;rout&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/routes.php&#10;invo&#9;null&#9;null&#10;userCo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php&#10;tablecon&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="extr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/ExtraOrden.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;modalC&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateUser.blade.php&#10;Modalcre&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;create&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;orde&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;ap&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;ord&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Extra&#9;null&#9;null&#10;ExtraOr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2016_03_20_190552_ExtraOrden.php&#10;us&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;est&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;or&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Order.php&#10;tab&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;esta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;loginc&#9;null&#9;null&#10;ta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;welco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/welcomep.blade.php&#10;admi&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Order.php&#10;fun&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;dash&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;funct&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;caja.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/caja/caja.blade.php&#10;caja.b&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/tours/caja.blade.php&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/cajaController.php&#10;orderc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;menu.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;resta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;usuarios.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;das&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;adm&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;admincon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;functions&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;adminc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;lo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;user&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/User.php&#10;Invo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/InvoiceController.php&#10;cajar&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/CajaRoutes.php&#10;rout&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/routes.php&#10;invo&#9;null&#9;null&#10;userCo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/UserController.php" />
     <property name="recentsLimit" value="5" />
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -3284,9 +3282,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -3294,6 +3289,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -3315,12 +3313,6 @@
       <created>1425477644111</created>
       <option name="number" value="Default" />
       <updated>1425477644111</updated>
-    </task>
-    <task id="LOCAL-00148" summary="TestCase para servisor">
-      <created>1456755969618</created>
-      <option name="number" value="00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1456755969619</updated>
     </task>
     <task id="LOCAL-00149" summary="Cambio de order cost,">
       <created>1456795217437</created>
@@ -3610,7 +3602,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458610516892</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="Formularios modificados para extras">
+      <created>1458610551542</created>
+      <option name="number" value="00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1458610551542</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -3637,24 +3635,24 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3353566" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4400607" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3353566" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323217" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3348485" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4400607" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3464448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3517398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323217" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3353566" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908952" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41290322" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3675,17 +3673,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36520377" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2946154" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323217" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41290322" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3464448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3707,7 +3705,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/php-getting-started" />
     </ignored-roots>
-    <MESSAGE value="error factura" />
     <MESSAGE value="errorde factura" />
     <MESSAGE value="Salucion de error de factura" />
     <MESSAGE value="Modales que no se solapan" />
@@ -3732,7 +3729,8 @@
     <MESSAGE value="primero error" />
     <MESSAGE value="migraciones Para Productos" />
     <MESSAGE value="nuevos metodos para manejar extras en un pedido" />
-    <option name="LAST_COMMIT_MESSAGE" value="nuevos metodos para manejar extras en un pedido" />
+    <MESSAGE value="Formularios modificados para extras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formularios modificados para extras" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3836,9 +3834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="2227">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="e#57#75#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3846,7 +3841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2684" max-vertical-offset="3519">
           <caret line="165" column="41" selection-start-line="165" selection-start-column="41" selection-end-line="165" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3861,7 +3855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3869,7 +3862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="816">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3877,9 +3869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2907">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#59#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3887,7 +3876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.37777779" vertical-offset="187" max-vertical-offset="952">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3895,7 +3883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1208792" vertical-offset="102" max-vertical-offset="2159">
           <caret line="24" column="53" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3903,7 +3890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923" vertical-offset="221" max-vertical-offset="1105">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3911,7 +3897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3919,7 +3904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="646" max-vertical-offset="1989">
           <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3927,7 +3911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1768">
           <caret line="9" column="0" selection-start-line="7" selection-start-column="3" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3935,7 +3918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3943,7 +3925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="341">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3951,7 +3932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="341">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3959,7 +3939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="8.668874" vertical-offset="0" max-vertical-offset="2975">
           <caret line="159" column="5" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3967,7 +3946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3975,7 +3953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3983,7 +3960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="341">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3991,7 +3967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923" vertical-offset="119" max-vertical-offset="1003">
           <caret line="15" column="9" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3999,7 +3974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.153846" vertical-offset="212" max-vertical-offset="646">
           <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4007,7 +3981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4015,15 +3988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.576923" vertical-offset="518" max-vertical-offset="833">
           <caret line="40" column="30" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.230769" vertical-offset="467" max-vertical-offset="782">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4031,6 +3995,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="153" max-vertical-offset="2295">
           <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6545454" vertical-offset="793" max-vertical-offset="2584">
+          <caret line="63" column="97" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5" vertical-offset="1211" max-vertical-offset="2635">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5729" max-vertical-offset="8721">
+          <caret line="348" column="44" selection-start-line="348" selection-start-column="44" selection-end-line="348" selection-end-column="44" />
+          <folding>
+            <element signature="e#61#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateUser.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="680">
+          <caret line="21" column="26" selection-start-line="13" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1003">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="612">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="964" max-vertical-offset="1615">
+          <caret line="64" column="101" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateProductsRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="680">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3740">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1513">
+          <caret line="50" column="64" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="3519">
+          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -4043,100 +4095,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/TableController.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_20_190552_ExtraOrden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6545454" vertical-offset="793" max-vertical-offset="2584">
-          <caret line="63" column="97" selection-start-line="63" selection-start-column="71" selection-end-line="63" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5" vertical-offset="1211" max-vertical-offset="2635">
-          <caret line="72" column="50" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="50" />
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="782">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/ExtraOrden.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.538462" vertical-offset="160" max-vertical-offset="714">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4" vertical-offset="5729" max-vertical-offset="8721">
-          <caret line="348" column="44" selection-start-line="348" selection-start-column="44" selection-end-line="348" selection-end-column="44" />
-          <folding>
-            <element signature="e#61#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateUser.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="119" max-vertical-offset="680">
-          <caret line="21" column="26" selection-start-line="13" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/ModalCreateMenu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/admin/FormMenu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.884615" vertical-offset="126" max-vertical-offset="612">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/usuarios/admin/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2545455" vertical-offset="964" max-vertical-offset="1615">
-          <caret line="64" column="101" selection-start-line="64" selection-start-column="101" selection-end-line="64" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateProductsRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="153" max-vertical-offset="680">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.115385" vertical-offset="551" max-vertical-offset="3740">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/adminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.076923" vertical-offset="548" max-vertical-offset="1513">
-          <caret line="50" column="64" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7083333" vertical-offset="1394" max-vertical-offset="3519">
-          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.3655914" vertical-offset="0" max-vertical-offset="714">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
