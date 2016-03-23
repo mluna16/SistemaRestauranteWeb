@@ -21,8 +21,9 @@ class ExtraOrden extends Model
         $product  = new Product();
         $data = $this->where('id_order',$idOrder)->get(['id_product']);
         $response['costoExtra'] = 0;
+        $response['data'] = null;
         foreach($data as $extra){
-            $response['costaExtra'] = $response['costoExtra'] + $product->getCostProduct($extra['id_product']);
+            $response['costoExtra'] = $response['costoExtra'] + $product->getCostProduct($extra['id_product']);
             $response['data'][] = ['nombreExtra' => $product->getName($extra['id_product'])];
         }
         return  $response;

@@ -70,7 +70,6 @@ class Table extends Model {
 
             foreach ($mesasData as $i =>$mesaData) {
                 $orderData = Order::find($mesaData->id_order);
-                $extraData = $extra->getForIsOrder($mesaData->id_order);
 
 
                 $mesa['CostTable'] = $mesa['CostTable'] + $product->getProductAttributeForId($orderData->id_product, 'cost');
@@ -85,7 +84,8 @@ class Table extends Model {
                     'Extra'         => null,
                 ];
 
-                if($extraData != null){
+                if($extra->countExtra($mesaData->id_order) >0){
+                    $extraData = $extra->getForIsOrder($mesaData->id_order);
                     $mesa['CostTable'] = $mesa['CostTable'] + $extraData['costoExtra'];
                     $mesa['Pedidos'][$i]['Extra'] = $extraData['data'];
                     $mesa['Pedidos'][$i]['ProductCost'] = $mesa['Pedidos'][$i]['ProductCost'] + $extraData['costoExtra'];
