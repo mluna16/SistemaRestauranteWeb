@@ -103,12 +103,14 @@ class InvoiceController extends Controller {
 
             $data = [
                 'local'         => $local->getLocalNameForUser(),
-                'date'         => Carbon::parse($invoice->created_at)->setTimezone('America/Caracas')->format('d/m/Y h:s'),
+                'date'          => Carbon::parse($invoice->created_at)->setTimezone('America/Caracas')->format('d/m/Y h:s'),
                 'clientName'    => $invoice->client_name,
                 'clientId'      => $invoice->client_id,
-                'invoiceId'       => $invoice->id,
+                'invoiceId'     => str_pad($invoice->id,8,'0',STR_PAD_LEFT),
                 'cost'          => $invoice->costo,
-                'product'       => $invoiceProduct->getProduct($id)
+                'rif'           => $local->getLocalRif(),
+                'product'       => $invoiceProduct->getProduct($id),
+                'location'      => $local->getLocalLocation(),
             ];
 
         }catch (Exception $e) {

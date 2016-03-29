@@ -29,7 +29,7 @@ class Local extends Model {
 
 	protected $table = 'local';
 
-    protected $fillable = array('name','location','number_tables','owner');
+    protected $fillable = array('name','location','number_tables','owner','rif');
 
     public function getNameOwnerAttribute(){
        return User::where('id', $this->owner)->firstOrFail()->FullName;
@@ -88,6 +88,7 @@ class Local extends Model {
             'number_tables' => $local->number_tables,
             'owner' => $user->getFullNameUserById($local->owner),
             'id_image' => $localImage->id,
+            'rif'       => $local->rif,
             'image' => $localImage->name.".".$localImage->type
         ];
 
@@ -110,6 +111,32 @@ class Local extends Model {
             $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
 
             return Local::where('owner', $ownerID)->take(1)->firstOrFail()->name;
+        }
+    }
+
+    public function getLocalRif()
+    {
+        $user = new User();
+        if (Auth::user()->getIsASystemGod()) {
+            if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+            else return 000;
+        } else {
+            $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
+
+            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->rif;
+        }
+    }
+
+    public function getLocalLocation()
+    {
+        $user = new User();
+        if (Auth::user()->getIsASystemGod()) {
+            if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+            else return 000;
+        } else {
+            $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
+
+            return Local::where('owner', $ownerID)->take(1)->firstOrFail()->location;
         }
     }
 }

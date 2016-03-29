@@ -242,6 +242,7 @@ $(document).ready(function(){
         $('.localName').val(data['name']);
         $('.localNumberTables').val(data['number_tables']);
         $('.localLocation').val(data['location']);
+        $('.localRif').val(data['rif']);
         $('.LocalEditSubmit').attr('data-id',data['id']);
         $('#Editlocal').openModal();
     }

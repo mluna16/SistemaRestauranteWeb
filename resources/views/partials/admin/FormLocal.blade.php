@@ -10,10 +10,13 @@
 
 </div>
 <div class="row">
-    <div class="input-field col s12">
+    <div class="input-field col s6">
+        {!! Form::text('rif', null,['class' => 'validate localRif'])!!}
+        {!! Form::label('rif', 'RIF',['for' => 'rif'])!!}
+    </div>
+    <div class="input-field col s6">
         {!! Form::text('location', null,['class' => 'validate localLocation'])!!}
         {!! Form::label('location', 'Ubicacion',['for' => 'location'])!!}
-
     </div>
 </div>
 {!! Form::hidden('owner', \Hash::make(Auth::user()->id)) !!}

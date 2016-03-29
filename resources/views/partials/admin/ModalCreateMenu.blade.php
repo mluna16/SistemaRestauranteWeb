@@ -1,7 +1,7 @@
 @section('modalMenu')
 <div id="create_menu" class="modal modal-fixed-footer">
     <div class="modal-content">
-        <h4> Crear nuevo producto para el menu </h4>
+        <h4> Crear nuevo producto para el menú </h4>
 
         <div id="menuPaso1" class="menuPaso1">
             <p>Crear datos del Producto</p>
