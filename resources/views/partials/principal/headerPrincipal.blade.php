@@ -1,6 +1,5 @@
 <nav class="light-blue lighten-1 fixed" role="navigation">
     <div class="container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
     </div>
     <div class="nav-wrapper ">
         <ul class="right">

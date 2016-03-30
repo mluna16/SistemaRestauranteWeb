@@ -105,7 +105,7 @@ class Local extends Model {
     {
         $user = new User();
         if (Auth::user()->getIsASystemGod()) {
-            if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->id;
+            if(! $user->getIsAFirstTimeUser()) return Local::where('owner', Auth::user()->id)->take(1)->firstOrFail()->name;
             else return 000;
         } else {
             $ownerID = User::where('id', Auth::user()->id)->firstOrFail()->created_by;
@@ -140,3 +140,4 @@ class Local extends Model {
         }
     }
 }
+
