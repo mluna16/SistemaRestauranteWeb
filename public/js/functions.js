@@ -94,6 +94,8 @@ $(document).ready(function(){
         $( ".menuPaso2" ).show();
         imageDropZone.options.url = "productImg/"+id;
         $(form).attr('action').replace('MENU_ID', id);
+        $(this).ajaxGetPageLoader('Menu','#principalPanel')
+
     }
     $(".menuPaso2Atras").click(function(){
         $(".crear_menuSubmit").addClass("crear_menuSubmitNone")
