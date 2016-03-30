@@ -280,6 +280,7 @@ $(document).ready(function(){
 
 
     function infopedido(data){
+        console.log(data);
         var struct = '<div class="row"> <div class="col s12 126"> <div class="card "> <div class="card-content"> <span class="card-title light-blue-text text-lighten-1 ">Mesa numero '+data['data']['NumberTable'] +'</span> <table class="responsive-table hoverable  "> <thead> <tr> <th data-field="producto">Producto</th> <th data-field="precio">Precio</th> <th data-field="estado">Estado</th> </tr> </thead> <tbody>';
         var pedido = data['data']['Pedidos']
         $.each(pedido, function (index, val){
@@ -288,6 +289,15 @@ $(document).ready(function(){
                             + '<td>' + val['ProductCost'] + '</td>'
                             + '<td>' + val['OrderState'] +'</td>'
             struct += '</tr>';
+            if(val['Extra'] !=null) {
+                $.each(val['Extra'], function (inde, value) {
+                    struct += '<tr data-id="' + 1 + '" style="cursor: pointer;">'
+                    + '<td>' + value['nombreExtra'] + '</td>'
+                    + '<td>' + value['costExtra'] + '</td>'
+                    + '<td>' + val['OrderState'] + '</td>'
+                    struct += '</tr>';
+                });
+            }
         });
         struct += '</tbody> </table> </div> <div class="card-action"> <div class="row"> <div class="col m6"> <h5>Total Bs : '+data['data']['CostTable']+'</h5> </div>';
         if(pedido[0]['Facturar']== 1){
