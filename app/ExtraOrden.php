@@ -25,7 +25,8 @@ class ExtraOrden extends Model
         foreach($data as $extra){
             $response['costoExtra'] = $response['costoExtra'] + $product->getCostProduct($extra['id_product']);
             $response['data'][] = ['nombreExtra' => $product->getName($extra['id_product']),
-                                    'costExtra' => $product->getCostProduct($extra['id_product'])];
+                                    'costExtra' => $product->getCostProduct($extra['id_product']),
+                                    'id_product' => $extra['id_product']];
         }
         return  $response;
     }

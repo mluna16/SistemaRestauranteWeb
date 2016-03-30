@@ -45,6 +45,19 @@ class InvoiceController extends Controller {
                         'costo'         => $mesa['ProductCost'],
                 ];
                 $invoiceProduct->createNew($data);
+
+                if($mesa['Extra']!=null) {
+                    foreach ($mesa['Extra'] as $extra) {
+
+                        $data = [
+                            'id_product' => $extra['id_product'],
+                            'id_invoice' => $invoiceData['id'],
+                            'costo'     => $extra['costExtra'],
+                        ];
+                        $invoiceProduct->createNew($data);
+
+                    }
+                }
             }
 
             $table->changeStatusTable($request['idtable']);
