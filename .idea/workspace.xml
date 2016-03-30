@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833b8ac5-d67f-4867-9626-8acb4634ea09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/functions.js" afterPath="$PROJECT_DIR$/public/js/functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/functionsAdmin.js" afterPath="$PROJECT_DIR$/public/js/functionsAdmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php" afterPath="$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="467bdade-441a-43cf-8262-c53bae2193fd" name="Failed commit: Default" comment="Solo Imganes" />
@@ -76,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23822714" vertical-offset="5762" max-vertical-offset="7616">
-              <caret line="344" column="35" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
+            <state vertical-scroll-proportion="-3.2432432" vertical-offset="1478" max-vertical-offset="7616">
+              <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
               <folding>
                 <marker date="1459350585085" expanded="true" signature="1238:1302" placeholder="..." />
                 <marker date="1459350585085" expanded="true" signature="3005:3069" placeholder="..." />
@@ -88,6 +87,16 @@
                 <marker date="1459350585085" expanded="true" signature="15993:16023" placeholder="..." />
                 <marker date="1459350585085" expanded="true" signature="16077:16086" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminRoutes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4548105" vertical-offset="609" max-vertical-offset="952">
+              <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,7 +197,6 @@
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php" />
         <option value="$PROJECT_DIR$/app/Local.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/principal/headerPrincipal.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" />
         <option value="$PROJECT_DIR$/app/ExtraOrden.php" />
@@ -196,6 +204,7 @@
         <option value="$PROJECT_DIR$/app/Table.php" />
         <option value="$PROJECT_DIR$/public/js/functionsAdmin.js" />
         <option value="$PROJECT_DIR$/public/js/functions.js" />
+        <option value="$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php" />
       </list>
     </option>
   </component>
@@ -819,7 +828,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../deepfloat" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;invo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/InvoiceController.php&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/cajaController.php&#10;cajacon&#9;null&#9;null&#10;js&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;or&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;userco&#9;null&#9;null&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;Aut&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Middleware/Authenticate.php&#10;heade&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/principal/headerPrincipal.blade.php&#10;inv&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/caja/pdfInvoice.blade.php&#10;orde&#9;null&#9;null&#10;local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;admic&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;resta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;tablecon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;tab&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;extr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/ExtraOrden.php&#10;prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;modalC&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateUser.blade.php&#10;Modalcre&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;create&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;ap&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;ord&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Extra&#9;null&#9;null&#10;ExtraOr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2016_03_20_190552_ExtraOrden.php&#10;us&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;est&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;esta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;loginc&#9;null&#9;null&#10;ta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;welco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/welcomep.blade.php&#10;admi&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;fun&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;dash&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;funct&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;caja.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/caja/caja.blade.php&#10;caja.b&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/tours/caja.blade.php&#10;orderc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;menu.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;usuarios.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;das&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="route&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/AdminRoutes.php&#10;admin&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;invo&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/InvoiceController.php&#10;caja&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/cajaController.php&#10;cajacon&#9;null&#9;null&#10;js&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;or&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;userco&#9;null&#9;null&#10;order&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;Aut&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Middleware/Authenticate.php&#10;heade&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/principal/headerPrincipal.blade.php&#10;inv&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/caja/pdfInvoice.blade.php&#10;orde&#9;null&#9;null&#10;local&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Local.php&#10;admic&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;resta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/restaurante.blade.php&#10;tablecon&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;api&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;tab&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;extr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/ExtraOrden.php&#10;prod&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/productsController.php&#10;adminco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;menu&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;modalC&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateUser.blade.php&#10;Modalcre&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;create&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/partials/admin/ModalCreateMenu.blade.php&#10;ap&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Routes/ApiV1.php&#10;pro&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Product.php&#10;tabl&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;ord&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;Extra&#9;null&#9;null&#10;ExtraOr&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/database/migrations/2016_03_20_190552_ExtraOrden.php&#10;us&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php&#10;func&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functionsAdmin.js&#10;est&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;esta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/estadisticaController.php&#10;loginc&#9;null&#9;null&#10;ta&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/TableController.php&#10;welco&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/welcomep.blade.php&#10;admi&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/adminController.php&#10;fun&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;dash&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/layout/dashboard.blade.php&#10;table&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Table.php&#10;funct&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/public/js/functions.js&#10;caja.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/caja/caja.blade.php&#10;caja.b&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/tours/caja.blade.php&#10;orderc&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/app/Http/Controllers/Api/OrderController.php&#10;menu.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/menu.blade.php&#10;usuarios.&#9;FILE&#9;file://C:/wamp/VirtualHost/SistemaRestauranteWeb/resources/views/usuarios/admin/usuarios.blade.php" />
     <property name="recentsLimit" value="5" />
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -3318,12 +3327,6 @@
       <option name="number" value="Default" />
       <updated>1425477644111</updated>
     </task>
-    <task id="LOCAL-00161" summary="TestCase para servisor">
-      <created>1457296104898</created>
-      <option name="number" value="00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1457296104898</updated>
-    </task>
     <task id="LOCAL-00162" summary="notificaciones">
       <created>1457296203912</created>
       <option name="number" value="00162" />
@@ -3612,7 +3615,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459344988436</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="solion de js">
+      <created>1459350604162</created>
+      <option name="number" value="00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1459350604162</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -3709,7 +3718,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/php-getting-started" />
     </ignored-roots>
-    <MESSAGE value="Bug de facturas" />
     <MESSAGE value="Envio de notificacion si la mesa esta vacia" />
     <MESSAGE value="solucion de modal que se solapan" />
     <MESSAGE value="Estadisticas mejoradas para hora venezolana" />
@@ -3734,7 +3742,8 @@
     <MESSAGE value="arreglo de js" />
     <MESSAGE value="Solucion de extra en caja" />
     <MESSAGE value="Solucion de extra en factura" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solucion de extra en factura" />
+    <MESSAGE value="solion de js" />
+    <option name="LAST_COMMIT_MESSAGE" value="solion de js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3992,14 +4001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.576923" vertical-offset="360" max-vertical-offset="952">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/productsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6923077" vertical-offset="2693" max-vertical-offset="3740">
@@ -4138,8 +4139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23822714" vertical-offset="5762" max-vertical-offset="7616">
-          <caret line="344" column="35" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
+        <state vertical-scroll-proportion="-3.2432432" vertical-offset="1478" max-vertical-offset="7616">
+          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
           <folding>
             <marker date="1459350585085" expanded="true" signature="1238:1302" placeholder="..." />
             <marker date="1459350585085" expanded="true" signature="3005:3069" placeholder="..." />
@@ -4147,6 +4148,14 @@
             <marker date="1459350585085" expanded="true" signature="15993:16023" placeholder="..." />
             <marker date="1459350585085" expanded="true" signature="16077:16086" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/AdminRoutes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4548105" vertical-offset="609" max-vertical-offset="952">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
