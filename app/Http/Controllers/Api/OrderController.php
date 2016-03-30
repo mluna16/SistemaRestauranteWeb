@@ -80,7 +80,6 @@ class OrderController extends Controller {
 
                         foreach($code as $data){
                             $msg['idusuario'] = $data['id'];
-                            dd($msg);
                             $util->sendPush($data['codigo'],$msg);
                         }
 
