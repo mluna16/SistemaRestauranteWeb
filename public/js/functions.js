@@ -342,7 +342,7 @@ $(document).ready(function(){
     * Modals
      */
     $(document).on('click','#create_user_modal',function(){
-        $(this).ajaxGetData('modaluser','generateModalCreateUser','data')
+        $(this).ajaxGetData('admin/modaluser','generateModalCreateUser','data')
    })
     function generateModalCreateUser (data){
         console.log('entrando')
@@ -352,7 +352,7 @@ $(document).ready(function(){
     }
 
     $(document).on('click','#create_menu_modal',function(){
-        $(this).ajaxGetData('modalmenu','generateModalCreateMenu','data')
+        $(this).ajaxGetData('admin/modalmenu','generateModalCreateMenu','data')
     })
     function generateModalCreateMenu (data){
         console.log('entrando')
