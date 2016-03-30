@@ -94,7 +94,6 @@ $(document).ready(function(){
         $( ".menuPaso2" ).show();
         imageDropZone.options.url = "productImg/"+id;
         $(form).attr('action').replace('MENU_ID', id);
-        $(this).ajaxGetPageLoader('Menu','#principalPanel')
 
     }
     $(".menuPaso2Atras").click(function(){
@@ -119,10 +118,14 @@ $(document).ready(function(){
     //DropZone de Menu
 
     Dropzone.options.crearMenuFormImages={
+
         autoProcessQueue: true,
         maxFilesize: 0.5,
         acceptedFiles: ".jpg, .jpeg, .png",
-        maxFiles:5
+        maxFiles:5,
+        success: function(){
+            $(this).ajaxGetPageLoader('Menu','#principalPanel')
+        }
     };
     //DropZone de Local
     $(function() {

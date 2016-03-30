@@ -78,14 +78,14 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61495847" vertical-offset="1427" max-vertical-offset="7395">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37950137" vertical-offset="2005" max-vertical-offset="7446">
+              <caret line="126" column="63" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="63" />
               <folding>
-                <marker date="1459300236792" expanded="true" signature="1238:1302" placeholder="..." />
-                <marker date="1459300236792" expanded="true" signature="3005:3069" placeholder="..." />
-                <marker date="1459300236792" expanded="true" signature="15384:15398" placeholder="..." />
-                <marker date="1459300236792" expanded="true" signature="15473:15503" placeholder="..." />
-                <marker date="1459300236792" expanded="true" signature="15557:15566" placeholder="..." />
+                <marker date="1459300869096" expanded="true" signature="1238:1302" placeholder="..." />
+                <marker date="1459300869096" expanded="true" signature="3005:3069" placeholder="..." />
+                <marker date="1459300869096" expanded="true" signature="15429:15443" placeholder="..." />
+                <marker date="1459300869096" expanded="true" signature="15518:15548" placeholder="..." />
+                <marker date="1459300869096" expanded="true" signature="15602:15611" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -3345,12 +3345,6 @@
       <option name="number" value="Default" />
       <updated>1425477644111</updated>
     </task>
-    <task id="LOCAL-00154" summary="error factura">
-      <created>1457056828780</created>
-      <option name="number" value="00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1457056828783</updated>
-    </task>
     <task id="LOCAL-00155" summary="errorde factura">
       <created>1457057129515</created>
       <option name="number" value="00155" />
@@ -3639,7 +3633,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459299842608</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="cambios en js">
+      <created>1459300254375</created>
+      <option name="number" value="00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1459300254375</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -4159,14 +4159,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61495847" vertical-offset="1427" max-vertical-offset="7395">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37950137" vertical-offset="2005" max-vertical-offset="7446">
+          <caret line="126" column="63" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="63" />
           <folding>
-            <marker date="1459300236792" expanded="true" signature="1238:1302" placeholder="..." />
-            <marker date="1459300236792" expanded="true" signature="3005:3069" placeholder="..." />
-            <marker date="1459300236792" expanded="true" signature="15384:15398" placeholder="..." />
-            <marker date="1459300236792" expanded="true" signature="15473:15503" placeholder="..." />
-            <marker date="1459300236792" expanded="true" signature="15557:15566" placeholder="..." />
+            <marker date="1459300869096" expanded="true" signature="1238:1302" placeholder="..." />
+            <marker date="1459300869096" expanded="true" signature="3005:3069" placeholder="..." />
+            <marker date="1459300869096" expanded="true" signature="15429:15443" placeholder="..." />
+            <marker date="1459300869096" expanded="true" signature="15518:15548" placeholder="..." />
+            <marker date="1459300869096" expanded="true" signature="15602:15611" placeholder="..." />
           </folding>
         </state>
       </provider>
